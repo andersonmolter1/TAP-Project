@@ -16,7 +16,6 @@ public class PLayerController : NetworkBehaviour
     // Use this for initializati
     void Start()
     {
-        facingRight = true;
         rb = GetComponent<Rigidbody>();
     }
 
