@@ -4,7 +4,6 @@ using System.Collections;
 
 public class Respawner : MonoBehaviour
 {
-    private string killBar = "Respawner";
     public float spawnX = 0f;
     public float spawnY = 0f;
     public GameObject spawnPoint;
@@ -13,6 +12,8 @@ public class Respawner : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
 	{
+        //Compiler says there is an error on 16 but spawn point is referenced in inspector.
+        //player still spawns properly. So will ignore error for now. 
         Vector2 spawnSpot = spawnPoint.transform.position;
         // If the player hits the trigger...
         if (col.gameObject.CompareTag("Respawn"))
