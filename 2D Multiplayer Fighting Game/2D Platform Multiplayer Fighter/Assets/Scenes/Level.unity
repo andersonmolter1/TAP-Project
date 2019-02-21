@@ -207,7 +207,7 @@ SpriteRenderer:
   m_SortingLayerID: 1024582385
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 31f0432074fd7a84c8ee25266710dea3, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -215,7 +215,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1001 &143424600
@@ -415,6 +415,11 @@ PrefabInstance:
       propertyPath: gunFire
       value: Fire2_P3
       objectReference: {fileID: 0}
+    - target: {fileID: 1990607642884544446, guid: 6aa187bc6339843479c03fdfd71404a3,
+        type: 3}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 1596087757}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6aa187bc6339843479c03fdfd71404a3, type: 3}
 --- !u!1 &230930178 stripped
@@ -435,13 +440,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1d3ae068036c4be39e9bc98c505ef52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  splash: {fileID: 0}
-  spawnPoint: {fileID: 1596087757}
-  player: {fileID: 230930178}
-  playerTag: player3
   spawnX: 0
   spawnY: 0
-  spawnZ: 0
+  spawnPoint: {fileID: 0}
 --- !u!1001 &307847258
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -585,7 +586,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 8.52, y: 4.8}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -631,7 +632,7 @@ SpriteRenderer:
   m_SortingLayerID: 1024582385
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 31f0432074fd7a84c8ee25266710dea3, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -639,7 +640,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &407902200 stripped
@@ -660,13 +661,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1d3ae068036c4be39e9bc98c505ef52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  splash: {fileID: 0}
-  spawnPoint: {fileID: 2097278570}
-  player: {fileID: 407902200}
-  playerTag: player1
   spawnX: 0
   spawnY: 0
-  spawnZ: 0
+  spawnPoint: {fileID: 0}
 --- !u!1 &462175025 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100020, guid: 6aa187bc6339843479c03fdfd71404a3,
@@ -685,13 +682,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1d3ae068036c4be39e9bc98c505ef52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  splash: {fileID: 0}
-  spawnPoint: {fileID: 1579566180}
-  player: {fileID: 462175025}
-  playerTag: player4
   spawnX: 0
   spawnY: 0
-  spawnZ: 0
+  spawnPoint: {fileID: 0}
 --- !u!1 &474494695
 GameObject:
   m_ObjectHideFlags: 0
@@ -1364,6 +1357,11 @@ PrefabInstance:
       propertyPath: gunFire
       value: Fire2_P4
       objectReference: {fileID: 0}
+    - target: {fileID: 1990607642884544446, guid: 6aa187bc6339843479c03fdfd71404a3,
+        type: 3}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 1579566180}
     m_RemovedComponents:
     - {fileID: 11400006, guid: 6aa187bc6339843479c03fdfd71404a3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6aa187bc6339843479c03fdfd71404a3, type: 3}
@@ -1429,11 +1427,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400020, guid: 6aa187bc6339843479c03fdfd71404a3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.15
+      value: 2.76
       objectReference: {fileID: 0}
     - target: {fileID: 400020, guid: 6aa187bc6339843479c03fdfd71404a3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.15
+      value: 4.46
       objectReference: {fileID: 0}
     - target: {fileID: 400020, guid: 6aa187bc6339843479c03fdfd71404a3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1515,6 +1513,11 @@ PrefabInstance:
       propertyPath: gunFire
       value: Fire2_P2
       objectReference: {fileID: 0}
+    - target: {fileID: 1990607642884544446, guid: 6aa187bc6339843479c03fdfd71404a3,
+        type: 3}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 562952376}
     m_RemovedComponents:
     - {fileID: 11400006, guid: 6aa187bc6339843479c03fdfd71404a3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6aa187bc6339843479c03fdfd71404a3, type: 3}
@@ -2196,11 +2199,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400020, guid: 6aa187bc6339843479c03fdfd71404a3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.49
+      value: -11.24
       objectReference: {fileID: 0}
     - target: {fileID: 400020, guid: 6aa187bc6339843479c03fdfd71404a3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.08
+      value: 4.96
       objectReference: {fileID: 0}
     - target: {fileID: 400020, guid: 6aa187bc6339843479c03fdfd71404a3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2274,6 +2277,11 @@ PrefabInstance:
       propertyPath: gunFire
       value: Fire2_P1
       objectReference: {fileID: 0}
+    - target: {fileID: 1990607642884544446, guid: 6aa187bc6339843479c03fdfd71404a3,
+        type: 3}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 2097278570}
     m_RemovedComponents:
     - {fileID: 11400006, guid: 6aa187bc6339843479c03fdfd71404a3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6aa187bc6339843479c03fdfd71404a3, type: 3}
@@ -2405,13 +2413,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1d3ae068036c4be39e9bc98c505ef52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  splash: {fileID: 0}
-  spawnPoint: {fileID: 562952376}
-  player: {fileID: 1877445504}
-  playerTag: player2
   spawnX: 0
   spawnY: 0
-  spawnZ: 0
+  spawnPoint: {fileID: 0}
 --- !u!1 &1918147823
 GameObject:
   m_ObjectHideFlags: 0
@@ -2811,7 +2815,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2063414504}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.61, y: -13.26, z: 0.14893454}
+  m_LocalPosition: {x: 2.61, y: -16.92, z: 0.14893454}
   m_LocalScale: {x: 70.41108, y: 0.43819097, z: 1}
   m_Children:
   - {fileID: 77165901}
@@ -2882,7 +2886,7 @@ SpriteRenderer:
   m_SortingLayerID: 1024582385
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 31f0432074fd7a84c8ee25266710dea3, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2890,7 +2894,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &2089471431
