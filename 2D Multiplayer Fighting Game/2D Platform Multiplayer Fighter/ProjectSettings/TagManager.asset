@@ -18,6 +18,8 @@ TagManager:
   - player2
   - player3
   - player4
+  - player
+  - projectile
   layers:
   - Default
   - TransparentFX
@@ -60,6 +62,9 @@ TagManager:
     locked: 0
   - name: Background
     uniqueID: 1535931219
+    locked: 0
+  - name: backgroundPlayer
+    uniqueID: 3992724535
     locked: 0
   - name: Character
     uniqueID: 2511236001

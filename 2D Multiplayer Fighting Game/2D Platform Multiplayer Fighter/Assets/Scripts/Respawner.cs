@@ -36,7 +36,12 @@ public class Respawner : MonoBehaviour
 
         }
 	}
-
+    public void killPlayer()
+    {
+        
+        Vector2 spawnSpot = spawnPoint.transform.position;
+        transform.position = spawnSpot;
+    }
 	IEnumerator WaitToLoad()
 	{
         // ... pause briefly
