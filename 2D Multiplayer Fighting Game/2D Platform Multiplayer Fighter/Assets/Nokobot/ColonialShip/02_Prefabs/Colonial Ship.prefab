@@ -1563,9 +1563,10 @@ GameObject:
   - component: {fileID: 4998975655028046}
   - component: {fileID: 33735481156849566}
   - component: {fileID: 23978411006585232}
+  - component: {fileID: 7230332925550098142}
   m_Layer: 0
   m_Name: Ship_Body
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1629,6 +1630,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &7230332925550098142
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1327614130263004}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 21.39827, y: 16.649288, z: 67.7676}
+  m_Center: {x: 0, y: 0, z: 0.000000014901161}
 --- !u!1 &1348224758363558
 GameObject:
   m_ObjectHideFlags: 0
@@ -1948,9 +1962,10 @@ GameObject:
   - component: {fileID: 4417274650610110}
   - component: {fileID: 33450175694280560}
   - component: {fileID: 23040715001655906}
+  - component: {fileID: 7004665301806120057}
   m_Layer: 0
   m_Name: front_basket
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2014,6 +2029,36 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!60 &7004665301806120057
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1383185157158224}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.000000014901161, y: 3.8863938}
+      - {x: -3.6961803, y: 1.2009616}
+      - {x: -2.2843647, y: -3.1441588}
+      - {x: 2.2843654, y: -3.1441584}
+      - {x: 3.69618, y: 1.2009622}
 --- !u!1 &1384188745273164
 GameObject:
   m_ObjectHideFlags: 0
