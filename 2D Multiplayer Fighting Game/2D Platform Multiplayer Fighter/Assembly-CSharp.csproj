@@ -79,8 +79,10 @@
     <Compile Include="Assets\AssetsFromStore\CodeMonkey\Utils\World_Bar.cs" />
     <Compile Include="Assets\AssetsFromStore\CodeMonkey\Utils\World_Mesh.cs" />
     <Compile Include="Assets\AssetsFromStore\CodeMonkey\Utils\World_Sprite.cs" />
+    <Compile Include="Assets\Scripts\CharacterSelection.cs" />
     <Compile Include="Assets\Scripts\Gun.cs" />
     <Compile Include="Assets\Scripts\MainMenuNav.cs" />
+    <Compile Include="Assets\Scripts\MeleeWeapon.cs" />
     <Compile Include="Assets\Scripts\Pauser.cs" />
     <Compile Include="Assets\Scripts\PlayerControl.cs" />
     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
@@ -90,7 +92,7 @@
     <Compile Include="Assets\Scripts\ScoreShadow.cs" />
     <Compile Include="Assets\Scripts\Spawner.cs" />
     <Compile Include="Assets\Scripts\TakeDamagePlayer.cs" />
-    <None Include="Assets\Ninja Files\Read Me.txt" />
+    <None Include="Assets\AssetsFromStore\Ninja Files\Read Me.txt" />
     <None Include="Assets\AssetsFromStore\CodeMonkey\README.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Owner/Documents/GitHub/TAP-Project/2D Multiplayer Fighting Game/2D Platform Multiplayer Fighter/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
