@@ -80,6 +80,7 @@
     <Compile Include="Assets\AssetsFromStore\CodeMonkey\Utils\World_Mesh.cs" />
     <Compile Include="Assets\AssetsFromStore\CodeMonkey\Utils\World_Sprite.cs" />
     <Compile Include="Assets\Scripts\CharacterSelection.cs" />
+    <Compile Include="Assets\Scripts\characterTeleport.cs" />
     <Compile Include="Assets\Scripts\Gun.cs" />
     <Compile Include="Assets\Scripts\MainMenuNav.cs" />
     <Compile Include="Assets\Scripts\MeleeWeapon.cs" />
