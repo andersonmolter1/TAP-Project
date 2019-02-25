@@ -20,6 +20,11 @@ TagManager:
   - player4
   - player
   - projectile
+  - sword
+  - knight
+  - wizard
+  - viking
+  - archer
   layers:
   - Default
   - TransparentFX
@@ -35,7 +40,7 @@ TagManager:
   - Pickups
   - Ground
   - Wall
-  - 
+  - Sword
   - 
   - 
   - 

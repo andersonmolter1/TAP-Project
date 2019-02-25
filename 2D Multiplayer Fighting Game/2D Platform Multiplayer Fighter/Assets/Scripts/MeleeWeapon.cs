@@ -10,6 +10,17 @@ public class MeleeWeapon : MonoBehaviour
         
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        //collsion for sword.
+        if (collision.gameObject.CompareTag("player"))
+        {
+            Debug.Log("Sword Hit");
+        } else if (collision.gameObject.CompareTag("player"))
+        {
+            Debug.Log("Arrow Hit");
+        }
+    }
     // Update is called once per frame
     void Update()
     {

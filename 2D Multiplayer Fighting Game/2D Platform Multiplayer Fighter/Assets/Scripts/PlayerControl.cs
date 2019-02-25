@@ -16,14 +16,14 @@ public class PlayerControl : MonoBehaviour
     public AudioClip[] taunts;              // Array of clips for when the player taunts.
     public float tauntProbability = 50f;    // Chance of a taunt happening.
     public float tauntDelay = 1f;           // Delay for when the taunt should happen.
-    
-
+    public string horiztonal = "Horizontal_P1";
+    public string jumpButton = "Jump_P1";
+    public float speed;
     private int tauntIndex;                 // The index of the taunts array indicating the most recent taunt.
     private Transform groundCheck;          // A position marking where to check if the player is grounded.
     private bool grounded = false;          // Whether or not the player is grounded.
     private Animator anim;                  // Reference to the player's animator component.
-    public string jumpButton = "Jump_P1";
-    public string horiztonal_P1 = "Horizontal_P1";
+
 
     void Awake()
     {
@@ -31,6 +31,8 @@ public class PlayerControl : MonoBehaviour
         groundCheck = transform.Find("groundCheck");
         anim = GetComponent<Animator>();
     }
+
+
     void Update()
     {
         // The player is grounded if a linecast to the groundcheck position hits anything on the ground layer.
@@ -45,22 +47,25 @@ public class PlayerControl : MonoBehaviour
     void FixedUpdate()
     {
         // Cache the horizontal input.
-        float h = Input.GetAxis(horiztonal_P1);
+        float h = Input.GetAxis(horiztonal);
 
         // The Speed animator parameter is set to the absolute value of the horizontal input.
-        //anim.SetFloat("Speed", Mathf.Abs(h));
+
 
         // If the player is changing direction (h has a different sign to velocity.x) or hasn't reached maxSpeed yet...
-        if (h * GetComponent<Rigidbody2D>().velocity.x < maxSpeed)
+        if(h * GetComponent<Rigidbody2D>().velocity.x < maxSpeed){
             // ... add a force to the player.
-            GetComponent<Rigidbody2D>().AddForce(Vector2.right * h * moveForce);
 
+            GetComponent<Rigidbody2D>().AddForce(Vector2.right * h * moveForce);
+        }
         // If the player's horizontal velocity is greater than the maxSpeed...
         if (Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x) > maxSpeed)
+        {
             // ... set the player's velocity to the maxSpeed in the x axis.
             GetComponent<Rigidbody2D>().velocity = new Vector2(Mathf.Sign(GetComponent<Rigidbody2D>().velocity.x) * maxSpeed, GetComponent<Rigidbody2D>().velocity.y);
-
+        }
         // If the input is moving the player right and the player is facing left...
+        
         if (h > 0 && !facingRight)
             // ... flip the player.
             Flip();
@@ -99,7 +104,7 @@ public class PlayerControl : MonoBehaviour
         transform.localScale = theScale;
     }
 
-
+    /*
     public IEnumerator Taunt()
     {
         // Check the random chance of taunting.
@@ -136,4 +141,6 @@ public class PlayerControl : MonoBehaviour
             // Otherwise return this index.
             return i;
     }
+    */
+    
 }
