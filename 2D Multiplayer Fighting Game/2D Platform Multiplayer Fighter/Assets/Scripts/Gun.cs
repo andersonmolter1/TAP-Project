@@ -24,7 +24,7 @@ public class Gun : MonoBehaviour
         // If the fire button is pressed...
         if (Input.GetButtonDown(gunFire))
         {
-            Debug.Log("Shoot");
+
             // ... set the animator Shoot trigger parameter and play the audioclip.
             //anim.SetTrigger("Shoot");
 

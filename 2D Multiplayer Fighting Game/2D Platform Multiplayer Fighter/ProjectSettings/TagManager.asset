@@ -25,6 +25,9 @@ TagManager:
   - wizard
   - viking
   - archer
+  - arrow
+  - KnightHealthBar
+  - ArcherHealthBar
   layers:
   - Default
   - TransparentFX

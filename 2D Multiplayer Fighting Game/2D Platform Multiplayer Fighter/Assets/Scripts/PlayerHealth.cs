@@ -3,72 +3,95 @@ using System.Collections;
 
 public class PlayerHealth : MonoBehaviour
 {
-
-    public float health = 1f;
-    public float repeatDamagePeriod = 2f;		
-				
-	public float hurtForce = 10f;				
-	public float damageAmount = 10f;			
-
-	private SpriteRenderer healthBar;			
-						
-	private Vector3 healthScale;				
-	private PlayerControl playerControl;		
-						
-
-
-	void Awake ()
-	{
-        health = 1f;
-		// Setting up references.
-		playerControl = GetComponent<PlayerControl>();
-		healthBar = GameObject.Find("HealthBar").GetComponent<SpriteRenderer>();
-		//anim = GetComponent<Animator>();
-
-		// Getting the intial scale of the healthbar (whilst the player has full health).
-		healthScale = healthBar.transform.localScale;
-	}
-
-
-	
-
-
-	public void TakeDamage ()
-	{
-		// Make sure the player can't jump.
-		playerControl.jump = false;
-		
-        // Reduce the player's health by 10.
-		health -= damageAmount;
-
-		// Update what the health bar looks like.
-		UpdateHealthBar();
-
-		
-	}
-
-    private void OnCollisionEnter2D(Collision2D col)
+    public float orgHealth = 100f;
+    public float health = 100f;                 // The player's health.
+    public float damageAmount = 1f;            // The amount of damage to take when enemies touch the player
+    public GameObject projectile;
+              // Reference to the sprite renderer of the health bar.
+    private Vector3 healthScale;                // The local scale of the health bar initially (with full health).
+    private Transform bar;
+    public Transform healthBar;
+    public GameObject HealthBar;
+    private void Start()
     {
-        if (col.gameObject.name == "arrow")
-        {
-            Debug.Log("Player contact");
-            TakeDamage();
-        }
+        
     }
-    public void UpdateHealthBar ()
-	{
-        if (health < 0.01f)
-        {
-            // Set the health bar's colour to proportion of the way between green and red based on the player's health.
-            healthBar.material.color = Color.Lerp(Color.green, Color.red, 1 - health * 0.01f);
+    void Awake()
+    {
 
-            // Set the scale of the health bar to be proportional to the player's health.
-            healthBar.transform.localScale = new Vector3(healthScale.x * health * 0.01f, 1, 1);
-        } else
+        bar = transform.Find("HealthBar");
+
+        // Getting the intial scale of the healthbar (whilst the player has full health).
+        //healthScale = healthBar.transform.localScale;
+    }
+    public void SetSize(float sizeNormalized)
+    {
+        bar.localScale = new Vector3(sizeNormalized, 0, 0);
+    }
+    public void SetColor(Color color)
+    {
+        bar.Find("HealthBar");
+    }
+
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        healthBar.localScale = new Vector3(0.5f, 0, 0);
+        /*
+        //GameObject.Find("arrow").GetComponent<SpriteRenderer>();
+        // If the colliding gameobject is an Enemy...
+        //if (col.gameObject.CompareTag("arrow"))
         {
-            GetComponent<Respawner>().killPlayer();
+            
+
+            // ... and if the player still has health...
+            //if (health > 0f)
+            {
+                // ... take damage and reset the lastHitTime.
+                StartCoroutine(waitTime());
+            }
+            
+
         }
-	}
-   
-    
+        
+    }
+    */
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        
+
+    }
+
+    IEnumerator waitTime()
+    {
+        print("time");
+        Debug.Log("collsion");
+        TakeDamage();
+        yield return new WaitForSeconds(10);
+        print("time");
+    }
+    public void TakeDamage()
+    {
+        // Reduce the player's health by 10.
+        health -= damageAmount;
+
+        // Update what the health bar looks like.
+        UpdateHealthBar();
+       
+    }
+
+
+    public void UpdateHealthBar()
+    {
+        // Set the health bar's colour to proportion of the way between green and red based on the player's health.
+        //healthBar.material.color = Color.Lerp(Color.green, Color.red, 1 - health * 0.01f);
+        Debug.Log("player damage");
+
+        // Set the scale of the health bar to be proportional to the player's health.
+        //healthBar.transform.localScale = new Vector3(healthScale.x * health * 0.01f, 1, 1);
+    }
+    void KillPlayer()
+    {
+        Destroy(gameObject);
+    }
 }
