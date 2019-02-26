@@ -11,13 +11,16 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/CharacterSelector.unity
     guid: 0e2a64c0ff3347641b5025cb8ba5f64f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Castle.unity
     guid: 931e23ae6105b494b9872d59f4325a62
   - enabled: 0
     path: Assets/Scenes/failedScenes/PirateShip.unity
     guid: 33985688c070a2e4899ad0b543433eee
+  - enabled: 1
+    path: Assets/Scenes/PirateShip.unity
+    guid: f534c0730f58c5a44b734cfa9c9853d9
   m_configObjects: {}
