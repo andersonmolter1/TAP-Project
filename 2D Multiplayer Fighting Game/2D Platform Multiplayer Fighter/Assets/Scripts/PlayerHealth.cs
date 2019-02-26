@@ -23,7 +23,6 @@ public class PlayerHealth : MonoBehaviour
     public void Awake()
     {
         arrowDamage = wa.getArrowDamage();
-        Debug.Log(arrowDamage);
 
     }
     void OnCollisionEnter2D(Collision2D col)
@@ -32,7 +31,7 @@ public class PlayerHealth : MonoBehaviour
         {
             if (health > 0f)
             {
-                TakeDamage(arrowDamage);
+                TakeDamage(10f);
             } 
         }
         /*
@@ -68,6 +67,7 @@ public class PlayerHealth : MonoBehaviour
         
         if (health <= 0f)
         {
+            Debug.Log("Health");
             killPlayer();
         }
         else

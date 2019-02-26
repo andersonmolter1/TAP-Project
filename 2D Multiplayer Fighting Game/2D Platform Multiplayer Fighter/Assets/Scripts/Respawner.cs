@@ -11,8 +11,7 @@ public class Respawner : MonoBehaviour
     void OnCollisionEnter2D(Collision2D col)
 	{
         if (col.gameObject.CompareTag("killBar"))
-        {
-            Debug.Log("Killbar");
+        { 
             killPlayer();
         }
 	}
