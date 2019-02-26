@@ -10,10 +10,10 @@ public class CharacterSelection : MonoBehaviour
     public Button ArcherButton;
     public Button WizardButton;
     public Button VikingButton;
-    public static bool Knight = true;
-    public static bool Archer = true;
-    public static bool Wizard = true;
-    public static bool Viking = true;
+    public bool Knight = true;
+    public bool Archer = true;
+    public bool Wizard = true;
+    public bool Viking = true;
     // Start is called before the first frame update
     public void Update()
     {

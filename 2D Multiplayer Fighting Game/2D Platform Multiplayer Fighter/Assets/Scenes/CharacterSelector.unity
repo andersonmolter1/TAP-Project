@@ -841,7 +841,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Viking
+  m_Text: To Castle Level
 --- !u!222 &1119459381
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1348,9 +1348,9 @@ MonoBehaviour:
   WizardButton: {fileID: 1506480125}
   VikingButton: {fileID: 362101743}
   Knight: 0
-  Archer: 0
-  Wizard: 0
-  Viking: 0
+  Archer: 1
+  Wizard: 1
+  Viking: 1
 --- !u!4 &1577913006
 Transform:
   m_ObjectHideFlags: 0
@@ -1392,7 +1392,7 @@ GameObject:
   - component: {fileID: 1627619453}
   - component: {fileID: 1627619452}
   m_Layer: 5
-  m_Name: Viking (1)
+  m_Name: Level
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

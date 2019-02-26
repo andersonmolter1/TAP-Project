@@ -94,22 +94,56 @@
     <Compile Include="Assets\Scripts\projectileCollider.cs" />
     <Compile Include="Assets\Scripts\Respawner.cs" />
     <Compile Include="Assets\Scripts\Score.cs" />
+    <Compile Include="Assets\Scripts\WeaponDamageAmounts.cs" />
     <None Include="Assets\AssetsFromStore\Ninja Files\Read Me.txt" />
     <None Include="Assets\AssetsFromStore\CodeMonkey\README.txt" />
+    <Reference Include="Unity.2D.Animation.Runtime">
+      <HintPath>C:/Users/Owner/Documents/GitHub/TAP-Project/TAP-Project/2D Multiplayer Fighting Game/2D Platform Multiplayer Fighter/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Owner/Documents/GitHub/TAP-Project/TAP-Project/2D Multiplayer Fighting Game/2D Platform Multiplayer Fighter/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.IK.Editor">
+      <HintPath>C:/Users/Owner/Documents/GitHub/TAP-Project/TAP-Project/2D Multiplayer Fighting Game/2D Platform Multiplayer Fighter/Library/ScriptAssemblies/Unity.2D.IK.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.IK.Runtime">
+      <HintPath>C:/Users/Owner/Documents/GitHub/TAP-Project/TAP-Project/2D Multiplayer Fighting Game/2D Platform Multiplayer Fighter/Library/ScriptAssemblies/Unity.2D.IK.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
       <HintPath>C:/Users/Owner/Documents/GitHub/TAP-Project/TAP-Project/2D Multiplayer Fighting Game/2D Platform Multiplayer Fighter/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="PsdPlugin">
+      <HintPath>C:/Users/Owner/Documents/GitHub/TAP-Project/TAP-Project/2D Multiplayer Fighting Game/2D Platform Multiplayer Fighter/Library/ScriptAssemblies/PsdPlugin.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
       <HintPath>C:/Users/Owner/Documents/GitHub/TAP-Project/TAP-Project/2D Multiplayer Fighting Game/2D Platform Multiplayer Fighter/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Psdimporter.Editor">
+      <HintPath>C:/Users/Owner/Documents/GitHub/TAP-Project/TAP-Project/2D Multiplayer Fighting Game/2D Platform Multiplayer Fighter/Library/ScriptAssemblies/Unity.2D.Psdimporter.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.InternalAPIEngineBridge.001">
+      <HintPath>C:/Users/Owner/Documents/GitHub/TAP-Project/TAP-Project/2D Multiplayer Fighting Game/2D Platform Multiplayer Fighter/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Common.Runtime">
+      <HintPath>C:/Users/Owner/Documents/GitHub/TAP-Project/TAP-Project/2D Multiplayer Fighting Game/2D Platform Multiplayer Fighter/Library/ScriptAssemblies/Unity.2D.Common.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Animation.Editor">
+      <HintPath>C:/Users/Owner/Documents/GitHub/TAP-Project/TAP-Project/2D Multiplayer Fighting Game/2D Platform Multiplayer Fighter/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Triangle.Runtime">
+      <HintPath>C:/Users/Owner/Documents/GitHub/TAP-Project/TAP-Project/2D Multiplayer Fighting Game/2D Platform Multiplayer Fighter/Library/ScriptAssemblies/Unity.2D.Triangle.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>C:/Users/Owner/Documents/GitHub/TAP-Project/TAP-Project/2D Multiplayer Fighting Game/2D Platform Multiplayer Fighter/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.2D.Common.Editor">
+      <HintPath>C:/Users/Owner/Documents/GitHub/TAP-Project/TAP-Project/2D Multiplayer Fighting Game/2D Platform Multiplayer Fighter/Library/ScriptAssemblies/Unity.2D.Common.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
       <HintPath>C:/Users/Owner/Documents/GitHub/TAP-Project/TAP-Project/2D Multiplayer Fighting Game/2D Platform Multiplayer Fighter/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.InternalAPIEditorBridge.001">
+      <HintPath>C:/Users/Owner/Documents/GitHub/TAP-Project/TAP-Project/2D Multiplayer Fighting Game/2D Platform Multiplayer Fighter/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

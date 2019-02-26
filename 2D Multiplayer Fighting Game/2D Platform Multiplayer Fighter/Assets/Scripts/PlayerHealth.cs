@@ -11,10 +11,20 @@ public class PlayerHealth : MonoBehaviour
     //public Transform healthBar;
     public GameObject HealthBar;
     private float healthBarMaxSize = 10;
+    Respawner rp = new Respawner();
 
+    private float swordDamage;
+    private float maceDamage;
+    private float arrowDamage;
+    private float fireBallDamage;
+    public Transform spawnPoint;
+    public GameObject player;
+    WeaponDamageAmounts wa = new WeaponDamageAmounts();
     public void Awake()
     {
-        
+        arrowDamage = wa.getArrowDamage();
+        Debug.Log(arrowDamage);
+
     }
     void OnCollisionEnter2D(Collision2D col)
     {
@@ -22,18 +32,49 @@ public class PlayerHealth : MonoBehaviour
         {
             if (health > 0f)
             {
-                TakeDamage();
+                TakeDamage(arrowDamage);
+            } 
+        }
+        /*
+        else if (col.gameObject.CompareTag("knight"))
+        {
+            if (health > 0f)
+            {
+                TakeDamage(10f);
             }
         }
+        
+        else if (col.gameObject.CompareTag("mace"))
+        {
+            if (health > 0f)
+            {
+                TakeDamage(15f);
+            }
+        }
+        else if (col.gameObject.CompareTag("fireball"))
+        {
+            if (health > 0f)
+            {
+                TakeDamage(20f);
+            }
+        }
+        */
     }
-    public void TakeDamage()
+    public void TakeDamage(float damageAmount)
     {
         // Reduce the player's health by 10.
+       // Debug.Log(damageAmount);
         health = health - damageAmount;
-
-        // Update what the health bar looks like.
-        UpdateHealthBar();
-
+        
+        if (health <= 0f)
+        {
+            killPlayer();
+        }
+        else
+        {
+            // Update what the health bar looks like.
+            UpdateHealthBar();
+        }
     }
 
 
@@ -53,8 +94,8 @@ public class PlayerHealth : MonoBehaviour
             HealthBarRender.material.color = Color.red;
         }
     }
-    void KillPlayer()
+    public void killPlayer()
     {
-        Destroy(gameObject);
+        player.transform.position = spawnPoint.transform.position;
     }
 }

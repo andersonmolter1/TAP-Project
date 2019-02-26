@@ -13,7 +13,7 @@ public class characterTeleport : MonoBehaviour
     public GameObject ArcherSpawnPoint;
     public GameObject VikingSpawnPoint;
 
-    public CharacterSelection CharacterSelection;
+    CharacterSelection cs = new CharacterSelection();
 
     void Start()
     {
@@ -23,35 +23,33 @@ public class characterTeleport : MonoBehaviour
         Vector2 spawnP3 = ArcherSpawnPoint.transform.position;
         Vector2 spawnP4 = VikingSpawnPoint.transform.position;
 
-        /*
-       //I have tried every way I know and that I could find to reference this bool variable. 
-        if (CharacterSelection.getWizard())
+
+        
+        if (cs.getKnight())
         {
-            Debug.Log("Teleport");
-            Debug.Log(spawnP1);
             Knight.transform.position = spawnP1;
         }
-        if (CharacterSelection.getWizard())
+        if (cs.getWizard())
         {
             Wizard.transform.position = spawnP2;
         }
-        if (CharacterSelection.getArcher())
+        if (cs.getArcher())
         {
             Archer.transform.position = spawnP3;
         }
-        if (CharacterSelection.getViking())
+        if (cs.getViking())
         {
             Viking.transform.position = spawnP4;
         }
-        
+
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
-    */
-    }
+
 }
+

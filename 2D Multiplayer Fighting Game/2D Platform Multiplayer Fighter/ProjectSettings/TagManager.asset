@@ -5,13 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - ground
-  - Crate
   - Enemy
   - Wall
-  - Obstacle
   - Bullet
-  - BombPickup
-  - ExplosionFX
   - HealthBar
   - Button
   - player1
@@ -28,6 +24,8 @@ TagManager:
   - arrow
   - KnightHealthBar
   - ArcherHealthBar
+  - killBar
+  - mace
   layers:
   - Default
   - TransparentFX
