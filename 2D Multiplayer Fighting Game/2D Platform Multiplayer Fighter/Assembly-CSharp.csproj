@@ -81,8 +81,6 @@
     <Compile Include="Assets\AssetsFromStore\CodeMonkey\Utils\World_Sprite.cs" />
     <Compile Include="Assets\HowToHealthBar\Scripts\GameHandler.cs" />
     <Compile Include="Assets\HowToHealthBar\Scripts\HealthBar.cs" />
-    <Compile Include="Assets\Scripts\CharacterSelection.cs" />
-    <Compile Include="Assets\Scripts\characterTeleport.cs" />
     <Compile Include="Assets\Scripts\CollisionManager.cs" />
     <Compile Include="Assets\Scripts\EnemySpawner.cs" />
     <Compile Include="Assets\Scripts\Gun.cs" />
@@ -94,6 +92,7 @@
     <Compile Include="Assets\Scripts\projectileCollider.cs" />
     <Compile Include="Assets\Scripts\Respawner.cs" />
     <Compile Include="Assets\Scripts\Score.cs" />
+    <Compile Include="Assets\Scripts\SpawnPlayer.cs" />
     <Compile Include="Assets\Scripts\WeaponDamageAmounts.cs" />
     <None Include="Assets\AssetsFromStore\Ninja Files\Read Me.txt" />
     <None Include="Assets\AssetsFromStore\CodeMonkey\README.txt" />

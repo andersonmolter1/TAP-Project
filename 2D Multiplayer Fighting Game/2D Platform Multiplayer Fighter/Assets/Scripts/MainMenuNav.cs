@@ -16,6 +16,6 @@ public class MainMenuNav : MonoBehaviour
 
     public void LoadByIndex(int levelIndex)
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("Castle");
     }
 }

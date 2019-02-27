@@ -1324,6 +1324,7 @@ GameObject:
   - component: {fileID: 1577913006}
   - component: {fileID: 1577913005}
   - component: {fileID: 1577913007}
+  - component: {fileID: 1577913008}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -1338,7 +1339,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1577913004}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f70f413dc7bdfc3488114fb0934ff8f3, type: 3}
   m_Name: 
@@ -1347,10 +1348,6 @@ MonoBehaviour:
   ArcherButton: {fileID: 1320874128}
   WizardButton: {fileID: 1506480125}
   VikingButton: {fileID: 362101743}
-  Knight: 0
-  Archer: 0
-  Wizard: 0
-  Viking: 0
 --- !u!4 &1577913006
 Transform:
   m_ObjectHideFlags: 0
@@ -1379,6 +1376,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Button: {fileID: 1627619452}
   levelIndex: 0
+--- !u!114 &1577913008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577913004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7803268ab85a4fb4da79ac4d339e9c81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  KnightButton: {fileID: 610467314}
+  ArcherButton: {fileID: 1320874128}
+  WizardButton: {fileID: 1506480125}
+  VikingButton: {fileID: 362101743}
+  Knight: {fileID: 0}
+  Viking: {fileID: 0}
+  Wizard: {fileID: 0}
+  Archer: {fileID: 0}
+  KnightSpawnPoint: {fileID: 0}
+  WizardSpawnPoint: {fileID: 0}
+  ArcherSpawnPoint: {fileID: 0}
+  VikingSpawnPoint: {fileID: 0}
 --- !u!1 &1627619451
 GameObject:
   m_ObjectHideFlags: 0
