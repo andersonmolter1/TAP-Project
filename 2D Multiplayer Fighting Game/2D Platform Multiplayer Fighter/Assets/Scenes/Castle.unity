@@ -121,7 +121,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 87978066}
-  - component: {fileID: 87978065}
   - component: {fileID: 87978067}
   m_Layer: 0
   m_Name: spawner
@@ -130,27 +129,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &87978065
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 87978064}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f3f57819e84d7249bebb9ef11965b4a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Knight: {fileID: 1290700244}
-  Viking: {fileID: 1907486406}
-  Wizard: {fileID: 374649567}
-  Archer: {fileID: 1647243968}
-  KnightSpawnPoint: {fileID: 1053946499}
-  WizardSpawnPoint: {fileID: 980511626}
-  ArcherSpawnPoint: {fileID: 1703498129}
-  VikingSpawnPoint: {fileID: 1216061852}
-  cs: {fileID: 0}
 --- !u!4 &87978066
 Transform:
   m_ObjectHideFlags: 0
@@ -1275,6 +1253,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 5383989383595767406, guid: 1115ac1182490064eb1223b78a1a4120,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5383989383595767405, guid: 1115ac1182490064eb1223b78a1a4120,
         type: 3}
