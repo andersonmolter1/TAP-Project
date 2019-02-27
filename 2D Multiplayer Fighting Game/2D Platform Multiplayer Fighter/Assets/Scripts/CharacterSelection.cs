@@ -15,6 +15,11 @@ public class CharacterSelection : MonoBehaviour
     public bool Wizard = true;
     public bool Viking = true;
     // Start is called before the first frame update
+
+    public CharacterSelection() {
+
+    }
+
     public void Update()
     {
         KnightButton.onClick.AddListener(KnightSelection);
