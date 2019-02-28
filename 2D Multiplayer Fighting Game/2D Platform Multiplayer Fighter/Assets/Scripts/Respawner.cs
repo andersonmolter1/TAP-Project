@@ -12,6 +12,7 @@ public class Respawner : MonoBehaviour
 	{
         if (col.gameObject.CompareTag("killBar"))
         { 
+            
             killPlayer();
         }
 	}

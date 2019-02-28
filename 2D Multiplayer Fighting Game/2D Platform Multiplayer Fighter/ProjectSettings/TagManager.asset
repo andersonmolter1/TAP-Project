@@ -26,6 +26,9 @@ TagManager:
   - ArcherHealthBar
   - killBar
   - mace
+  - ExplosionFX
+  - BombPickup
+  - fireball
   layers:
   - Default
   - TransparentFX

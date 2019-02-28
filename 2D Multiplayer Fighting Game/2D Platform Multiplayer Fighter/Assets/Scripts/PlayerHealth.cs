@@ -11,7 +11,6 @@ public class PlayerHealth : MonoBehaviour
     //public Transform healthBar;
     public GameObject HealthBar;
     private float healthBarMaxSize = 10;
-    Respawner rp = new Respawner();
 
     private float swordDamage;
     private float maceDamage;
@@ -22,7 +21,6 @@ public class PlayerHealth : MonoBehaviour
     WeaponDamageAmounts wa = new WeaponDamageAmounts();
     public void Awake()
     {
-        arrowDamage = wa.getArrowDamage();
 
     }
     void OnCollisionEnter2D(Collision2D col)
@@ -51,14 +49,21 @@ public class PlayerHealth : MonoBehaviour
                 TakeDamage(15f);
             }
         }
-        else if (col.gameObject.CompareTag("fireball"))
+        */
+        if (col.gameObject.CompareTag("fireball"))
         {
+            Debug.Log("Fireball");
             if (health > 0f)
             {
                 TakeDamage(20f);
             }
         }
-        */
+        if (col.gameObject.CompareTag("killBar"))
+        {
+
+            killPlayer();
+        }
+
     }
     public void TakeDamage(float damageAmount)
     {
@@ -68,7 +73,6 @@ public class PlayerHealth : MonoBehaviour
         
         if (health <= 0f)
         {
-            Debug.Log("Health");
             killPlayer();
         }
         else
