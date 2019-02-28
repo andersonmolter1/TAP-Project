@@ -8,7 +8,7 @@ public class WeaponDamageAmounts : MonoBehaviour
     public float maceDamage = 30f;
     public float arrowDamage = 100f;
     public float fireBallDamage = 20f;
-
+    
     public float getSwordDamage()
     {
         return swordDamage;

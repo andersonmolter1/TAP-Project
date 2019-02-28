@@ -21,6 +21,7 @@ public class Gun : MonoBehaviour
 
     void Update()
     {
+        projectile.gravityScale = 0;
         // If the fire button is pressed...
         if (Input.GetButtonDown(gunFire))
         {
@@ -34,13 +35,15 @@ public class Gun : MonoBehaviour
             {
                 // ... instantiate the rocket facing right and set it's velocity to the right. 
                 Rigidbody2D bulletInstance = Instantiate(projectile, transform.position, Quaternion.Euler(new Vector3(0, 0, 0))) as Rigidbody2D;
-                bulletInstance.velocity = new Vector2(speed, 4);
+                bulletInstance.velocity = new Vector2(speed, 0);
+                
+                
             }
             else
             {
                 // Otherwise instantiate the rocket facing left and set it's velocity to the left.
                 Rigidbody2D bulletInstance = Instantiate(projectile, transform.position, Quaternion.Euler(new Vector3(0, 0, 180f))) as Rigidbody2D;
-                bulletInstance.velocity = new Vector2(-speed, 4);
+                bulletInstance.velocity = new Vector2(-speed, 0);
             }
         }
         
@@ -53,7 +56,7 @@ public class Gun : MonoBehaviour
     IEnumerator waitForNextShot()
     {
         
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(4);
         
     }
     public void destroyArrow()
