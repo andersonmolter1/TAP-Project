@@ -3,19 +3,21 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+/*
+ * Remember to clean this up. Changes to the overall menu/level nav
+ * requires changes to this code.
+ * 
+ */
 
 public class MainMenuNav : MonoBehaviour
 {
-    public Button Button;
-    public int levelIndex = 0;
+    public Button game;
+   
     void Start()
     {
-        Button.onClick.AddListener(delegate { LoadByIndex(levelIndex); });
+        game.onClick.AddListener(delegate { SceneManager.LoadScene("MapSelector"); });
     }
 
 
-    public void LoadByIndex(int levelIndex)
-    {
-        SceneManager.LoadScene("Castle");
-    }
+   
 }

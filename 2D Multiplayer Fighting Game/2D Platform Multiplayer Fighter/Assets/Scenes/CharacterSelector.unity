@@ -841,7 +841,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: To Castle Level
+  m_Text: Battle!
 --- !u!222 &1119459381
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1322,8 +1322,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1577913006}
-  - component: {fileID: 1577913007}
   - component: {fileID: 1577913008}
+  - component: {fileID: 1577913005}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -1331,6 +1331,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1577913005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577913004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 384b60c5b3471ba4e9bc8c85d38538dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startLevel: {fileID: 1627619452}
 --- !u!4 &1577913006
 Transform:
   m_ObjectHideFlags: 0
@@ -1345,20 +1358,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1577913007
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1577913004}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bb15daf6bfa44a96870f9f364b601, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Button: {fileID: 1627619452}
-  levelIndex: 0
 --- !u!114 &1577913008
 MonoBehaviour:
   m_ObjectHideFlags: 0
