@@ -7,5 +7,5 @@ PhysicsMaterial2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: PlatformEnd
-  friction: 1
-  bounciness: 0.15
+  friction: 0.8
+  bounciness: 0.1
