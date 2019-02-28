@@ -613,11 +613,7 @@ MonoBehaviour:
   jump: 0
   moveForce: 365
   maxSpeed: 5
-  jumpClips: []
   jumpForce: 1000
-  taunts: []
-  tauntProbability: 50
-  tauntDelay: 1
   horiztonal: Horizontal_P1
   jumpButton: Jump_P1
   speed: 0
@@ -695,10 +691,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  damageAmount: 1
+  damageAmount: 10
   HealthBar: {fileID: 2862010669886705712}
   spawnPoint: {fileID: 0}
-  player: {fileID: 0}
+  player: {fileID: 174424}
 --- !u!61 &4446011071773962355
 BoxCollider2D:
   m_ObjectHideFlags: 0

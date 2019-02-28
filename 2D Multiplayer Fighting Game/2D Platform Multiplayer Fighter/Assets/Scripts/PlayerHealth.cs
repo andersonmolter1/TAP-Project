@@ -34,6 +34,7 @@ public class PlayerHealth : MonoBehaviour
                 TakeDamage(10f);
             } 
         }
+
         /*
         else if (col.gameObject.CompareTag("knight"))
         {

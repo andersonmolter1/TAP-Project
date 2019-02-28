@@ -189,7 +189,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 445534, guid: 7b12c04f1af3b4141ae7fede3611ef76, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 20.28
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 445534, guid: 7b12c04f1af3b4141ae7fede3611ef76, type: 3}
       propertyPath: m_LocalPosition.z
@@ -287,6 +287,11 @@ PrefabInstance:
       propertyPath: maxSpeed
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 2848635786970813451, guid: 7b12c04f1af3b4141ae7fede3611ef76,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2863201092601578471, guid: 7b12c04f1af3b4141ae7fede3611ef76,
         type: 3}
       propertyPath: m_UseAutoMass
@@ -316,6 +321,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 2862010669886705712, guid: 7b12c04f1af3b4141ae7fede3611ef76,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b12c04f1af3b4141ae7fede3611ef76, type: 3}
@@ -377,17 +387,17 @@ PrefabInstance:
     - target: {fileID: 2848635786970813451, guid: 3e61f3bead8107f4f9c45d16c994eaf3,
         type: 3}
       propertyPath: jumpForce
-      value: 1700
+      value: 1800
       objectReference: {fileID: 0}
     - target: {fileID: 2848635786970813451, guid: 3e61f3bead8107f4f9c45d16c994eaf3,
         type: 3}
       propertyPath: moveForce
-      value: 200
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 2848635786970813451, guid: 3e61f3bead8107f4f9c45d16c994eaf3,
         type: 3}
       propertyPath: maxSpeed
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2863201092601578471, guid: 3e61f3bead8107f4f9c45d16c994eaf3,
         type: 3}
@@ -423,6 +433,11 @@ PrefabInstance:
         type: 3}
       propertyPath: speed
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5979158767289484837, guid: 3e61f3bead8107f4f9c45d16c994eaf3,
+        type: 3}
+      propertyPath: damageAmount
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e61f3bead8107f4f9c45d16c994eaf3, type: 3}
@@ -1212,7 +1227,7 @@ PrefabInstance:
     - target: {fileID: 2848635786970813451, guid: 0ccf0e6e066286b4bbf451e293b0b31c,
         type: 3}
       propertyPath: jumpForce
-      value: 1700
+      value: 1800
       objectReference: {fileID: 0}
     - target: {fileID: 2848635786970813451, guid: 0ccf0e6e066286b4bbf451e293b0b31c,
         type: 3}
@@ -1223,6 +1238,16 @@ PrefabInstance:
         type: 3}
       propertyPath: maxSpeed
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2848635786970813451, guid: 0ccf0e6e066286b4bbf451e293b0b31c,
+        type: 3}
+      propertyPath: horiztonal
+      value: Horizontal_P2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2848635786970813451, guid: 0ccf0e6e066286b4bbf451e293b0b31c,
+        type: 3}
+      propertyPath: jumpButton
+      value: Jump_P2
       objectReference: {fileID: 0}
     - target: {fileID: 2863201092601578471, guid: 0ccf0e6e066286b4bbf451e293b0b31c,
         type: 3}
@@ -1260,6 +1285,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6047219895168099818, guid: 3d635ad3d587cd1409c389a344b2fab3,
         type: 3}
+    - target: {fileID: 4041808506354674500, guid: 0ccf0e6e066286b4bbf451e293b0b31c,
+        type: 3}
+      propertyPath: gunFire
+      value: Fire2_P2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3043343141263316051, guid: 0ccf0e6e066286b4bbf451e293b0b31c,
+        type: 3}
+      propertyPath: damageAmount
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1034595749120041526, guid: 0ccf0e6e066286b4bbf451e293b0b31c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ccf0e6e066286b4bbf451e293b0b31c, type: 3}
 --- !u!1 &1361981435
@@ -1615,6 +1655,11 @@ PrefabInstance:
         type: 3}
       propertyPath: maxSpeed
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2848635786970813451, guid: 76fb456ec831b414f96d1900d8fae1a1,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2863201092601578471, guid: 76fb456ec831b414f96d1900d8fae1a1,
         type: 3}
@@ -2312,12 +2357,17 @@ PrefabInstance:
     - target: {fileID: 2754715035261955476, guid: 1115ac1182490064eb1223b78a1a4120,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.17
+      value: 8.642
       objectReference: {fileID: 0}
     - target: {fileID: 2754715035261955476, guid: 1115ac1182490064eb1223b78a1a4120,
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 4.79
+      objectReference: {fileID: 0}
+    - target: {fileID: 2754715035261955476, guid: 1115ac1182490064eb1223b78a1a4120,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.656
       objectReference: {fileID: 0}
     - target: {fileID: 6558637428368584841, guid: 1115ac1182490064eb1223b78a1a4120,
         type: 3}
@@ -2337,12 +2387,17 @@ PrefabInstance:
     - target: {fileID: 8370035353042523876, guid: 1115ac1182490064eb1223b78a1a4120,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.35
+      value: -5.821
       objectReference: {fileID: 0}
     - target: {fileID: 8370035353042523876, guid: 1115ac1182490064eb1223b78a1a4120,
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 4.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 8370035353042523876, guid: 1115ac1182490064eb1223b78a1a4120,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.654
       objectReference: {fileID: 0}
     - target: {fileID: 5406405381465179312, guid: 1115ac1182490064eb1223b78a1a4120,
         type: 3}
