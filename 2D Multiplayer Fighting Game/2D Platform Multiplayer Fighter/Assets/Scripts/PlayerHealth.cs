@@ -69,9 +69,12 @@ public class PlayerHealth : MonoBehaviour
     {
         // Reduce the player's health by 10.
        // Debug.Log(damageAmount);
-        health = health - damageAmount;
-        
-        if (health <= 0f)
+        health -= damageAmount;
+        if (health < 0f)
+        {
+            health = 0f;
+        }
+        if (health == 0f)
         {
             killPlayer();
         }
@@ -88,19 +91,27 @@ public class PlayerHealth : MonoBehaviour
         Renderer HealthBarRender = HealthBar.GetComponent<Renderer>();
         if (health > 30f)
         {
-
             HealthBar.transform.localScale = new Vector3((health * 0.01f), 0.6251f, 0.893f);
-
             HealthBarRender.material.color = Color.green;
         }
-        else if (health < 30f)
+        else if (health <= 30f)
         {
             HealthBar.transform.localScale = new Vector3((health * 0.01f), 0.6251f, 0.893f);
             HealthBarRender.material.color = Color.red;
         }
     }
+
+    public void RestoreHealthBar()
+    {
+        health = 100f;
+    }
+
     public void killPlayer()
     {
+        UpdateHealthBar();
+        RestoreHealthBar();
+        UpdateHealthBar();
         player.transform.position = spawnPoint.transform.position;
+        
     }
 }
