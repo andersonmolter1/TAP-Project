@@ -164,9 +164,9 @@ MonoBehaviour:
   Viking: {fileID: 1907486406}
   Wizard: {fileID: 374649567}
   Archer: {fileID: 1647243968}
-  KnightSpawnPoint: {fileID: 1053946499}
-  WizardSpawnPoint: {fileID: 980511626}
-  ArcherSpawnPoint: {fileID: 1703498129}
+  KnightSpawnPoint: {fileID: 980511626}
+  WizardSpawnPoint: {fileID: 1703498129}
+  ArcherSpawnPoint: {fileID: 1053946499}
   VikingSpawnPoint: {fileID: 1216061852}
 --- !u!1001 &268293223
 PrefabInstance:
@@ -185,7 +185,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 445534, guid: 7b12c04f1af3b4141ae7fede3611ef76, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.94
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 445534, guid: 7b12c04f1af3b4141ae7fede3611ef76, type: 3}
       propertyPath: m_LocalPosition.y
@@ -343,7 +343,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 445534, guid: 3e61f3bead8107f4f9c45d16c994eaf3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.97
+      value: -18
       objectReference: {fileID: 0}
     - target: {fileID: 445534, guid: 3e61f3bead8107f4f9c45d16c994eaf3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1286,7 +1286,7 @@ PrefabInstance:
         type: 3}
       propertyPath: spawnPoint
       value: 
-      objectReference: {fileID: 1216061853}
+      objectReference: {fileID: 1053946500}
     - target: {fileID: 1034595749120041526, guid: 0ccf0e6e066286b4bbf451e293b0b31c,
         type: 3}
       propertyPath: m_TagString
@@ -1859,7 +1859,7 @@ PrefabInstance:
         type: 3}
       propertyPath: spawnPoint
       value: 
-      objectReference: {fileID: 1053946500}
+      objectReference: {fileID: 1216061853}
     - target: {fileID: 1406710409729383436, guid: 76fb456ec831b414f96d1900d8fae1a1,
         type: 3}
       propertyPath: health
