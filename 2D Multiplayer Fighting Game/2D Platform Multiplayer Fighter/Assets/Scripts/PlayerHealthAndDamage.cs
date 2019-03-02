@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Threading.Tasks;
 
-public class PlayerHealth : MonoBehaviour
+public class PlayerHealthAndDamage : MonoBehaviour
 {
   
     public float health = 100f;
@@ -18,7 +19,7 @@ public class PlayerHealth : MonoBehaviour
     private float fireBallDamage;
     public Transform spawnPoint;
     public GameObject player;
-    WeaponDamageAmounts wa = new WeaponDamageAmounts();
+
     public void Awake()
     {
 
@@ -61,7 +62,9 @@ public class PlayerHealth : MonoBehaviour
         if (col.gameObject.CompareTag("killBar"))
         {
 
-            killPlayer();
+            KillPlayer();
+            Invoke("Respawn", 2f);
+
         }
 
     }
@@ -76,7 +79,9 @@ public class PlayerHealth : MonoBehaviour
         }
         if (health == 0f)
         {
-            killPlayer();
+            KillPlayer();
+            Invoke("Respawn", 2f);
+
         }
         else
         {
@@ -106,12 +111,19 @@ public class PlayerHealth : MonoBehaviour
         health = 100f;
     }
 
-    public void killPlayer()
+    public void KillPlayer()
     {
         UpdateHealthBar();
         RestoreHealthBar();
         UpdateHealthBar();
-        player.transform.position = spawnPoint.transform.position;
-        
+        player.SetActive(false);
     }
+
+    public void Respawn()
+    {
+        player.SetActive(true);
+        player.transform.position = spawnPoint.position;
+
+    }
+
 }

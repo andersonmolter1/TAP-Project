@@ -87,13 +87,11 @@
     <Compile Include="Assets\Scripts\MeleeWeapon.cs" />
     <Compile Include="Assets\Scripts\Pauser.cs" />
     <Compile Include="Assets\Scripts\PlayerControl.cs" />
-    <Compile Include="Assets\Scripts\PlayerHealth.cs" />
-    <Compile Include="Assets\Scripts\projectileCollider.cs" />
-    <Compile Include="Assets\Scripts\Respawner.cs" />
+    <Compile Include="Assets\Scripts\PlayerHealthAndDamage.cs" />
+    <Compile Include="Assets\Scripts\ProjectileCollision.cs" />
     <Compile Include="Assets\Scripts\SceneLoader.cs" />
     <Compile Include="Assets\Scripts\Score.cs" />
     <Compile Include="Assets\Scripts\SpawnPlayer.cs" />
-    <Compile Include="Assets\Scripts\WeaponDamageAmounts.cs" />
     <None Include="Assets\AssetsFromStore\Ninja Files\Read Me.txt" />
     <None Include="Assets\AssetsFromStore\CodeMonkey\README.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">
