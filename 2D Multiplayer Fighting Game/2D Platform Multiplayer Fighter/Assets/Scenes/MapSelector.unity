@@ -367,7 +367,6 @@ GameObject:
   m_Component:
   - component: {fileID: 734391558}
   - component: {fileID: 734391561}
-  - component: {fileID: 734391559}
   m_Layer: 5
   m_Name: Castle
   m_TagString: Untagged
@@ -395,18 +394,6 @@ RectTransform:
   m_AnchoredPosition: {x: -243.75003, y: -130.1}
   m_SizeDelta: {x: 487.5, y: 205.8}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &734391559
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 734391557}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3c677f0e9af36840bdf2e355334a429, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!222 &734391561
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -623,7 +610,7 @@ GameObject:
   - component: {fileID: 1172957035}
   - component: {fileID: 1172957036}
   m_Layer: 0
-  m_Name: LevelSelector
+  m_Name: SceneLoader
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -637,11 +624,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1172957034}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -462.87558, y: -279.39243, z: -0.14702973}
+  m_LocalPosition: {x: -6.37558, y: -2.8924255, z: -0.14702973}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1484097534}
-  m_RootOrder: 5
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1172957036
 MonoBehaviour:
@@ -652,7 +639,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1172957034}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3c677f0e9af36840bdf2e355334a429, type: 3}
+  m_Script: {fileID: 11500000, guid: 5a2fa7b4bbaaf2347a8834ccd1bcd34a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1197646365
@@ -1023,7 +1010,6 @@ RectTransform:
   - {fileID: 1125797467}
   - {fileID: 652359360}
   - {fileID: 1531699960}
-  - {fileID: 1172957035}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1042,7 +1028,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1493644613}
   - component: {fileID: 1493644616}
-  - component: {fileID: 1493644614}
   m_Layer: 5
   m_Name: Pirate Ship
   m_TagString: Untagged
@@ -1070,18 +1055,6 @@ RectTransform:
   m_AnchoredPosition: {x: -243.75003, y: 75.7}
   m_SizeDelta: {x: 487.5, y: 205.8}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1493644614
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1493644612}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3c677f0e9af36840bdf2e355334a429, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!222 &1493644616
 CanvasRenderer:
   m_ObjectHideFlags: 0
