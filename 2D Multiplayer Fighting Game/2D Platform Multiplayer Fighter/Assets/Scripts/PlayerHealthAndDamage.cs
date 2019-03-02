@@ -30,10 +30,9 @@ public class PlayerHealthAndDamage : MonoBehaviour
         {
             if (health > 0f)
             {
-                TakeDamage(10f);
+                TakeDamage(15f);
             } 
         }
-
         /*
         else if (col.gameObject.CompareTag("knight"))
         {
@@ -56,14 +55,14 @@ public class PlayerHealthAndDamage : MonoBehaviour
             Debug.Log("Fireball");
             if (health > 0f)
             {
-                TakeDamage(20f);
+                TakeDamage(30f);
             }
         }
         if (col.gameObject.CompareTag("killBar"))
         {
 
             KillPlayer();
-            Invoke("Respawn", 2f);
+            Invoke("Respawn", 1.5f);
 
         }
 
