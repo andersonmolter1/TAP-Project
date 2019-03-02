@@ -142,7 +142,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 218438834}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -286,8 +286,8 @@ RectTransform:
   - {fileID: 1320874127}
   - {fileID: 1506480124}
   - {fileID: 362101742}
-  - {fileID: 191356809}
   - {fileID: 1627619455}
+  - {fileID: 191356809}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1424,7 +1424,7 @@ GameObject:
   - component: {fileID: 1627619453}
   - component: {fileID: 1627619452}
   m_Layer: 5
-  m_Name: Level
+  m_Name: Battle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1472,7 +1472,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 861916953}
         m_MethodName: StartLevel
-        m_Mode: 5
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1533,7 +1533,7 @@ RectTransform:
   m_Children:
   - {fileID: 1119459379}
   m_Father: {fileID: 218438834}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
