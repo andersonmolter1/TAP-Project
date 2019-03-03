@@ -614,8 +614,8 @@ MonoBehaviour:
   moveForce: 365
   maxSpeed: 5
   jumpForce: 1000
-  horiztonal: Horizontal_P1
-  jumpButton: Jump_P1
+  horiztonal: Horizontal
+  jumpButton: Jump
   speed: 0
 --- !u!50 &2863201092601578471
 Rigidbody2D:
@@ -829,10 +829,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1225116202557170594}
-  - component: {fileID: 6048390184662069833}
+  - component: {fileID: 8194133453587374217}
   m_Layer: 0
   m_Name: GameObject
-  m_TagString: Untagged
+  m_TagString: fireball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -851,7 +851,7 @@ Transform:
   m_Father: {fileID: 7726146199055632519}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6048390184662069833
+--- !u!114 &8194133453587374217
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -865,8 +865,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 2927868795434278919, guid: 0a3a7cedafe80f241856257a5db41aa7,
     type: 3}
-  speed: 25
-  gunFire: Fire2_P1
+  speed: 15
+  gunFire: Fire
 --- !u!1 &4844304216255060268
 GameObject:
   m_ObjectHideFlags: 0

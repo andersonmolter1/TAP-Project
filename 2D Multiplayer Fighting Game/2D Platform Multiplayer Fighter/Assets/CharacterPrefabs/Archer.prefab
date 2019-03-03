@@ -570,7 +570,6 @@ GameObject:
   - component: {fileID: 3043343141263316051}
   - component: {fileID: 2863201092601578471}
   - component: {fileID: 1495701138596128242}
-  - component: {fileID: 3938965693692758627}
   - component: {fileID: 5272531459248411590}
   m_Layer: 0
   m_Name: Archer
@@ -682,20 +681,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.6}
   m_EdgeRadius: 0
---- !u!114 &3938965693692758627
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 174424}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1d3ae068036c4be39e9bc98c505ef52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnPoint: {fileID: 0}
-  player: {fileID: 174424}
 --- !u!61 &5272531459248411590
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1119,7 +1104,7 @@ MonoBehaviour:
   projectile: {fileID: 3710293067687625220, guid: c1ad3f4009f139f45b21d961604006f7,
     type: 3}
   speed: 20
-  gunFire: Fire2_P1
+  gunFire: P2_Fire
 --- !u!1 &8968112887266508367
 GameObject:
   m_ObjectHideFlags: 0

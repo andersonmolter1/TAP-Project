@@ -570,7 +570,6 @@ GameObject:
   - component: {fileID: 2863201092601578471}
   - component: {fileID: 1406710409729383436}
   - component: {fileID: 1910112127208329072}
-  - component: {fileID: 6280497866693774930}
   - component: {fileID: 5418781840802924978}
   m_Layer: 0
   m_Name: Viking
@@ -682,20 +681,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.6}
   m_EdgeRadius: 0
---- !u!114 &6280497866693774930
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 174424}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1d3ae068036c4be39e9bc98c505ef52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnPoint: {fileID: 0}
-  player: {fileID: 0}
 --- !u!61 &5418781840802924978
 BoxCollider2D:
   m_ObjectHideFlags: 0
