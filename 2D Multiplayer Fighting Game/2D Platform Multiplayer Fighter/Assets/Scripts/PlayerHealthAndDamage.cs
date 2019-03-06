@@ -93,10 +93,15 @@ public class PlayerHealthAndDamage : MonoBehaviour
     public void UpdateHealthBar()
     {
         Renderer HealthBarRender = HealthBar.GetComponent<Renderer>();
-        if (health > 30f)
+        if (health > 60f)
         {
             HealthBar.transform.localScale = new Vector3((health * 0.01f), 0.6251f, 0.893f);
             HealthBarRender.material.color = Color.green;
+        }
+        else if(health < 60 && health > 30)
+        {
+            HealthBar.transform.localScale = new Vector3((health * 0.01f), 0.6251f, 0.893f);
+            HealthBarRender.material.color = Color.yellow;
         }
         else if (health <= 30f)
         {
