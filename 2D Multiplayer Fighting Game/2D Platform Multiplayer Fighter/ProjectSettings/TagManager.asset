@@ -29,6 +29,12 @@ TagManager:
   - ExplosionFX
   - BombPickup
   - fireball
+  - pause
+  - playerMarker
+  - pmarker1
+  - pmarker2
+  - pmarker3
+  - pmarker4
   layers:
   - Default
   - TransparentFX
