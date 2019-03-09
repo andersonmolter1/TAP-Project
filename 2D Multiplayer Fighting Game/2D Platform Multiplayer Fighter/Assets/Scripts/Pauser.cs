@@ -1,19 +1,56 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class Pauser : MonoBehaviour {
 	private bool paused = false;
-	
-	// Update is called once per frame
-	void Update () {
-		if(Input.GetKeyUp(KeyCode.P))
+    GameObject[] pauseObjects;
+
+
+    private void Start()
+    {
+        pauseObjects = GameObject.FindGameObjectsWithTag("pause");
+        hidePaused();
+    }
+
+    // Update is called once per frame
+    void Update () {
+		if(Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.JoystickButton7))
 		{
-			paused = !paused;
+            togglePause();
 		}
 
-		if(paused)
-			Time.timeScale = 0;
-		else
-			Time.timeScale = 1;
+
 	}
+
+    void togglePause() {
+        if (paused)
+        {
+            Time.timeScale = 1f;
+            paused = false;
+            hidePaused();
+        }
+        else
+        {
+            Time.timeScale = 0f;
+            paused = true;
+            showPaused();
+        }
+    }
+
+
+    public void showPaused()
+    {
+        foreach(GameObject g in pauseObjects)
+        {
+            g.SetActive(true);
+        }
+    }
+
+    public void hidePaused() {
+        foreach(GameObject g in pauseObjects)
+        {
+            g.SetActive(false);
+        }
+    }
 }
