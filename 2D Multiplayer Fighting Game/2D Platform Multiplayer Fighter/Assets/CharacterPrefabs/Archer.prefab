@@ -46,7 +46,7 @@ MonoBehaviour:
   projectile: {fileID: 6047219895168099818, guid: 3d635ad3d587cd1409c389a344b2fab3,
     type: 3}
   speed: 20
-  gunFire: Fire
+  gunFire: P1_Fire
 --- !u!1 &1206398516716666725
 GameObject:
   m_ObjectHideFlags: 0
@@ -185,7 +185,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 5
 --- !u!61 &97125378452205955
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -226,6 +226,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   facingRight: 1
   jump: 0
+  h: 0
   activeState: 0
   playerAttack: Fire
   moveForce: 365

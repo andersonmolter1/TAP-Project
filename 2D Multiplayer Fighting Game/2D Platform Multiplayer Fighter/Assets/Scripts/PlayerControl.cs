@@ -8,14 +8,15 @@ public class PlayerControl : MonoBehaviour
     [HideInInspector]
     public bool jump = false;               // Condition for whether the player should jump.
 
-    public int activeState;
-    public string playerAttack;
+    public float h;
+    public int activeState;                 //int for contolling anim. key below
+    public string playerAttack;             //string for input for attack
     public float moveForce = 365f;          // Amount of force added to move the player left and right.
     public float maxSpeed = 5f;             // The fastest the player can travel in the x axis.
     public float jumpForce = 1000f;         // Amount of force added when the player jumps.
 
-    public string horiztonal = "Horizontal_P1";
-    public string jumpButton = "Jump_P1";            
+    public string horiztonal = "Horizontal_P1";   //controller/keyboard input 
+    public string jumpButton = "Jump_P1";         //controller/keyboard input 
     private Transform groundCheck;          // A position marking where to check if the player is grounded.
     private bool grounded = false;          // Whether or not the player is grounded.
     public Animator anim;                  // Reference to the player's animator component.
@@ -43,14 +44,25 @@ public class PlayerControl : MonoBehaviour
 
     void FixedUpdate()
     {
+        /*
+         * activeState KEY
+         * activeState 0 = idle
+         * activeState 1 = running
+         * activeState 2 = jumping
+         * activeState 3 = attacking
+         * activeState 4 = die
+         */
+
         anim.SetInteger("stateOfAction", activeState);
         // Cache the horizontal input.
-        float h = Input.GetAxis(horiztonal);
-        if(Mathf.Abs(h) > 0)
+        h = Input.GetAxis(horiztonal);
+        if (Mathf.Abs(h) > 0 && grounded)
         {
+            //sets anim to run
             activeState = 1;
         } else
         {
+            //switches anim back to idle
             activeState = 0;
         }
 
@@ -89,7 +101,7 @@ public class PlayerControl : MonoBehaviour
             jump = false;
         }
     }
-
+    
 
     void Flip()
     {

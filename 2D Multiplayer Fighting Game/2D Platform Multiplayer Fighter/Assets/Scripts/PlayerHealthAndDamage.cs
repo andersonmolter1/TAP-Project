@@ -26,15 +26,15 @@ public class PlayerHealthAndDamage : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.CompareTag("arrow"))
+        if (col.gameObject.CompareTag("arrow") && this.gameObject != gameObject)
         {
             if (health > 0f)
             {
                 TakeDamage(15f);
             } 
         }
-        /*
-        else if (col.gameObject.CompareTag("knight"))
+        
+        else if (col.gameObject.CompareTag("vikingColliderAre"))
         {
             if (health > 0f)
             {
@@ -42,14 +42,14 @@ public class PlayerHealthAndDamage : MonoBehaviour
             }
         }
         
-        else if (col.gameObject.CompareTag("mace"))
+        else if (col.gameObject.CompareTag("knightColliderArea"))
         {
             if (health > 0f)
             {
                 TakeDamage(15f);
             }
         }
-        */
+        
         if (col.gameObject.CompareTag("fireball"))
         {
             Debug.Log("Fireball");

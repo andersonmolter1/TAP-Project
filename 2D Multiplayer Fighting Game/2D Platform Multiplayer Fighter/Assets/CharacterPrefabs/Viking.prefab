@@ -109,6 +109,53 @@ Transform:
   m_Father: {fileID: 4201326894273833688}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6388918736251953023
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8434716095440349979}
+  - component: {fileID: 5358507327951456688}
+  m_Layer: 0
+  m_Name: Axe
+  m_TagString: Axe
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8434716095440349979
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6388918736251953023}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.93, y: -0.4, z: 0.072265625}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4201326894273833688}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5358507327951456688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6388918736251953023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 407e43338ceb3d244ba756a75a307793, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meleeCol: {fileID: 2093378149557543075, guid: 9f655d2994d6f7a478e3348147d7a003,
+    type: 3}
+  weapon: {fileID: 5362086956313674846, guid: 9f655d2994d6f7a478e3348147d7a003, type: 3}
+  meleeInput: Fire
 --- !u!1 &7613987979073396137
 GameObject:
   m_ObjectHideFlags: 0
@@ -127,7 +174,7 @@ GameObject:
   - component: {fileID: 8083823632700896195}
   - component: {fileID: 985549484693091235}
   m_Layer: 0
-  m_Name: TempViking
+  m_Name: Viking
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -146,6 +193,7 @@ Transform:
   m_Children:
   - {fileID: 3403072430938066058}
   - {fileID: 6106084913981194769}
+  - {fileID: 8434716095440349979}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -183,8 +231,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1783731295
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 2135f9eb50903e64581d98fce8c230b5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -211,6 +259,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   facingRight: 1
   jump: 0
+  h: 0
   activeState: 0
   playerAttack: Fire
   moveForce: 365
@@ -314,6 +363,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 407e43338ceb3d244ba756a75a307793, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  meleeCol: {fileID: 0}
+  weapon: {fileID: 0}
   meleeInput: Fire
 --- !u!61 &985549484693091235
 BoxCollider2D:
@@ -324,11 +375,11 @@ BoxCollider2D:
   m_GameObject: {fileID: 7613987979073396137}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 28bcc4c1b183d154d876e209d20a6b63, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -1.5}
+  m_Offset: {x: 0, y: -1.55}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}

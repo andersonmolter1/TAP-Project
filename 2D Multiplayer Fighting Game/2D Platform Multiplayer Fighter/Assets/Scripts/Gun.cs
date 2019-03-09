@@ -31,21 +31,8 @@ public class Gun : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        Debug.Log("Hit ground");
-    }
-    //trial of delayed shooting
-    /*
-    IEnumerator waitForNextShot()
-    {
-        Debug.Log("fire");
-        Invoke("shoot", 0.5f);
-        yield return new WaitForSeconds(1);
-        
-
-    }
-    */
+    
+    
 
     public void destroyArrow()
     {
