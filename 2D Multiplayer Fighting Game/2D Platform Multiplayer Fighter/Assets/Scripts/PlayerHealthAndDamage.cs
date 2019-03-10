@@ -4,14 +4,13 @@ using System.Threading.Tasks;
 
 public class PlayerHealthAndDamage : MonoBehaviour
 {
-  
+    public int lives = 3;
     public float health = 100f;
     public float damageAmount = 10f;
     //public GameObject project
     
     //public Transform healthBar;
     public GameObject HealthBar;
-    private float healthBarMaxSize = 10;
 
     private float swordDamage;
     private float maceDamage;
@@ -19,44 +18,60 @@ public class PlayerHealthAndDamage : MonoBehaviour
     private float fireBallDamage;
     public Transform spawnPoint;
     public GameObject player;
+    bool allowDamage = true;
 
-    public void Awake()
-    {
 
-    }
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.CompareTag("arrow"))
+
+        if (allowDamage)
         {
-            if (health > 0f)
+            if (col.gameObject.CompareTag("arrow"))
             {
-                TakeDamage(15f);
-            } 
-        }
-        /*
-        else if (col.gameObject.CompareTag("knight"))
-        {
-            if (health > 0f)
-            {
-                TakeDamage(10f);
+
+                if (health > 0f)
+                {
+                    TakeDamage(7.5f);
+                    
+                }
+
             }
-        }
-        
-        else if (col.gameObject.CompareTag("mace"))
-        {
-            if (health > 0f)
+
+            else if (col.gameObject.CompareTag("knightCollider"))
             {
-                TakeDamage(15f);
+                Debug.Log("knight");
+                if (health > 0f)
+                {
+                    TakeDamage(5f);
+                    
+                }
+                
             }
-        }
-        */
-        if (col.gameObject.CompareTag("fireball"))
-        {
-            Debug.Log("Fireball");
-            if (health > 0f)
+
+            else if (col.gameObject.CompareTag("vikingCollider"))
             {
-                TakeDamage(30f);
+
+                if (health > 0f)
+                {
+                    TakeDamage(7.5f);
+                    
+                }
+
             }
+
+            else if (col.gameObject.CompareTag("fireball"))
+            {
+
+
+                if (health > 0f)
+                {
+                    TakeDamage(15f);
+                    
+                }
+
+
+            }
+
         }
         if (col.gameObject.CompareTag("killBar"))
         {
@@ -65,8 +80,10 @@ public class PlayerHealthAndDamage : MonoBehaviour
             Invoke("Respawn", 1.5f);
 
         }
-
     }
+    
+
+
     public void TakeDamage(float damageAmount)
     {
         // Reduce the player's health by 10.
@@ -121,6 +138,7 @@ public class PlayerHealthAndDamage : MonoBehaviour
         RestoreHealthBar();
         UpdateHealthBar();
         player.SetActive(false);
+        lives--;
     }
 
     public void Respawn()
