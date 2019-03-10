@@ -118,6 +118,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2675885353492793890}
+  - component: {fileID: 7012422331894074126}
   m_Layer: 0
   m_Name: AxeCollision
   m_TagString: Untagged
@@ -133,12 +134,28 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4632796563484622143}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.4005146, y: 0.20689557, z: 0.051757812}
+  m_LocalPosition: {x: 1.68, y: -0.31, z: 0.051757812}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4201326894273833688}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7012422331894074126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4632796563484622143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 407e43338ceb3d244ba756a75a307793, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meleeCol: {fileID: 7623461148615943993, guid: ebe60e10f62fe0b4590a823a00a3a404,
+    type: 3}
+  meleeInput: Fire
+  colliderTag: vikingCollider
 --- !u!1 &7613987979073396137
 GameObject:
   m_ObjectHideFlags: 0
@@ -328,6 +345,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52121b47a452546fb88cf2e9a9352f56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lives: 3
   health: 100
   damageAmount: 10
   HealthBar: {fileID: 259571198151874026}
@@ -345,7 +363,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 407e43338ceb3d244ba756a75a307793, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  meleeCol: {fileID: 0}
   meleeInput: Fire
+  colliderTag: 
 --- !u!61 &985549484693091235
 BoxCollider2D:
   m_ObjectHideFlags: 0

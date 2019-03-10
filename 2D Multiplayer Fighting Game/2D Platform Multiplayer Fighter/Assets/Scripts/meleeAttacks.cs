@@ -11,7 +11,6 @@ public class meleeAttacks : MonoBehaviour
     public string meleeInput;
     private bool attackOnce = true;
     public string colliderTag;
-    public int num = 0;
 
     void Awake()
     {
@@ -25,7 +24,6 @@ public class meleeAttacks : MonoBehaviour
     {
         if (Input.GetButtonDown(meleeInput) && attackOnce)
         {
-            num++;
             meleeCollider = Instantiate(meleeCol, transform.position, Quaternion.Euler(new Vector3(0, 0, 0)));
             //need to destroy gameObject but comes with error "Destroying assets is not permitted to avoid data loss."
             playerCtrl.activeState = 3;

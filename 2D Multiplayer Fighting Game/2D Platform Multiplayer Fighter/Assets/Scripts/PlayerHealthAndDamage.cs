@@ -139,6 +139,7 @@ public class PlayerHealthAndDamage : MonoBehaviour
         UpdateHealthBar();
         player.SetActive(false);
         lives--;
+        Debug.Log(lives);
     }
 
     public void Respawn()
