@@ -11,9 +11,12 @@ public class meleeAttacks : MonoBehaviour
     public string meleeInput;
     private bool attackOnce = true;
     public string colliderTag;
+    private float cooldownTime = .5f;
+    private bool isCooldown;
 
     void Awake()
     {
+       
         // Setting up the references.
         anim = transform.root.gameObject.GetComponent<Animator>();
         playerCtrl = transform.root.GetComponent<PlayerControl>();
@@ -22,18 +25,26 @@ public class meleeAttacks : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown(meleeInput) && attackOnce)
+        
+        if (Input.GetButtonDown(meleeInput) && !isCooldown)
         {
-            meleeCollider = Instantiate(meleeCol, transform.position, Quaternion.Euler(new Vector3(0, 0, 0)));
-            //need to destroy gameObject but comes with error "Destroying assets is not permitted to avoid data loss."
-            playerCtrl.activeState = 3;
-            attackOnce = false;
-            Destroy(meleeCollider, 0.2f);
+            
+            StartCoroutine(Cooldown());
         }
-        if (GameObject.Find(colliderTag) == null)
-        {
-
-            attackOnce = true;
-        }
+        
     }
+    private IEnumerator Cooldown()
+    {
+        meleeCollider = Instantiate(meleeCol, transform.position, Quaternion.Euler(new Vector3(0, 0, 0)));
+        //need to destroy gameObject but comes with error "Destroying assets is not permitted to avoid data loss."
+        playerCtrl.activeState = 3;
+        Destroy(meleeCollider, 0.1f);
+        // Start cooldown
+        isCooldown = true;
+        // Wait for time you want
+        yield return new WaitForSeconds(cooldownTime);
+        // Stop cooldown
+        isCooldown = false;
+    }
+
 }
