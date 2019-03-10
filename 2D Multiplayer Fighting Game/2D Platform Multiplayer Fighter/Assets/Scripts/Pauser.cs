@@ -23,7 +23,7 @@ public class Pauser : MonoBehaviour {
 
 	}
 
-    void togglePause() {
+    public void togglePause() {
         if (paused)
         {
             Time.timeScale = 1f;
