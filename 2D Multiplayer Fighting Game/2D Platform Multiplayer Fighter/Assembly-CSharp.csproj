@@ -93,6 +93,7 @@
     <Compile Include="Assets\Scripts\Navigation\P4_Nav.cs" />
     <Compile Include="Assets\Scripts\OptionsMenu.cs" />
     <Compile Include="Assets\Scripts\Pauser.cs" />
+    <Compile Include="Assets\Scripts\PlayerCharacter.cs" />
     <Compile Include="Assets\Scripts\PlayerControl.cs" />
     <Compile Include="Assets\Scripts\PlayerHealthAndDamage.cs" />
     <Compile Include="Assets\Scripts\ProjectileCollision.cs" />
