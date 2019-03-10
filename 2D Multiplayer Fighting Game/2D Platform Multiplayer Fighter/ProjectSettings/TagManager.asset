@@ -35,6 +35,8 @@ TagManager:
   - pmarker2
   - pmarker3
   - pmarker4
+  - knightCollider
+  - vikingCollider
   layers:
   - Default
   - TransparentFX

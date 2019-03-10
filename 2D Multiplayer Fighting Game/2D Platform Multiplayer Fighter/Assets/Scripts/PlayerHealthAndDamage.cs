@@ -4,14 +4,13 @@ using System.Threading.Tasks;
 
 public class PlayerHealthAndDamage : MonoBehaviour
 {
-  
+    public int lives = 3;
     public float health = 100f;
     public float damageAmount = 10f;
     //public GameObject project
     
     //public Transform healthBar;
     public GameObject HealthBar;
-    private float healthBarMaxSize = 10;
 
     private float swordDamage;
     private float maceDamage;
@@ -19,45 +18,62 @@ public class PlayerHealthAndDamage : MonoBehaviour
     private float fireBallDamage;
     public Transform spawnPoint;
     public GameObject player;
+    bool allowDamage = true;
 
     public void Awake()
     {
 
     }
-    void OnCollisionEnter2D(Collision2D col)
+    void OnTriggerEnter2D(Collision2D col)
     {
+        Debug.Log("before allow");
+
+        Debug.Log("allow");
         if (col.gameObject.CompareTag("arrow"))
         {
+
             if (health > 0f)
             {
+
                 TakeDamage(15f);
-            } 
+            }
+
         }
-        /*
-        else if (col.gameObject.CompareTag("knight"))
+
+        else if (col.gameObject.CompareTag("knightCollider"))
         {
+            Debug.Log("knight");
             if (health > 0f)
             {
+
                 TakeDamage(10f);
             }
+
         }
-        
-        else if (col.gameObject.CompareTag("mace"))
+
+        else if (col.gameObject.CompareTag("vikingCollider"))
         {
+
             if (health > 0f)
             {
                 TakeDamage(15f);
             }
+
         }
-        */
-        if (col.gameObject.CompareTag("fireball"))
+
+        else if (col.gameObject.CompareTag("fireball"))
         {
-            Debug.Log("Fireball");
+
+
             if (health > 0f)
             {
                 TakeDamage(30f);
             }
+
+
         }
+
+
         if (col.gameObject.CompareTag("killBar"))
         {
 
@@ -65,8 +81,9 @@ public class PlayerHealthAndDamage : MonoBehaviour
             Invoke("Respawn", 1.5f);
 
         }
-
     }
+    
+    
     public void TakeDamage(float damageAmount)
     {
         // Reduce the player's health by 10.
@@ -121,6 +138,7 @@ public class PlayerHealthAndDamage : MonoBehaviour
         RestoreHealthBar();
         UpdateHealthBar();
         player.SetActive(false);
+        lives--;
     }
 
     public void Respawn()
