@@ -79,6 +79,7 @@
     <Compile Include="Assets\AssetsFromStore\CodeMonkey\Utils\World_Bar.cs" />
     <Compile Include="Assets\AssetsFromStore\CodeMonkey\Utils\World_Mesh.cs" />
     <Compile Include="Assets\AssetsFromStore\CodeMonkey\Utils\World_Sprite.cs" />
+    <Compile Include="Assets\Scripts\Blink.cs" />
     <Compile Include="Assets\Scripts\CollisionManager.cs" />
     <Compile Include="Assets\Scripts\EnemySpawner.cs" />
     <Compile Include="Assets\Scripts\Gun.cs" />
