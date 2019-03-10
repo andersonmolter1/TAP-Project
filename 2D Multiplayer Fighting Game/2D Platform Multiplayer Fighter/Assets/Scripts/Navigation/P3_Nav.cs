@@ -24,7 +24,7 @@ public class P3_Nav : MonoBehaviour
 
     void Update()
     {
-        
+
     }
 
     public void ShowMarker(GameObject g) {
