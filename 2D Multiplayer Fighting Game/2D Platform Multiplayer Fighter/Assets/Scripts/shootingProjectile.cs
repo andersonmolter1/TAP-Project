@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Gun : MonoBehaviour
+public class shootingProjectile : MonoBehaviour
 {
     public Rigidbody2D projectile;               // Prefab of the rocket.
     public float speed = 20f;				// The speed the rocket will fire at.
@@ -9,10 +9,12 @@ public class Gun : MonoBehaviour
 
     private PlayerControl playerCtrl;       // Reference to the PlayerControl script.
     private Animator anim;                  // Reference to the Animator component.
+    private bool isCooldown;
 
 
     void Awake()
     {
+        isCooldown = true;
         // Setting up the references.
         anim = transform.root.gameObject.GetComponent<Animator>();
         playerCtrl = transform.root.GetComponent<PlayerControl>();
@@ -23,12 +25,13 @@ public class Gun : MonoBehaviour
     {
         projectile.gravityScale = 0;
         // If the fire button is pressed...
-        if (Input.GetButtonDown(gunFire))
+        if (Input.GetButtonDown(gunFire) && isCooldown)
         {
-            playerCtrl.activeState = 3;
-            shootProjectile();
+
+            StartCoroutine(Cooldown());
+
         }
-        
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -69,4 +72,19 @@ public class Gun : MonoBehaviour
             bulletInstance.velocity = new Vector2(-speed, 0);
         }
     }
+    private IEnumerator Cooldown()
+    {
+
+
+        Debug.Log("fire");
+        playerCtrl.activeState = 3;
+        // Wait for time you want
+        yield return new WaitForSeconds(.3f);
+        shootProjectile();
+        isCooldown = false;
+        // Stop cooldown
+        yield return new WaitForSeconds(.8f);
+        isCooldown = true;
+    }
+
 }

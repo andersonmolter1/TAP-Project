@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7401239311448416598}
   - component: {fileID: 6986769001938427454}
+  - component: {fileID: 5054583523361528601}
   - component: {fileID: 6047219895168099818}
   - component: {fileID: 5782340049101885754}
-  - component: {fileID: 3888658744651379721}
   m_Layer: 0
   m_Name: arrow
   m_TagString: arrow
@@ -82,6 +82,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5054583523361528601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8198007388402907825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a42692b1cf4d0e4e989c623e68b6da9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosion: {fileID: 1968586304485042, guid: 6c86c599d7bf3464eb4506d2584fbe57, type: 3}
+  projectile: {fileID: 8198007388402907825}
 --- !u!50 &6047219895168099818
 Rigidbody2D:
   serializedVersion: 4
@@ -151,15 +165,3 @@ PolygonCollider2D:
       - {x: -1.01, y: -0.255}
       - {x: -0.89, y: -0.074999996}
       - {x: 1, y: -0.085}
---- !u!114 &3888658744651379721
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8198007388402907825}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6575c132b33359c4d8cb52802eab207a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

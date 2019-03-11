@@ -75,14 +75,17 @@ public class PlayerHealthAndDamage : MonoBehaviour
         }
         if (col.gameObject.CompareTag("killBar"))
         {
-
+            Debug.Log("Kill");
             KillPlayer();
             Invoke("Respawn", 1.5f);
 
         }
     }
-    
 
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        allowDamage = true;
+    }
 
     public void TakeDamage(float damageAmount)
     {
@@ -144,9 +147,11 @@ public class PlayerHealthAndDamage : MonoBehaviour
 
     public void Respawn()
     {
-        player.SetActive(true);
-        player.transform.position = spawnPoint.position;
-
+        if (lives > 0)
+        {
+            player.SetActive(true);
+            player.transform.position = spawnPoint.position;
+        }
     }
 
 }

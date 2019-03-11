@@ -9,14 +9,13 @@ public class meleeAttacks : MonoBehaviour
     private PlayerControl playerCtrl;       // Reference to the PlayerControl script.
     private Animator anim;                  // Reference to the Animator component.
     public string meleeInput;
-    private bool attackOnce = true;
     public string colliderTag;
-    private float cooldownTime = .5f;
+    private float cooldownTime = .8f;
     private bool isCooldown;
 
     void Awake()
     {
-       
+        isCooldown = true;
         // Setting up the references.
         anim = transform.root.gameObject.GetComponent<Animator>();
         playerCtrl = transform.root.GetComponent<PlayerControl>();
@@ -25,8 +24,8 @@ public class meleeAttacks : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        if (Input.GetButtonDown(meleeInput) && !isCooldown)
+
+        if (Input.GetButtonDown(meleeInput) && isCooldown)
         {
             
             StartCoroutine(Cooldown());
@@ -40,11 +39,11 @@ public class meleeAttacks : MonoBehaviour
         playerCtrl.activeState = 3;
         Destroy(meleeCollider, 0.1f);
         // Start cooldown
-        isCooldown = true;
+        isCooldown = false;
         // Wait for time you want
         yield return new WaitForSeconds(cooldownTime);
         // Stop cooldown
-        isCooldown = false;
+        isCooldown = true;
     }
 
 }
