@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 259571198151874026}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.831, y: 2.097, z: 0.02906394}
+  m_LocalPosition: {x: -0.79, y: 1.76, z: 0.02906394}
   m_LocalScale: {x: 1, y: 0.62509996, z: 0.893}
   m_Children: []
   m_Father: {fileID: 4201326894273833688}
@@ -405,5 +405,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   meleeCol: {fileID: 2674153289252896130, guid: 4f6a0684402d58e45986e3f01c4bd9d5,
     type: 3}
-  meleeInput: Fire
+  meleeInput: P1_Fire
   colliderTag: knightCollider
