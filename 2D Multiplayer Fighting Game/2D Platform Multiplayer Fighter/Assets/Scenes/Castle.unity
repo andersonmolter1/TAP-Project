@@ -638,6 +638,21 @@ PrefabInstance:
       propertyPath: spawnPoint
       value: 
       objectReference: {fileID: 1053946500}
+    - target: {fileID: 3235408263508717088, guid: 35b1fcca4e5576348a486f75f5838791,
+        type: 3}
+      propertyPath: horiztonal
+      value: P1_Horizontal
+      objectReference: {fileID: 0}
+    - target: {fileID: 3235408263508717088, guid: 35b1fcca4e5576348a486f75f5838791,
+        type: 3}
+      propertyPath: jumpButton
+      value: P1_Jump
+      objectReference: {fileID: 0}
+    - target: {fileID: 3235408263508717088, guid: 35b1fcca4e5576348a486f75f5838791,
+        type: 3}
+      propertyPath: playerAttack
+      value: Fire
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35b1fcca4e5576348a486f75f5838791, type: 3}
 --- !u!1 &648505526
@@ -2984,6 +2999,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3345254667136186713, guid: 95e67836a06dd6d4db1f6870b0071e3c,
+        type: 3}
+      propertyPath: playerAttack
+      value: Fire
+      objectReference: {fileID: 0}
+    - target: {fileID: 3345254667136186713, guid: 95e67836a06dd6d4db1f6870b0071e3c,
+        type: 3}
+      propertyPath: horiztonal
+      value: P2_Horizontal
+      objectReference: {fileID: 0}
+    - target: {fileID: 3345254667136186713, guid: 95e67836a06dd6d4db1f6870b0071e3c,
+        type: 3}
+      propertyPath: jumpButton
+      value: P2_Jump
+      objectReference: {fileID: 0}
+    - target: {fileID: 4083934580382557725, guid: 95e67836a06dd6d4db1f6870b0071e3c,
+        type: 3}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 1703498130}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95e67836a06dd6d4db1f6870b0071e3c, type: 3}
 --- !u!1001 &5383989383177963107
