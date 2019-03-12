@@ -733,12 +733,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!95 &148019252 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 5863047488589916, guid: 33a635d6b827e7b458416e96792e5f87,
-    type: 3}
-  m_PrefabInstance: {fileID: 1626436607}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &152442546
 GameObject:
   m_ObjectHideFlags: 0
@@ -2250,9 +2244,9 @@ MonoBehaviour:
   m_Script: {fileID: 1077351063, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
+  m_HorizontalAxis: P4_Dpad_Horizontal
+  m_VerticalAxis: P4_Dpad_Vertical
+  m_SubmitButton: P4_Submit
   m_CancelButton: Cancel
   m_InputActionsPerSecond: 20
   m_RepeatDelay: 0.5
@@ -2418,18 +2412,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 814811873}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 148019252}
-        m_MethodName: SetTrigger
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Highlighted
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &814811873
@@ -4251,9 +4234,9 @@ MonoBehaviour:
   m_Script: {fileID: 1077351063, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
+  m_HorizontalAxis: P3_Dpad_Horizontal
+  m_VerticalAxis: P3_Dpad_Vertical
+  m_SubmitButton: P3_Submit
   m_CancelButton: Cancel
   m_InputActionsPerSecond: 20
   m_RepeatDelay: 0.5
@@ -4560,12 +4543,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!95 &1286284432 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 7843112853157048352, guid: 8934745dd0dd4b44b97d245aeecb35b7,
-    type: 3}
-  m_PrefabInstance: {fileID: 1450062710}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1366815168
 GameObject:
   m_ObjectHideFlags: 0
@@ -4894,9 +4871,9 @@ MonoBehaviour:
   m_Script: {fileID: 1077351063, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_HorizontalAxis: Dpad_Horizontal
-  m_VerticalAxis: Dpad_Vertical
-  m_SubmitButton: Submit
+  m_HorizontalAxis: P1_Dpad_Horizontal
+  m_VerticalAxis: P1_Dpad_Vertical
+  m_SubmitButton: P1_Submit
   m_CancelButton: Cancel
   m_InputActionsPerSecond: 20
   m_RepeatDelay: 0.5
@@ -5565,9 +5542,9 @@ MonoBehaviour:
   m_Script: {fileID: 1077351063, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_HorizontalAxis: P2_Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
+  m_HorizontalAxis: P2_Dpad_Horizontal
+  m_VerticalAxis: P2_Dpad_Vertical
+  m_SubmitButton: P2_Submit
   m_CancelButton: Cancel
   m_InputActionsPerSecond: 20
   m_RepeatDelay: 0.5
@@ -6101,18 +6078,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1707989430}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2028176358}
-        m_MethodName: SetTrigger
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Highlighted
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1707989430
@@ -7802,12 +7768,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!95 &2028176358 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 5042245803051917226, guid: eee1d6b1c30d959419143f07b30a76f5,
-    type: 3}
-  m_PrefabInstance: {fileID: 341329757}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2036447455
 GameObject:
   m_ObjectHideFlags: 0
@@ -8145,18 +8105,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2053485671}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1286284432}
-        m_MethodName: SetTrigger
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Highlighted
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &2053485671
