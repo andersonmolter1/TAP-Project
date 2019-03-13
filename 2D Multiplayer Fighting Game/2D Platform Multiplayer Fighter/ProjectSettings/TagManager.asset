@@ -37,10 +37,6 @@ TagManager:
   - pmarker4
   - knightCollider
   - vikingCollider
-  - p1_spawn
-  - p2_spawn
-  - p3_spawn
-  - p4_spawn
   layers:
   - Default
   - TransparentFX

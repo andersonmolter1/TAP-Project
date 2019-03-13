@@ -231,19 +231,7 @@ MonoBehaviour:
   m_Group: {fileID: 1215635821}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1231357777}
-        m_MethodName: setCharacter
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 8045197380288853528, guid: 8757539e94316b14ca4871152e0dc627,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_IsOn: 0
@@ -864,19 +852,7 @@ MonoBehaviour:
   m_Group: {fileID: 1215635821}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1231357777}
-        m_MethodName: setCharacter
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 7613987979073396137, guid: 5e0c80fb705218142a4f944e4182c872,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_IsOn: 0
@@ -1123,19 +1099,7 @@ MonoBehaviour:
   m_Group: {fileID: 371129319}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1559917405}
-        m_MethodName: setCharacter
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 8045197380288853528, guid: d20f74cff6b9bf14898b457958d1a28a,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_IsOn: 0
@@ -1960,19 +1924,7 @@ MonoBehaviour:
   m_Group: {fileID: 813260288}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1413769330}
-        m_MethodName: setCharacter
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1496221714939665707, guid: aac7bd5916e50c24797a31c756335faf,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_IsOn: 0
@@ -2254,8 +2206,8 @@ GameObject:
   - component: {fileID: 785384351}
   - component: {fileID: 785384350}
   m_Layer: 0
-  m_Name: Player4
-  m_TagString: Player
+  m_Name: P4_EventSystem
+  m_TagString: player4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2267,14 +2219,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 785384349}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e2d9400faf80d549a4a0a00dffe3981, type: 3}
+  m_Script: {fileID: 11500000, guid: 75a9651ac0c633d4ebc7ec0089b53d5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerName: p4
-  character: {fileID: 0}
-  spawnPoint: {fileID: 0}
 --- !u!222 &785384351
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2299,8 +2248,8 @@ MonoBehaviour:
   m_VerticalAxis: P4_Dpad_Vertical
   m_SubmitButton: P4_Submit
   m_CancelButton: Cancel
-  m_InputActionsPerSecond: 60
-  m_RepeatDelay: 1
+  m_InputActionsPerSecond: 20
+  m_RepeatDelay: 0.5
   m_ForceModuleActive: 0
 --- !u!114 &785384353
 MonoBehaviour:
@@ -2544,7 +2493,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &888142401
 GameObject:
@@ -2678,19 +2627,7 @@ MonoBehaviour:
   m_Group: {fileID: 371129319}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1559917405}
-        m_MethodName: setCharacter
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1496221714939665707, guid: d9241c126715fe248917d205805d0636,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_IsOn: 0
@@ -3138,19 +3075,7 @@ MonoBehaviour:
   m_Group: {fileID: 371129319}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1559917405}
-        m_MethodName: setCharacter
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 7613987979073396137, guid: a002cafeb37d31748b7ba8667590fa8d,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_IsOn: 0
@@ -3371,19 +3296,7 @@ MonoBehaviour:
   m_Group: {fileID: 1064278286}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 785384350}
-        m_MethodName: setCharacter
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 7613987979073396137, guid: b5ce66a38e0108f42a8c4681a32dc2bc,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_IsOn: 0
@@ -3679,7 +3592,7 @@ RectTransform:
   - {fileID: 814811871}
   - {fileID: 2053485669}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3855,19 +3768,7 @@ MonoBehaviour:
   m_Group: {fileID: 813260288}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1413769330}
-        m_MethodName: setCharacter
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 8045197380288853528, guid: f8f1c4d21c02109428d4e5816b868022,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_IsOn: 0
@@ -3997,7 +3898,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1215635819
 GameObject:
@@ -4166,19 +4067,7 @@ MonoBehaviour:
   m_Group: {fileID: 1215635821}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1231357777}
-        m_MethodName: setCharacter
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 7613987979073396137, guid: 9e0ac1227222faf40ae0022eb3a2646a,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_IsOn: 0
@@ -4307,8 +4196,8 @@ GameObject:
   - component: {fileID: 1231357778}
   - component: {fileID: 1231357777}
   m_Layer: 0
-  m_Name: Player3
-  m_TagString: Player
+  m_Name: P3_EventSystem
+  m_TagString: player3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4320,14 +4209,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1231357776}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e2d9400faf80d549a4a0a00dffe3981, type: 3}
+  m_Script: {fileID: 11500000, guid: a906c6952b615904d8976d7b9e6ce9ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerName: p3
-  character: {fileID: 0}
-  spawnPoint: {fileID: 0}
 --- !u!222 &1231357778
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4352,8 +4238,8 @@ MonoBehaviour:
   m_VerticalAxis: P3_Dpad_Vertical
   m_SubmitButton: P3_Submit
   m_CancelButton: Cancel
-  m_InputActionsPerSecond: 60
-  m_RepeatDelay: 1
+  m_InputActionsPerSecond: 20
+  m_RepeatDelay: 0.5
   m_ForceModuleActive: 0
 --- !u!114 &1231357780
 MonoBehaviour:
@@ -4967,8 +4853,8 @@ GameObject:
   - component: {fileID: 1413769331}
   - component: {fileID: 1413769330}
   m_Layer: 0
-  m_Name: Player1
-  m_TagString: Player
+  m_Name: P1_EventSystem
+  m_TagString: player1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4989,8 +4875,8 @@ MonoBehaviour:
   m_VerticalAxis: P1_Dpad_Vertical
   m_SubmitButton: P1_Submit
   m_CancelButton: Cancel
-  m_InputActionsPerSecond: 60
-  m_RepeatDelay: 1
+  m_InputActionsPerSecond: 20
+  m_RepeatDelay: 0.5
   m_ForceModuleActive: 0
 --- !u!114 &1413769329
 MonoBehaviour:
@@ -5014,14 +4900,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1413769327}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e2d9400faf80d549a4a0a00dffe3981, type: 3}
+  m_Script: {fileID: 11500000, guid: f82a1993f8f80d545b1220148b1c96a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerName: p1
-  character: {fileID: 0}
-  spawnPoint: {fileID: 1413769332}
 --- !u!222 &1413769331
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5505,19 +5388,7 @@ MonoBehaviour:
   m_Group: {fileID: 813260288}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1413769330}
-        m_MethodName: setCharacter
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 7613987979073396137, guid: e93fd7c8f40b9ea4f941e3e7d142676f,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_IsOn: 0
@@ -5633,8 +5504,8 @@ GameObject:
   - component: {fileID: 1559917406}
   - component: {fileID: 1559917405}
   m_Layer: 0
-  m_Name: Player2
-  m_TagString: Player
+  m_Name: P2_EventSystem
+  m_TagString: player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5646,14 +5517,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1559917404}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e2d9400faf80d549a4a0a00dffe3981, type: 3}
+  m_Script: {fileID: 11500000, guid: 0999d48441600d74fa5cbe27ea1a252e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerName: p2
-  character: {fileID: 0}
-  spawnPoint: {fileID: 0}
 --- !u!222 &1559917406
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5678,8 +5546,8 @@ MonoBehaviour:
   m_VerticalAxis: P2_Dpad_Vertical
   m_SubmitButton: P2_Submit
   m_CancelButton: Cancel
-  m_InputActionsPerSecond: 60
-  m_RepeatDelay: 1
+  m_InputActionsPerSecond: 20
+  m_RepeatDelay: 0.5
   m_ForceModuleActive: 0
 --- !u!114 &1559917408
 MonoBehaviour:
@@ -5748,6 +5616,61 @@ Transform:
   m_Father: {fileID: 1970902165}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1577913004
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1577913006}
+  - component: {fileID: 1577913008}
+  m_Layer: 0
+  m_Name: SpawnPlayer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1577913006
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577913004}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 556.4488, y: 303, z: -6.3201385}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1577913008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577913004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7803268ab85a4fb4da79ac4d339e9c81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  KnightButton: {fileID: 0}
+  ArcherButton: {fileID: 0}
+  WizardButton: {fileID: 0}
+  VikingButton: {fileID: 0}
+  Knight: {fileID: 0}
+  Viking: {fileID: 0}
+  Wizard: {fileID: 0}
+  Archer: {fileID: 0}
+  KnightSpawnPoint: {fileID: 0}
+  WizardSpawnPoint: {fileID: 0}
+  ArcherSpawnPoint: {fileID: 0}
+  VikingSpawnPoint: {fileID: 0}
 --- !u!1001 &1626436607
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6314,19 +6237,7 @@ MonoBehaviour:
   m_Group: {fileID: 1064278286}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 785384350}
-        m_MethodName: setCharacter
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1496221714939665707, guid: e2be5c25c6092d549837e8c41692b898,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_IsOn: 0
@@ -6812,19 +6723,7 @@ MonoBehaviour:
   m_Group: {fileID: 813260288}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1413769330}
-        m_MethodName: setCharacter
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 7613987979073396137, guid: c71e6fbc9e8174f44ad27609e9cf6761,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_IsOn: 0
@@ -7026,19 +6925,7 @@ MonoBehaviour:
   m_Group: {fileID: 1215635821}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1231357777}
-        m_MethodName: setCharacter
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1496221714939665707, guid: 22c580dc4a4c73e43a18cc1f2ae93801,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_IsOn: 0
@@ -7285,19 +7172,7 @@ MonoBehaviour:
   m_Group: {fileID: 371129319}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1559917405}
-        m_MethodName: setCharacter
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 7613987979073396137, guid: 049c1687b5cdfdf42ac68d8b00b75fb8,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_IsOn: 0
@@ -7518,19 +7393,7 @@ MonoBehaviour:
   m_Group: {fileID: 1064278286}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 785384350}
-        m_MethodName: setCharacter
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 7613987979073396137, guid: 9052acf1f0c96374aa1663d95aac4c7b,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_IsOn: 0
@@ -7740,7 +7603,7 @@ RectTransform:
   - {fileID: 980983574}
   - {fileID: 1566241332}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -8414,19 +8277,7 @@ MonoBehaviour:
   m_Group: {fileID: 1064278286}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 785384350}
-        m_MethodName: setCharacter
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 8045197380288853528, guid: 6a360742e5fe2dc4f84f9cf875b98298,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_IsOn: 0
@@ -8653,5 +8504,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
