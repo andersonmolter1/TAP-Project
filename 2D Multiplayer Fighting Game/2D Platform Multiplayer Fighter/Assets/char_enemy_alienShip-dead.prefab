@@ -12,11 +12,10 @@ GameObject:
   - component: {fileID: 727081249252509520}
   - component: {fileID: 9128344784443880077}
   - component: {fileID: 237766060370618159}
-  - component: {fileID: 5937497777421028101}
   - component: {fileID: 4407391417118536155}
   m_Layer: 0
   m_Name: char_enemy_alienShip-dead
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -173,25 +172,12 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &5937497777421028101
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5479524775035434181}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a81da6dcbbd206d44b76f7f22e27414f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  location: {x: 0, y: 0, z: 0}
 --- !u!114 &4407391417118536155
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,3 +190,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dcf68fb1ebe35c4c81a215e49f26eb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}

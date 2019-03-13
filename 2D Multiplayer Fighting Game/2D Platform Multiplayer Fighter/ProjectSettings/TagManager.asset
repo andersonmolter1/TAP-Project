@@ -37,6 +37,7 @@ TagManager:
   - pmarker4
   - knightCollider
   - vikingCollider
+  - enemy
   layers:
   - Default
   - TransparentFX

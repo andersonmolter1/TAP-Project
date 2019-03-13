@@ -32,22 +32,36 @@ public class PlayerHealthAndDamage : MonoBehaviour
                 if (health > 0f)
                 {
                     TakeDamage(7.5f);
-                    
+
                 }
 
             }
 
             else if (col.gameObject.CompareTag("knightCollider"))
             {
-                Debug.Log("knight");
                 if (health > 0f)
                 {
                     TakeDamage(5f);
-                    
-                }
-                
-            }
 
+                }
+
+            }
+            else if (col.gameObject.CompareTag("healer"))
+            {
+                if (health > 0f)
+                {
+                    TakeDamage(7.5f);
+
+                }
+            }
+            else if (col.gameObject.CompareTag("enemy"))
+            {
+                if (health > 0f)
+                {
+                    TakeDamage(7.5f);
+
+                }
+            }
             else if (col.gameObject.CompareTag("vikingCollider"))
             {
 

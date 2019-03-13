@@ -4,28 +4,32 @@ using System.Collections;
 
 public class enemyAI : MonoBehaviour
 {
-    private float speed = 10.0f;
+    private float speed = 1.0f;
     private Vector2 target;
     private Vector2 position;
     private Camera cam;
-    private findPlayer playerLoc;
+    public Transform player;
 
     void Start()
     {
-        position = gameObject.transform.position;
-        target = playerLoc.location;
-        Debug.Log(target);
+        player = GameObject.FindGameObjectWithTag("player1").transform;
 
     }
 
     void Update()
     {
-        target = playerLoc.location;
-        Debug.Log(target);
+        findPlayer();
+        
+        ////Debug.Log(playerLoc.location);
         float step = speed * Time.deltaTime;
 
         // move sprite towards the target location
         transform.position = Vector2.MoveTowards(transform.position, target, step);
+    }
+
+    void findPlayer()
+    {
+        target = player.transform.position;
     }
 
     
