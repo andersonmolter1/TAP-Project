@@ -12,12 +12,24 @@ EditorBuildSettings:
     path: Assets/Scenes/MapSelector.unity
     guid: 0ae2a4c4167107a4a82e5bdd88e73ac9
   - enabled: 1
-    path: Assets/Scenes/CharacterSelection.unity
+    path: Assets/Scenes/characterSelection/Player1Selector.unity
     guid: 46889010244cf1b4995e4fc05fe761bc
+  - enabled: 1
+    path: Assets/Scenes/characterSelection/Player2Selector.unity
+    guid: 837130a6f4a3a0e459e11e2becc75ae4
+  - enabled: 1
+    path: Assets/Scenes/characterSelection/Player3Selector.unity
+    guid: e7af0e1176e720745a2375da37ff0ffa
+  - enabled: 1
+    path: Assets/Scenes/characterSelection/Player4Selector.unity
+    guid: 4f2ad61d73b864045823783c4dfaa60e
   - enabled: 1
     path: Assets/Scenes/Castle.unity
     guid: 931e23ae6105b494b9872d59f4325a62
   - enabled: 1
     path: Assets/Scenes/PirateShip.unity
     guid: f534c0730f58c5a44b734cfa9c9853d9
+  - enabled: 0
+    path: Assets/Scenes/PlayerCount.unity
+    guid: d2cc3b45794ea334b9b047166185e5d1
   m_configObjects: {}

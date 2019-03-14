@@ -13,14 +13,14 @@ public class PlayerControl : MonoBehaviour
     public float moveForce = 365f;          // Amount of force added to move the player left and right.
     public float maxSpeed = 5f;             // The fastest the player can travel in the x axis.
     public float jumpForce = 1000f;         // Amount of force added when the player jumps.
-
-    public string horiztonal = "Horizontal_P1";
-    public string jumpButton = "Jump_P1";            
+    public string attack = "Fire";
+    
+              
     private Transform groundCheck;          // A position marking where to check if the player is grounded.
     private bool grounded = false;          // Whether or not the player is grounded.
     public Animator anim;                  // Reference to the player's animator component.
-
-
+    public string horiztonal = "Horizontal";
+    public string jumpButton = "Jump";
     void Awake()
     {
         // Setting up references.

@@ -6,19 +6,19 @@ public class healerAI : MonoBehaviour
     public float speed = 3.0f;
     private Vector2 target;
     private Vector2 position;
-    [HideInInspector]
-    public Transform player;
-
+    
+   
     public GameObject particleEffect;
 
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("player1").transform;
+        
 
     }
 
     void Update()
     {
+        
         findPlayer();
 
         ////Debug.Log(playerLoc.location);
@@ -30,6 +30,7 @@ public class healerAI : MonoBehaviour
 
     void findPlayer()
     {
+        Transform player = GameObject.FindGameObjectWithTag("player1").transform;
         target = player.transform.position;
     }
 

@@ -8,13 +8,17 @@ public class meleeAttacks : MonoBehaviour
     public GameObject meleeCol;
     private PlayerControl playerCtrl;       // Reference to the PlayerControl script.
     private Animator anim;                  // Reference to the Animator component.
-    public string meleeInput;
+    private string meleeInput;
     public string colliderTag;
     private float cooldownTime = .8f;
     private bool isCooldown;
+    
+
 
     void Awake()
     {
+        PlayerControl pc = new PlayerControl();
+        meleeInput = pc.attack;
         isCooldown = true;
         // Setting up the references.
         anim = transform.root.gameObject.GetComponent<Animator>();

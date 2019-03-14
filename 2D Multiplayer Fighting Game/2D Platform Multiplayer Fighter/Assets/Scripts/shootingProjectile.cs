@@ -5,7 +5,7 @@ public class shootingProjectile : MonoBehaviour
 {
     public Rigidbody2D projectile;               // Prefab of the rocket.
     public float speed = 20f;				// The speed the rocket will fire at.
-    public string gunFire = "Fire1_P1";
+    public string gunFire;
 
     private PlayerControl playerCtrl;       // Reference to the PlayerControl script.
     private Animator anim;                  // Reference to the Animator component.
@@ -14,6 +14,8 @@ public class shootingProjectile : MonoBehaviour
 
     void Awake()
     {
+        PlayerControl pc = new PlayerControl();
+        gunFire = pc.attack;
         isCooldown = true;
         // Setting up the references.
        

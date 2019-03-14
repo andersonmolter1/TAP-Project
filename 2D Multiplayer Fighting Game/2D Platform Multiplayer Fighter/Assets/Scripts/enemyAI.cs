@@ -13,7 +13,9 @@ public class enemyAI : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("player1").transform;
-
+        player = GameObject.FindGameObjectWithTag("player2").transform;
+        player = GameObject.FindGameObjectWithTag("player3").transform;
+        player = GameObject.FindGameObjectWithTag("player4").transform;
     }
 
     void Update()

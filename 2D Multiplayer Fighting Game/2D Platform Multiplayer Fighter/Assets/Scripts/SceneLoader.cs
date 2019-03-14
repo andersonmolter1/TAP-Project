@@ -1,10 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-/*
- * 
- * Need to fix/separate character selection from levels.
- */
 
 public class SceneLoader : MonoBehaviour
 {
@@ -15,8 +11,9 @@ public class SceneLoader : MonoBehaviour
         level = thisLevel;
     }
 
-    public void CharacterSelect() {
-        SceneManager.LoadScene("CharacterSelection");
+    public void CharacterSelect()
+    {
+        SceneManager.LoadScene("Player1Selector");
     }
 
     public void StartLevel()
