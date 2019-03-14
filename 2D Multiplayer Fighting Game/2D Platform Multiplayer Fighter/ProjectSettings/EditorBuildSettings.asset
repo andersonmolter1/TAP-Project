@@ -32,4 +32,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/PlayerCount.unity
     guid: d2cc3b45794ea334b9b047166185e5d1
+  - enabled: 1
+    path: Assets/Scenes/Mangroves.unity
+    guid: 6b6c0fd0d21a1e3409cdb7fb88703f08
+  - enabled: 1
+    path: Assets/Scenes/Corridor.unity
+    guid: 8289308e1d19b4147aaf4cce66b9de3e
   m_configObjects: {}

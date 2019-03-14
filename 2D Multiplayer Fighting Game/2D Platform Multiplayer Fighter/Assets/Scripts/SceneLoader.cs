@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class SceneLoader : MonoBehaviour
 {
     public static string level;
+    public static string map;
 
     public void SetLevel(string thisLevel)
     {
@@ -20,5 +21,16 @@ public class SceneLoader : MonoBehaviour
     {
         SceneManager.LoadScene(level);
     }
+
+    public void SetMap(string thismap)
+    {
+        map = thismap;
+    }
+
+    public void StartMap()
+    {
+        SceneManager.LoadScene(map);
+    }
+
 
 }
