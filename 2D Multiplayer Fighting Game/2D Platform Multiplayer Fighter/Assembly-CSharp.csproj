@@ -79,14 +79,6 @@
     <Compile Include="Assets\AssetsFromStore\CodeMonkey\Utils\World_Bar.cs" />
     <Compile Include="Assets\AssetsFromStore\CodeMonkey\Utils\World_Mesh.cs" />
     <Compile Include="Assets\AssetsFromStore\CodeMonkey\Utils\World_Sprite.cs" />
-    <Compile Include="Assets\AssetsFromStore\EffectExamples\Shared\Scripts\DecalDestroyer.cs" />
-    <Compile Include="Assets\AssetsFromStore\EffectExamples\Shared\Scripts\ExtinguishableFire.cs" />
-    <Compile Include="Assets\AssetsFromStore\EffectExamples\Shared\Scripts\GunAim.cs" />
-    <Compile Include="Assets\AssetsFromStore\EffectExamples\Shared\Scripts\GunShoot.cs" />
-    <Compile Include="Assets\AssetsFromStore\EffectExamples\Shared\Scripts\ParticleCollision.cs" />
-    <Compile Include="Assets\AssetsFromStore\EffectExamples\Shared\Scripts\ParticleExamples.cs" />
-    <Compile Include="Assets\AssetsFromStore\EffectExamples\Shared\Scripts\ParticleMenu.cs" />
-    <Compile Include="Assets\AssetsFromStore\EffectExamples\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\AssetsFromStore\Lava_Flowing_Shader\Scripts\ScrollingUVs_Layers.cs" />
     <Compile Include="Assets\AssetsFromStore\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\AssetsFromStore\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
@@ -153,6 +145,7 @@
     <Compile Include="Assets\Scripts\PlayerControl.cs" />
     <Compile Include="Assets\Scripts\playerCount.cs" />
     <Compile Include="Assets\Scripts\PlayerHealthAndDamage.cs" />
+    <Compile Include="Assets\Scripts\playerIDColor.cs" />
     <Compile Include="Assets\Scripts\playerSpawner.cs" />
     <Compile Include="Assets\Scripts\playerValues.cs" />
     <Compile Include="Assets\Scripts\ProjectileCollision.cs" />
@@ -167,7 +160,6 @@
     <Compile Include="Assets\Scripts\TiltWindow.cs" />
     <None Include="Assets\AssetsFromStore\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\AssetsFromStore\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
-    <None Include="Assets\AssetsFromStore\EffectExamples\Shared\Shaders\SurfaceShader_VC.shader" />
     <None Include="Assets\AssetsFromStore\Lava_Flowing_Shader\Shaders\Unlit_Lava_Simple.shader" />
     <None Include="Assets\AssetsFromStore\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\AssetsFromStore\Ninja Files\Read Me.txt" />
