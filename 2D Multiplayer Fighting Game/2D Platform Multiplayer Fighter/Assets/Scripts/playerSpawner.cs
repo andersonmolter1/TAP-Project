@@ -34,19 +34,19 @@ public class playerSpawner : MonoBehaviour
         spawnIndex = Random.Range(0, spawnPoints.Length);
         if (playerValues.P1knight)
         {
-            player1 = Instantiate(knight, spawnPoints[spawnIndex]);
+            player1 = Instantiate(knight, spawnPoints[0]);
         }
         else if (playerValues.P1archer)
         {
-            player1 = Instantiate(archer, spawnPoints[spawnIndex]);
+            player1 = Instantiate(archer, spawnPoints[0]);
         }
         else if (playerValues.P1viking)
         {
-            player1 = Instantiate(viking, spawnPoints[spawnIndex]);
+            player1 = Instantiate(viking, spawnPoints[0]);
         }
         else if (playerValues.P1wizard)
         {
-            player1 = Instantiate(wizard, spawnPoints[spawnIndex]);
+            player1 = Instantiate(wizard, spawnPoints[0]);
         }
         else
         {
@@ -63,19 +63,19 @@ public class playerSpawner : MonoBehaviour
         spawnIndex = Random.Range(0, spawnPoints.Length);
         if (playerValues.P2knight)
         {
-            player2 = Instantiate(knight, spawnPoints[spawnIndex]);
+            player2 = Instantiate(knight, spawnPoints[1]);
         }
         else if (playerValues.P2archer)
         {
-            player2 = Instantiate(archer, spawnPoints[spawnIndex]);
+            player2 = Instantiate(archer, spawnPoints[1]);
         }
         else if (playerValues.P2viking)
         {
-            player2 = Instantiate(viking, spawnPoints[spawnIndex]);
+            player2 = Instantiate(viking, spawnPoints[1]);
         }
         else if (playerValues.P2wizard)
         {
-            player2 = Instantiate(wizard, spawnPoints[spawnIndex]);
+            player2 = Instantiate(wizard, spawnPoints[1]);
         }
         else
         {
@@ -92,19 +92,19 @@ public class playerSpawner : MonoBehaviour
         spawnIndex = Random.Range(0, spawnPoints.Length);
         if (playerValues.P3knight)
         {
-            player3 = Instantiate(knight, spawnPoints[spawnIndex]);
+            player3 = Instantiate(knight, spawnPoints[2]);
         }
         else if (playerValues.P3archer)
         {
-            player3 = Instantiate(archer, spawnPoints[spawnIndex]);
+            player3 = Instantiate(archer, spawnPoints[2]);
         }
         else if (playerValues.P3viking)
         {
-            player3 = Instantiate(viking, spawnPoints[spawnIndex]);
+            player3 = Instantiate(viking, spawnPoints[2]);
         }
         else if (playerValues.P3wizard)
         {
-            player3 = Instantiate(wizard, spawnPoints[spawnIndex]);
+            player3 = Instantiate(wizard, spawnPoints[2]);
         }
         else
         {
@@ -121,19 +121,19 @@ public class playerSpawner : MonoBehaviour
         spawnIndex = Random.Range(0, spawnPoints.Length);
         if (playerValues.P4archer)
         {
-            player4 = Instantiate(knight, spawnPoints[spawnIndex]);
+            player4 = Instantiate(knight, spawnPoints[3]);
         }
         else if (playerValues.P4archer)
         {
-            player4 = Instantiate(archer, spawnPoints[spawnIndex]);
+            player4 = Instantiate(archer, spawnPoints[3]);
         }
         else if (playerValues.P4viking)
         {
-            player4 = Instantiate(viking, spawnPoints[spawnIndex]);
+            player4 = Instantiate(viking, spawnPoints[3]);
         }
         else if (playerValues.P4wizard)
         {
-            player4 = Instantiate(wizard, spawnPoints[spawnIndex]);
+            player4 = Instantiate(wizard, spawnPoints[3]);
         }
         else
         {
