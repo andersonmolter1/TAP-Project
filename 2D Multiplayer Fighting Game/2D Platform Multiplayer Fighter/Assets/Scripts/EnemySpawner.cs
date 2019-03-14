@@ -1,24 +1,37 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class EnemySpawner : MonoBehaviour
 {
-	public float spawnTime = 5f;		// The amount of time between each spawn.
-	public float spawnDelay = 3f;		// The amount of time before spawning starts.
-	public GameObject enemies;		// Array of enemy prefabs.
+    public GameObject enemy;
+    public GameObject healer;
+    public float spawnTime = 1000.0f;            // How long between each spawn.
+    public Transform[] spawnPoints;         // An array of the spawn points this enemy can spawn from.
+    
 
+    void Start()
+    {
+        InvokeRepeating("HealerSpawn", 5, 0);
+        InvokeRepeating("EnemySpawn", 5, 0);
+    }
 
-	void Start ()
-	{
-		// Start calling the Spawn function repeatedly after a delay .
-		InvokeRepeating("Spawn", spawnDelay, spawnTime);
-	}
+    
+    void EnemySpawn()
+    {
 
+        
+        // Find a random index between zero and one less than the number of spawn points.
+        int spawnPointIndex = Random.Range(0, spawnPoints.Length);
 
-	void Spawn ()
-	{
-		// Instantiate a random enemy.
-		
-		Instantiate(enemies, transform.position, transform.rotation);
-	}
+        // Create an instance of the enemy prefab at the randomly selected spawn point's position and rotation.
+        Instantiate(enemy, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
+    }
+    void HealerSpawn()
+    {
+        
+        // Find a random index between zero and one less than the number of spawn points.
+        int spawnPointIndex = Random.Range(0, spawnPoints.Length);
+
+        // Create an instance of the enemy prefab at the randomly selected spawn point's position and rotation.
+        Instantiate(healer, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
+    }
 }

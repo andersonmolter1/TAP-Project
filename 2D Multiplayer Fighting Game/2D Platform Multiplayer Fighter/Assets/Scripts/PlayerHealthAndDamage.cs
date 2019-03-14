@@ -19,8 +19,13 @@ public class PlayerHealthAndDamage : MonoBehaviour
     public Transform spawnPoint;
     public GameObject player;
     bool allowDamage = true;
+    //public Animator anim;
+    //private int activeState;
 
-
+    private void Update()
+    {
+        //anim.SetInteger("stateOfAction", activeState);
+    }
     void OnCollisionEnter2D(Collision2D col)
     {
 
@@ -48,9 +53,10 @@ public class PlayerHealthAndDamage : MonoBehaviour
             }
             else if (col.gameObject.CompareTag("healer"))
             {
+                
                 if (health > 0f)
                 {
-                    TakeDamage(7.5f);
+                    TakeDamage(-5f);
 
                 }
             }
@@ -89,7 +95,7 @@ public class PlayerHealthAndDamage : MonoBehaviour
         }
         if (col.gameObject.CompareTag("killBar"))
         {
-            Debug.Log("Kill");
+           
             KillPlayer();
             Invoke("Respawn", 1.5f);
 
@@ -151,12 +157,12 @@ public class PlayerHealthAndDamage : MonoBehaviour
 
     public void KillPlayer()
     {
+        //activeState = 4;
         UpdateHealthBar();
         RestoreHealthBar();
         UpdateHealthBar();
         player.SetActive(false);
         lives--;
-        Debug.Log(lives);
     }
 
     public void Respawn()

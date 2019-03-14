@@ -65,8 +65,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1024582385
-  m_SortingLayer: 5
+  m_SortingLayerID: -1783731295
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 47a82cad23a3241318d426d0008ffb67, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -334,6 +334,7 @@ MonoBehaviour:
   HealthBar: {fileID: 259571198151874026}
   spawnPoint: {fileID: 0}
   player: {fileID: 7613987979073396137}
+  anim: {fileID: 7843112853157048352}
 --- !u!61 &985549484693091235
 BoxCollider2D:
   m_ObjectHideFlags: 0

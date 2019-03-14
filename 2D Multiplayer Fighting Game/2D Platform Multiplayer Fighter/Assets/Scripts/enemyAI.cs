@@ -4,11 +4,11 @@ using System.Collections;
 
 public class enemyAI : MonoBehaviour
 {
-    private float speed = 1.0f;
+    public float speed = 3.0f;
     private Vector2 target;
     private Vector2 position;
-    private Camera cam;
-    public Transform player;
+    private Transform player;
+    public GameObject particleEffect;
 
     void Start()
     {
@@ -19,7 +19,7 @@ public class enemyAI : MonoBehaviour
     void Update()
     {
         findPlayer();
-        
+
         ////Debug.Log(playerLoc.location);
         float step = speed * Time.deltaTime;
 
@@ -32,7 +32,15 @@ public class enemyAI : MonoBehaviour
         target = player.transform.position;
     }
 
-    
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (!collision.gameObject.CompareTag("ground"))
+        {
+            Destroy(gameObject, 0.2f);
+            GameObject particle = Instantiate(particleEffect, transform.position, Quaternion.Euler(new Vector3(0, 0, 0)));
+            Destroy(particle, 0.3f);
+        }
 
+    }
 
 }

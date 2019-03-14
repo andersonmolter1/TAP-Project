@@ -38,6 +38,7 @@ TagManager:
   - knightCollider
   - vikingCollider
   - enemy
+  - healer
   layers:
   - Default
   - TransparentFX

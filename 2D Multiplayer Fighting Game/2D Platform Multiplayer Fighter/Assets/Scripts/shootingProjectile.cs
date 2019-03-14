@@ -16,7 +16,7 @@ public class shootingProjectile : MonoBehaviour
     {
         isCooldown = true;
         // Setting up the references.
-        anim = transform.root.gameObject.GetComponent<Animator>();
+       
         playerCtrl = transform.root.GetComponent<PlayerControl>();
     }
 
@@ -38,18 +38,7 @@ public class shootingProjectile : MonoBehaviour
     {
         Debug.Log("Hit ground");
     }
-    //trial of delayed shooting
-    /*
-    IEnumerator waitForNextShot()
-    {
-        Debug.Log("fire");
-        Invoke("shoot", 0.5f);
-        yield return new WaitForSeconds(1);
-        
-
-    }
-    */
-
+   
     public void destroyArrow()
     {
         Destroy(projectile);
@@ -74,17 +63,19 @@ public class shootingProjectile : MonoBehaviour
     }
     private IEnumerator Cooldown()
     {
-
-
-        Debug.Log("fire");
         playerCtrl.activeState = 3;
         // Wait for time you want
-        yield return new WaitForSeconds(.3f);
-        shootProjectile();
+        //yield return new WaitForSeconds(.3f);
+        StartCoroutine(waitForAnim());
+        
         isCooldown = false;
         // Stop cooldown
         yield return new WaitForSeconds(.8f);
         isCooldown = true;
     }
-
+    private IEnumerator waitForAnim()
+    {
+        yield return new WaitForSeconds(.3f);
+        shootProjectile();
+    }
 }
