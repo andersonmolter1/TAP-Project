@@ -14,6 +14,10 @@ public class playerSpawner : MonoBehaviour
     private GameObject player2;
     private GameObject player3;
     private GameObject player4;
+    public GameObject knightID;
+    public GameObject wizardID;
+    public GameObject archerID;
+    public GameObject vikingID;
 
     // Start is called before the first frame update
     void Start()
@@ -34,19 +38,19 @@ public class playerSpawner : MonoBehaviour
         spawnIndex = Random.Range(0, spawnPoints.Length);
         if (playerValues.P1knight)
         {
-            player1 = Instantiate(knight, spawnPoints[spawnIndex]);
+            player1 = Instantiate(knight, spawnPoints[0]);
         }
         else if (playerValues.P1archer)
         {
-            player1 = Instantiate(archer, spawnPoints[spawnIndex]);
+            player1 = Instantiate(archer, spawnPoints[0]);
         }
         else if (playerValues.P1viking)
         {
-            player1 = Instantiate(viking, spawnPoints[spawnIndex]);
+            player1 = Instantiate(viking, spawnPoints[0]);
         }
         else if (playerValues.P1wizard)
         {
-            player1 = Instantiate(wizard, spawnPoints[spawnIndex]);
+            player1 = Instantiate(wizard, spawnPoints[0]);
         }
         else
         {
@@ -57,25 +61,28 @@ public class playerSpawner : MonoBehaviour
         player1.GetComponent<PlayerControl>().horiztonal = "P1_Horizontal";
         player1.GetComponent<PlayerControl>().jumpButton = "P1_Jump";
         player1.GetComponent<PlayerControl>().attack = "P1_Fire";
+        player1.GetComponent<playerIDColor>().color = "red";
+
+
     }
     void findPlayer2()
     {
         spawnIndex = Random.Range(0, spawnPoints.Length);
         if (playerValues.P2knight)
         {
-            player2 = Instantiate(knight, spawnPoints[spawnIndex]);
+            player2 = Instantiate(knight, spawnPoints[1]);
         }
         else if (playerValues.P2archer)
         {
-            player2 = Instantiate(archer, spawnPoints[spawnIndex]);
+            player2 = Instantiate(archer, spawnPoints[1]);
         }
         else if (playerValues.P2viking)
         {
-            player2 = Instantiate(viking, spawnPoints[spawnIndex]);
+            player2 = Instantiate(viking, spawnPoints[1]);
         }
         else if (playerValues.P2wizard)
         {
-            player2 = Instantiate(wizard, spawnPoints[spawnIndex]);
+            player2 = Instantiate(wizard, spawnPoints[1]);
         }
         else
         {
@@ -86,25 +93,26 @@ public class playerSpawner : MonoBehaviour
         player2.GetComponent<PlayerControl>().horiztonal = "P2_Horizontal";
         player2.GetComponent<PlayerControl>().jumpButton = "P2_Jump";
         player2.GetComponent<PlayerControl>().attack = "P2_Fire";
+        player1.GetComponent<playerIDColor>().color = "blue";
     }
     void findPlayer3()
     {
         spawnIndex = Random.Range(0, spawnPoints.Length);
         if (playerValues.P3knight)
         {
-            player3 = Instantiate(knight, spawnPoints[spawnIndex]);
+            player3 = Instantiate(knight, spawnPoints[2]);
         }
         else if (playerValues.P3archer)
         {
-            player3 = Instantiate(archer, spawnPoints[spawnIndex]);
+            player3 = Instantiate(archer, spawnPoints[2]);
         }
         else if (playerValues.P3viking)
         {
-            player3 = Instantiate(viking, spawnPoints[spawnIndex]);
+            player3 = Instantiate(viking, spawnPoints[2]);
         }
         else if (playerValues.P3wizard)
         {
-            player3 = Instantiate(wizard, spawnPoints[spawnIndex]);
+            player3 = Instantiate(wizard, spawnPoints[2]);
         }
         else
         {
@@ -115,25 +123,26 @@ public class playerSpawner : MonoBehaviour
         player3.GetComponent<PlayerControl>().horiztonal = "P3_Horizontal";
         player3.GetComponent<PlayerControl>().jumpButton = "P3_Jump";
         player3.GetComponent<PlayerControl>().attack = "P3_Fire";
+        player1.GetComponent<playerIDColor>().color = "yellow";
     }
     void findPlayer4()
     {
         spawnIndex = Random.Range(0, spawnPoints.Length);
         if (playerValues.P4archer)
         {
-            player4 = Instantiate(knight, spawnPoints[spawnIndex]);
+            player4 = Instantiate(knight, spawnPoints[3]);
         }
         else if (playerValues.P4archer)
         {
-            player4 = Instantiate(archer, spawnPoints[spawnIndex]);
+            player4 = Instantiate(archer, spawnPoints[3]);
         }
         else if (playerValues.P4viking)
         {
-            player4 = Instantiate(viking, spawnPoints[spawnIndex]);
+            player4 = Instantiate(viking, spawnPoints[3]);
         }
         else if (playerValues.P4wizard)
         {
-            player4 = Instantiate(wizard, spawnPoints[spawnIndex]);
+            player4 = Instantiate(wizard, spawnPoints[3]);
         }
         else
         {
@@ -144,6 +153,7 @@ public class playerSpawner : MonoBehaviour
         player4.GetComponent<PlayerControl>().horiztonal = "P4_Horizontal";
         player4.GetComponent<PlayerControl>().jumpButton = "P4_Jump";
         player4.GetComponent<PlayerControl>().attack = "P4_Fire";
+        player1.GetComponent<playerIDColor>().color = "green";
 
     }
 }
