@@ -150,10 +150,6 @@ MonoBehaviour:
   archer: {fileID: 1496221714939665707, guid: 95e67836a06dd6d4db1f6870b0071e3c, type: 3}
   viking: {fileID: 7613987979073396137, guid: e27b3e95737066c4c9f6cc7bdfe5cffb, type: 3}
   wizard: {fileID: 8045197380288853528, guid: ec84c63dc646c5c428a3d6398ee9f43f, type: 3}
-  knightID: {fileID: 0}
-  wizardID: {fileID: 0}
-  archerID: {fileID: 0}
-  vikingID: {fileID: 0}
 --- !u!4 &87978066
 Transform:
   m_ObjectHideFlags: 0

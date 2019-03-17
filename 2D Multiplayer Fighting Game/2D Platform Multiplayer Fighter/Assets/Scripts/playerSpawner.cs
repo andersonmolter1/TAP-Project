@@ -14,10 +14,6 @@ public class playerSpawner : MonoBehaviour
     private GameObject player2;
     private GameObject player3;
     private GameObject player4;
-    public GameObject knightID;
-    public GameObject wizardID;
-    public GameObject archerID;
-    public GameObject vikingID;
 
     // Start is called before the first frame update
     void Start()
@@ -61,9 +57,6 @@ public class playerSpawner : MonoBehaviour
         player1.GetComponent<PlayerControl>().horiztonal = "P1_Horizontal";
         player1.GetComponent<PlayerControl>().jumpButton = "P1_Jump";
         player1.GetComponent<PlayerControl>().attack = "P1_Fire";
-        player1.GetComponent<playerIDColor>().color = "red";
-
-
     }
     void findPlayer2()
     {
@@ -93,7 +86,6 @@ public class playerSpawner : MonoBehaviour
         player2.GetComponent<PlayerControl>().horiztonal = "P2_Horizontal";
         player2.GetComponent<PlayerControl>().jumpButton = "P2_Jump";
         player2.GetComponent<PlayerControl>().attack = "P2_Fire";
-        player1.GetComponent<playerIDColor>().color = "blue";
     }
     void findPlayer3()
     {
@@ -123,7 +115,6 @@ public class playerSpawner : MonoBehaviour
         player3.GetComponent<PlayerControl>().horiztonal = "P3_Horizontal";
         player3.GetComponent<PlayerControl>().jumpButton = "P3_Jump";
         player3.GetComponent<PlayerControl>().attack = "P3_Fire";
-        player1.GetComponent<playerIDColor>().color = "yellow";
     }
     void findPlayer4()
     {
@@ -153,7 +144,6 @@ public class playerSpawner : MonoBehaviour
         player4.GetComponent<PlayerControl>().horiztonal = "P4_Horizontal";
         player4.GetComponent<PlayerControl>().jumpButton = "P4_Jump";
         player4.GetComponent<PlayerControl>().attack = "P4_Fire";
-        player1.GetComponent<playerIDColor>().color = "green";
 
     }
 }
