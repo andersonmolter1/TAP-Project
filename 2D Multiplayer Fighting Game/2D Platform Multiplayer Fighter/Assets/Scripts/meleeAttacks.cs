@@ -29,7 +29,7 @@ public class meleeAttacks : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetButtonDown(meleeInput) && isCooldown)
+        //if (Input.GetButtonDown(attack) && isCooldown)
         {
             
             StartCoroutine(Cooldown());

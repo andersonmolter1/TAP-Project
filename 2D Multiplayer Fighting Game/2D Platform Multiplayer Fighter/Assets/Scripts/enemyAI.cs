@@ -1,7 +1,6 @@
 ﻿                 // How many times the enemy can be hit before it dies.
 using UnityEngine;
 using System.Collections;
-
 public class enemyAI : MonoBehaviour
 {
     public float speed = 3.0f;
@@ -12,14 +11,27 @@ public class enemyAI : MonoBehaviour
 
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("player1").transform;
-        player = GameObject.FindGameObjectWithTag("player2").transform;
-        player = GameObject.FindGameObjectWithTag("player3").transform;
-        player = GameObject.FindGameObjectWithTag("player4").transform;
+        
     }
 
     void Update()
     {
+        int random = Random.Range(1, 5);
+        switch (random)
+        {
+            case 1:
+                player = GameObject.FindGameObjectWithTag("player1").transform;
+                break;
+            case 2:
+                player = GameObject.FindGameObjectWithTag("player2").transform;
+                break;
+            case 3:
+                player = GameObject.FindGameObjectWithTag("player3").transform;
+                break;
+            case 4:
+                player = GameObject.FindGameObjectWithTag("player4").transform;
+                break;
+        }
         findPlayer();
 
         ////Debug.Log(playerLoc.location);

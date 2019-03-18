@@ -122,6 +122,9 @@ GameObject:
   m_Component:
   - component: {fileID: 87978066}
   - component: {fileID: 87978065}
+  - component: {fileID: 87978069}
+  - component: {fileID: 87978068}
+  - component: {fileID: 87978067}
   m_Layer: 0
   m_Name: SpawnPlayers
   m_TagString: Untagged
@@ -141,11 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 750fbf50c3817f94084e5541d6f3871e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPoints:
-  - {fileID: 1053946500}
-  - {fileID: 980511627}
-  - {fileID: 1703498130}
-  - {fileID: 1216061853}
+  spawnPoint: {fileID: 1053946500}
   knight: {fileID: 7613987979073396137, guid: 35b1fcca4e5576348a486f75f5838791, type: 3}
   archer: {fileID: 1496221714939665707, guid: 95e67836a06dd6d4db1f6870b0071e3c, type: 3}
   viking: {fileID: 7613987979073396137, guid: e27b3e95737066c4c9f6cc7bdfe5cffb, type: 3}
@@ -165,6 +164,57 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &87978067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87978064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5fae5094c2d07b459a709241234ba14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoint: {fileID: 1216061853}
+  knight: {fileID: 7613987979073396137, guid: 35b1fcca4e5576348a486f75f5838791, type: 3}
+  archer: {fileID: 1496221714939665707, guid: 95e67836a06dd6d4db1f6870b0071e3c, type: 3}
+  viking: {fileID: 7613987979073396137, guid: e27b3e95737066c4c9f6cc7bdfe5cffb, type: 3}
+  wizard: {fileID: 8045197380288853528, guid: ec84c63dc646c5c428a3d6398ee9f43f, type: 3}
+--- !u!114 &87978068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87978064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 099bd0f46164b204cb08d7429231534b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoint: {fileID: 1703498130}
+  knight: {fileID: 7613987979073396137, guid: 35b1fcca4e5576348a486f75f5838791, type: 3}
+  archer: {fileID: 1496221714939665707, guid: 95e67836a06dd6d4db1f6870b0071e3c, type: 3}
+  viking: {fileID: 7613987979073396137, guid: e27b3e95737066c4c9f6cc7bdfe5cffb, type: 3}
+  wizard: {fileID: 8045197380288853528, guid: ec84c63dc646c5c428a3d6398ee9f43f, type: 3}
+--- !u!114 &87978069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87978064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 779067c1471317b47ab613a1b659b61a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoint: {fileID: 980511627}
+  knight: {fileID: 7613987979073396137, guid: 35b1fcca4e5576348a486f75f5838791, type: 3}
+  archer: {fileID: 1496221714939665707, guid: 95e67836a06dd6d4db1f6870b0071e3c, type: 3}
+  viking: {fileID: 7613987979073396137, guid: e27b3e95737066c4c9f6cc7bdfe5cffb, type: 3}
+  wizard: {fileID: 8045197380288853528, guid: ec84c63dc646c5c428a3d6398ee9f43f, type: 3}
 --- !u!1 &90866142
 GameObject:
   m_ObjectHideFlags: 0

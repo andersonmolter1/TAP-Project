@@ -1,52 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1113648751132078939
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7510933901520628383}
-  - component: {fileID: 5366216912122619107}
-  m_Layer: 0
-  m_Name: bowAndArrow
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7510933901520628383
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1113648751132078939}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.68, y: -0.04, z: -0.80859375}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4861916265489240943}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5366216912122619107
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1113648751132078939}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d9bf156813c141e98b61835f46356f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectile: {fileID: 6047219895168099818, guid: 3d635ad3d587cd1409c389a344b2fab3,
-    type: 3}
-  speed: 20
-  gunFire: Fire
 --- !u!1 &1206398516716666725
 GameObject:
   m_ObjectHideFlags: 0
@@ -113,7 +66,6 @@ Transform:
   m_Children:
   - {fileID: 3596675045009435684}
   - {fileID: 4205290912381310766}
-  - {fileID: 7510933901520628383}
   - {fileID: 8930290874963863961}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -227,14 +179,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   facingRight: 1
   jump: 0
+  isMelee: 0
   activeState: 0
   playerAttack: Fire
   moveForce: 365
   maxSpeed: 5
   jumpForce: 1000
+  attack: 
+  anim: {fileID: 5042245803051917226}
   horiztonal: Horizontal
   jumpButton: Jump
-  anim: {fileID: 5042245803051917226}
+  projectile: {fileID: 6047219895168099818, guid: 3d635ad3d587cd1409c389a344b2fab3,
+    type: 3}
+  speed: 20
+  gunFire: 
+  meleeCol: {fileID: 2674153289252896130, guid: 4f6a0684402d58e45986e3f01c4bd9d5,
+    type: 3}
+  colliderTag: knightCollider
 --- !u!95 &5042245803051917226
 Animator:
   serializedVersion: 3
@@ -298,7 +259,6 @@ MonoBehaviour:
   HealthBar: {fileID: 4748600950538419049}
   spawnPoint: {fileID: 0}
   player: {fileID: 1496221714939665707}
-  anim: {fileID: 5042245803051917226}
 --- !u!1 &4583006607127404737
 GameObject:
   m_ObjectHideFlags: 0
@@ -585,5 +545,5 @@ Transform:
   m_Children:
   - {fileID: 4185407012894741946}
   m_Father: {fileID: 4861916265489240943}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

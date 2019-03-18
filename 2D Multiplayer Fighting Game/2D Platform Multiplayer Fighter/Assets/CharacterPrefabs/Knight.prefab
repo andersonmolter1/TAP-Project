@@ -137,7 +137,7 @@ Transform:
   m_LocalScale: {x: 0.01, y: 0.01, z: 1}
   m_Children: []
   m_Father: {fileID: 4201326894273833688}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7613987979073396137
 GameObject:
@@ -175,7 +175,6 @@ Transform:
   m_Children:
   - {fileID: 3403072430938066058}
   - {fileID: 6106084913981194769}
-  - {fileID: 1695159014263449170}
   - {fileID: 2506502625210955015}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -242,14 +241,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   facingRight: 1
   jump: 0
+  isMelee: 0
   activeState: 0
   playerAttack: Fire
   moveForce: 365
   maxSpeed: 5
   jumpForce: 1000
+  attack: 
+  anim: {fileID: 7843112853157048352}
   horiztonal: Horizontal
   jumpButton: Jump
-  anim: {fileID: 7843112853157048352}
+  projectile: {fileID: 6047219895168099818, guid: 3d635ad3d587cd1409c389a344b2fab3,
+    type: 3}
+  speed: 20
+  meleeCol: {fileID: 2674153289252896130, guid: 4f6a0684402d58e45986e3f01c4bd9d5,
+    type: 3}
+  colliderTag: knightCollider
 --- !u!95 &7843112853157048352
 Animator:
   serializedVersion: 3
@@ -334,7 +341,6 @@ MonoBehaviour:
   HealthBar: {fileID: 259571198151874026}
   spawnPoint: {fileID: 0}
   player: {fileID: 7613987979073396137}
-  anim: {fileID: 7843112853157048352}
 --- !u!61 &985549484693091235
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -361,50 +367,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.5, y: 0.01}
   m_EdgeRadius: 0
---- !u!1 &9035713448834006436
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1695159014263449170}
-  - component: {fileID: 8926846937504885343}
-  m_Layer: 0
-  m_Name: knightCollisionArea
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1695159014263449170
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9035713448834006436}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.34, y: -0.51, z: 0.009181969}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4201326894273833688}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8926846937504885343
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9035713448834006436}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407e43338ceb3d244ba756a75a307793, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  meleeCol: {fileID: 2674153289252896130, guid: 4f6a0684402d58e45986e3f01c4bd9d5,
-    type: 3}
-  meleeInput: Fire
-  colliderTag: knightCollider

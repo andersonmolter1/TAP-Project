@@ -1,52 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3209188525210272649
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 96652851147573056}
-  - component: {fileID: 7287092695124838608}
-  m_Layer: 0
-  m_Name: magicStaff
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &96652851147573056
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3209188525210272649}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.78, y: 0.08, z: 0.045898438}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2802481107824882256}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7287092695124838608
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3209188525210272649}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d9bf156813c141e98b61835f46356f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectile: {fileID: 2927868795434278919, guid: 0a3a7cedafe80f241856257a5db41aa7,
-    type: 3}
-  speed: 15
-  gunFire: P1_Fire
 --- !u!1 &6239847881420646126
 GameObject:
   m_ObjectHideFlags: 0
@@ -192,7 +145,6 @@ Transform:
   m_Children:
   - {fileID: 8034812809396010038}
   - {fileID: 7815355324480849654}
-  - {fileID: 96652851147573056}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -314,7 +266,6 @@ MonoBehaviour:
   HealthBar: {fileID: 6239847881420646126}
   spawnPoint: {fileID: 0}
   player: {fileID: 8045197380288853528}
-  anim: {fileID: 5863047488589916}
 --- !u!114 &8508371738293935840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -329,14 +280,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   facingRight: 1
   jump: 0
+  isMelee: 0
   activeState: 0
   playerAttack: Fire
   moveForce: 365
   maxSpeed: 5
   jumpForce: 1000
+  attack: 
+  anim: {fileID: 5863047488589916}
   horiztonal: Horizontal
   jumpButton: Jump
-  anim: {fileID: 5863047488589916}
+  projectile: {fileID: 2927868795434278919, guid: 0a3a7cedafe80f241856257a5db41aa7,
+    type: 3}
+  speed: 20
+  meleeCol: {fileID: 2674153289252896130, guid: 4f6a0684402d58e45986e3f01c4bd9d5,
+    type: 3}
+  colliderTag: knightCollider
 --- !u!95 &5863047488589916
 Animator:
   serializedVersion: 3
