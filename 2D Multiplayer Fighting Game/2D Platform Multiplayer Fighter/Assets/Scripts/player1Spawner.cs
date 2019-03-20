@@ -11,6 +11,7 @@ public class player1Spawner : MonoBehaviour
     public GameObject wizard;
     private GameObject player1;
     private bool isMelee;
+    public bool isDead = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,22 +23,25 @@ public class player1Spawner : MonoBehaviour
 
         if (playerValues.P1knight)
         {
+            Destroy(player1);
             player1 = Instantiate(knight, spawnPoint);
             isMelee = true;
-
         }
         else if (playerValues.P1archer)
         {
+            Destroy(player1);
             player1 = Instantiate(archer, spawnPoint);
             isMelee = false;
         }
         else if (playerValues.P1viking)
         {
+            Destroy(player1);
             player1 = Instantiate(viking, spawnPoint);
             isMelee = true;
         }
         else if (playerValues.P1wizard)
         {
+            Destroy(player1);
             player1 = Instantiate(wizard, spawnPoint);
             isMelee = false;
         }
@@ -55,5 +59,16 @@ public class player1Spawner : MonoBehaviour
 
 
     }
+
+    public GameObject getPlayer1()
+    {
+        return player1;
+    } 
+
+    public Transform getSpawn()
+    {
+        return spawnPoint;
+    }
+    
 }
 

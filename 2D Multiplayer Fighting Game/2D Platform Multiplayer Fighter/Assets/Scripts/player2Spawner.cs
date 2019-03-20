@@ -22,22 +22,26 @@ public class player2Spawner : MonoBehaviour
 
         if (playerValues.P2knight)
         {
+            Destroy(player2);
             player2 = Instantiate(knight, spawnPoint);
             isMelee = true;
 
         }
         else if (playerValues.P2archer)
         {
+            Destroy(player2);
             player2 = Instantiate(archer, spawnPoint);
             isMelee = false;
         }
         else if (playerValues.P2viking)
         {
+            Destroy(player2);
             player2 = Instantiate(viking, spawnPoint);
             isMelee = true;
         }
         else if (playerValues.P2wizard)
         {
+            Destroy(player2);
             player2 = Instantiate(wizard, spawnPoint);
             isMelee = false;
         }
