@@ -19,6 +19,9 @@ public class PlayerHealthAndDamage : MonoBehaviour
     public Transform spawnPoint;
     public GameObject player;
     bool allowDamage = true;
+    public GameObject life1;
+    public GameObject life2;
+    public GameObject life3;
     //public Animator anim;
     //private int activeState;
 
@@ -162,15 +165,25 @@ public class PlayerHealthAndDamage : MonoBehaviour
         RestoreHealthBar();
         UpdateHealthBar();
         player.SetActive(false);
+       
         lives--;
+        switch (lives)
+        {
+            case 1:
+                Destroy(life2);
+                break;
+            case 2:
+                Destroy(life1);
+                break;
+        }
+        Destroy(player);
     }
 
     public void Respawn()
     {
         if (lives > 0)
         {
-            player.SetActive(true);
-            player.transform.position = spawnPoint.position;
+           
         }
     }
 

@@ -55,8 +55,8 @@ public class PlayerControl : MonoBehaviour
         {
             jump = true;
         }
-        Debug.Log(isMelee);
-        Debug.Log(attack);
+        
+
         projectile.gravityScale = 0;
         if (!isMelee)
         {

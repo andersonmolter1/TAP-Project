@@ -17,7 +17,7 @@ public class player4Spawner : MonoBehaviour
         findPlayer4();
     }
 
-    void findPlayer4()
+    public void findPlayer4()
     {
 
         if (playerValues.P4knight)
@@ -51,6 +51,7 @@ public class player4Spawner : MonoBehaviour
         player4.GetComponent<PlayerControl>().jumpButton = "P4_Jump";
         player4.GetComponent<PlayerControl>().isMelee = isMelee;
         player4.GetComponent<PlayerControl>().attack = "P4_Fire";
+        player4.GetComponent<ChangeColor>().playerNumber = 4;
 
 
     }

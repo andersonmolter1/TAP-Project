@@ -17,7 +17,7 @@ public class player3Spawner : MonoBehaviour
         findPlayer3();
     }
 
-    void findPlayer3()
+    public void findPlayer3()
     {
         
         if (playerValues.P3knight)
@@ -51,6 +51,7 @@ public class player3Spawner : MonoBehaviour
         player3.GetComponent<PlayerControl>().jumpButton = "P3_Jump";
         player3.GetComponent<PlayerControl>().isMelee = isMelee;
         player3.GetComponent<PlayerControl>().attack = "P3_Fire";
+        player3.GetComponent<ChangeColor>().playerNumber = 3;
 
 
     }

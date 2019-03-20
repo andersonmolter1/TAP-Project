@@ -17,7 +17,7 @@ public class player2Spawner : MonoBehaviour
         findPlayer2();
     }
 
-    void findPlayer2()
+    public void findPlayer2()
     {
 
         if (playerValues.P2knight)
@@ -51,6 +51,7 @@ public class player2Spawner : MonoBehaviour
         player2.GetComponent<PlayerControl>().jumpButton = "P2_Jump";
         player2.GetComponent<PlayerControl>().isMelee = isMelee;
         player2.GetComponent<PlayerControl>().attack = "P2_Fire";
+        player2.GetComponent<ChangeColor>().playerNumber = 2;
 
 
     }
