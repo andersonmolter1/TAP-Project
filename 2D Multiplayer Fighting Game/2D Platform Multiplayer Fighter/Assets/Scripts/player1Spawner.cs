@@ -11,7 +11,6 @@ public class player1Spawner : MonoBehaviour
     public GameObject wizard;
     private GameObject player1;
     private bool isMelee;
-    public bool isDead = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -60,15 +59,6 @@ public class player1Spawner : MonoBehaviour
 
     }
 
-    public GameObject getPlayer1()
-    {
-        return player1;
-    } 
 
-    public Transform getSpawn()
-    {
-        return spawnPoint;
-    }
-    
 }
 

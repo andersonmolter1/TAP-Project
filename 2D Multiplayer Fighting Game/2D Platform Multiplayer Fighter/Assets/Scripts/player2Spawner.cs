@@ -57,6 +57,7 @@ public class player2Spawner : MonoBehaviour
         player2.GetComponent<PlayerControl>().attack = "P2_Fire";
         player2.GetComponent<ChangeColor>().playerNumber = 2;
 
-
     }
+
+    
 }
