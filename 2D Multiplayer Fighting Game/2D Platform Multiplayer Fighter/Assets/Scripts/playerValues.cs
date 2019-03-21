@@ -43,4 +43,12 @@ public static class playerValues
 
     public static int playerCount { get; set; }
 
+    public static int player1Lives { get; set; }
+
+    public static int player2Lives { get; set; }
+
+    public static int player3Lives { get; set; }
+
+    public static int player4Lives { get; set; }
+
 }

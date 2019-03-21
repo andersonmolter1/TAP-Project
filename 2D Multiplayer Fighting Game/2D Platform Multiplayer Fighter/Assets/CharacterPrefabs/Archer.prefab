@@ -79,6 +79,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &507731114321504152
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2686587511106801361}
+  m_Layer: 0
+  m_Name: arrowSpot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2686587511106801361
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507731114321504152}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.693, y: -0.39, z: 57.390625}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4861916265489240943}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1000382117050352931
 GameObject:
   m_ObjectHideFlags: 0
@@ -181,6 +211,7 @@ Transform:
   - {fileID: 4205290912381310766}
   - {fileID: 8930290874963863961}
   - {fileID: 552311888567299403}
+  - {fileID: 2686587511106801361}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -295,7 +326,6 @@ MonoBehaviour:
   jump: 0
   isMelee: 0
   activeState: 0
-  playerAttack: Fire
   moveForce: 365
   maxSpeed: 5
   jumpForce: 1000
@@ -306,6 +336,7 @@ MonoBehaviour:
   projectile: {fileID: 6047219895168099818, guid: 3d635ad3d587cd1409c389a344b2fab3,
     type: 3}
   speed: 20
+  projectileSpot: {fileID: 2686587511106801361}
   meleeCol: {fileID: 2674153289252896130, guid: 4f6a0684402d58e45986e3f01c4bd9d5,
     type: 3}
   colliderTag: knightCollider
@@ -367,7 +398,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNumber: 0
-  playerID: {fileID: 2552090269416794923}
+  playerID1: {fileID: 2552090269416794923}
+  playerID2: {fileID: 91837754033357696}
+  playerID3: {fileID: 7102250553168309283}
 --- !u!114 &4083934580382557725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -384,11 +417,11 @@ MonoBehaviour:
   health: 100
   damageAmount: 10
   HealthBar: {fileID: 4748600950538419049}
-  spawnPoint: {fileID: 0}
   player: {fileID: 1496221714939665707}
   life1: {fileID: 2552090269416794923}
   life2: {fileID: 91837754033357696}
   life3: {fileID: 7102250553168309283}
+  playerTag: 
 --- !u!1 &2552090269416794923
 GameObject:
   m_ObjectHideFlags: 0

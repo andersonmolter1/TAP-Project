@@ -10,7 +10,7 @@ public class PlayerControl : MonoBehaviour
 
     public bool isMelee;
     public int activeState;
-    public string playerAttack;
+    //public string playerAttack;
     public float moveForce = 365f;          // Amount of force added to move the player left and right.
     public float maxSpeed = 5f;             // The fastest the player can travel in the x axis.
     public float jumpForce = 1000f;         // Amount of force added when the player jumps.
@@ -25,6 +25,7 @@ public class PlayerControl : MonoBehaviour
     public Rigidbody2D projectile;               // Prefab of the rocket.
     public float speed = 20f;				// The speed the rocket will fire at.
     private bool isCooldown;
+    public Transform projectileSpot;
 
     private GameObject meleeCollider;
     public GameObject meleeCol;
@@ -38,11 +39,6 @@ public class PlayerControl : MonoBehaviour
         // Setting up references.
         groundCheck = transform.Find("groundCheck");
         isCooldown = true;
-        
-    }
-
-    private void Start()
-    {
         
     }
     void Update()
@@ -145,7 +141,7 @@ public class PlayerControl : MonoBehaviour
         if (facingRight)
         {
             // ... instantiate the rocket facing right and set it's velocity to the right. 
-            Rigidbody2D bulletInstance = Instantiate(projectile, transform.position, Quaternion.Euler(new Vector3(0, 0, 0))) as Rigidbody2D;
+            Rigidbody2D bulletInstance = Instantiate(projectile, projectileSpot.transform.position, Quaternion.Euler(new Vector3(0, 0, 0))) as Rigidbody2D;
             bulletInstance.velocity = new Vector2(speed, 0);
 
 
@@ -153,7 +149,7 @@ public class PlayerControl : MonoBehaviour
         else
         {
             // Otherwise instantiate the rocket facing left and set it's velocity to the left.
-            Rigidbody2D bulletInstance = Instantiate(projectile, transform.position, Quaternion.Euler(new Vector3(0, 0, 180f))) as Rigidbody2D;
+            Rigidbody2D bulletInstance = Instantiate(projectile, projectileSpot.transform.position, Quaternion.Euler(new Vector3(0, 0, 180f))) as Rigidbody2D;
             bulletInstance.velocity = new Vector2(-speed, 0);
         }
     }

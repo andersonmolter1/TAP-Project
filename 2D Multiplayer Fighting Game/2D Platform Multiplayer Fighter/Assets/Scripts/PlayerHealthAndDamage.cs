@@ -8,7 +8,7 @@ public class PlayerHealthAndDamage : MonoBehaviour
     public float health = 100f;
     public float damageAmount = 10f;
     //public GameObject project
-    
+
     //public Transform healthBar;
     public GameObject HealthBar;
 
@@ -16,19 +16,16 @@ public class PlayerHealthAndDamage : MonoBehaviour
     private float maceDamage;
     private float arrowDamage;
     private float fireBallDamage;
-    public Transform spawnPoint;
+    //public Transform spawnPoint;
     public GameObject player;
     bool allowDamage = true;
     public GameObject life1;
     public GameObject life2;
     public GameObject life3;
+
+    public string playerTag;
     //public Animator anim;
     //private int activeState;
-
-    private void Update()
-    {
-        //anim.SetInteger("stateOfAction", activeState);
-    }
     void OnCollisionEnter2D(Collision2D col)
     {
 
@@ -56,7 +53,7 @@ public class PlayerHealthAndDamage : MonoBehaviour
             }
             else if (col.gameObject.CompareTag("healer"))
             {
-                
+
                 if (health > 0f)
                 {
                     TakeDamage(-5f);
@@ -77,7 +74,7 @@ public class PlayerHealthAndDamage : MonoBehaviour
                 if (health > 0f)
                 {
                     TakeDamage(7.5f);
-                    
+
                 }
 
             }
@@ -89,7 +86,7 @@ public class PlayerHealthAndDamage : MonoBehaviour
                 if (health > 0f)
                 {
                     TakeDamage(15f);
-                    
+
                 }
 
 
@@ -98,7 +95,7 @@ public class PlayerHealthAndDamage : MonoBehaviour
         }
         if (col.gameObject.CompareTag("killBar"))
         {
-           
+
             KillPlayer();
             Invoke("Respawn", 1.5f);
 
@@ -113,7 +110,7 @@ public class PlayerHealthAndDamage : MonoBehaviour
     public void TakeDamage(float damageAmount)
     {
         // Reduce the player's health by 10.
-       // Debug.Log(damageAmount);
+        // Debug.Log(damageAmount);
         health -= damageAmount;
         if (health < 0f)
         {
@@ -141,7 +138,7 @@ public class PlayerHealthAndDamage : MonoBehaviour
             HealthBar.transform.localScale = new Vector3((health * 0.01f), 0.6251f, 0.893f);
             HealthBarRender.material.color = Color.green;
         }
-        else if(health < 60 && health > 30)
+        else if (health < 60 && health > 30)
         {
             HealthBar.transform.localScale = new Vector3((health * 0.01f), 0.6251f, 0.893f);
             HealthBarRender.material.color = Color.yellow;
@@ -165,26 +162,82 @@ public class PlayerHealthAndDamage : MonoBehaviour
         RestoreHealthBar();
         UpdateHealthBar();
         player.SetActive(false);
-       
-        lives--;
-        switch (lives)
-        {
-            case 1:
-                Destroy(life2);
-                break;
-            case 2:
-                Destroy(life1);
-                break;
-        }
+
+
         Destroy(player);
-    }
-
-    public void Respawn()
-    {
-        if (lives > 0)
+        if (playerTag == "player1")
         {
-           
+            playerValues.player1Lives--;
+            Debug.Log(playerValues.player1Lives);
+        }
+        else if (playerTag == "player2")
+        {
+            playerValues.player2Lives--;
+            Debug.Log(playerValues.player2Lives);
+        }
+        else if (playerTag == "player3")
+        {
+            playerValues.player3Lives--;
+            Debug.Log(playerValues.player3Lives);
+        }
+        else if (playerTag == "player4")
+        {
+            playerValues.player4Lives--;
+            Debug.Log(playerValues.player4Lives);
+
+        }
+
+    }
+    private void Update()
+    {
+        playerTag = player.tag;
+        if (playerTag == "player1")
+        {
+            switch (playerValues.player1Lives)
+            {
+                case 1:
+                    Destroy(life2);
+                    break;
+                case 2:
+                    Destroy(life1);
+                    break;
+            }
+        }
+        else if (playerTag == "player2")
+        {
+            switch (playerValues.player2Lives)
+            {
+                case 1:
+                    Destroy(life2);
+                    break;
+                case 2:
+                    Destroy(life1);
+                    break;
+            }
+        }
+        else if (playerTag == "player3")
+        {
+            switch (playerValues.player3Lives)
+            {
+                case 1:
+                    Destroy(life2);
+                    break;
+                case 2:
+                    Destroy(life1);
+                    break;
+            }
+        }
+        else if (playerTag == "player4")
+        {
+            switch (playerValues.player4Lives)
+            {
+                case 1:
+                    Destroy(life2);
+                    break;
+                case 2:
+                    Destroy(life1);
+                    break;
+            }
         }
     }
-
 }

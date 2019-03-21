@@ -16,22 +16,36 @@ public class enemyAI : MonoBehaviour
 
     void Update()
     {
-        int random = Random.Range(1, 5);
-        switch (random)
-        {
-            case 1:
-                player = GameObject.FindGameObjectWithTag("player1").transform;
-                break;
+        
+            int random = Random.Range(1, 5);
+            switch (random)
+            {
+                case 1:
+                if (GameObject.FindGameObjectWithTag("player1"))
+                {
+                    player = GameObject.FindGameObjectWithTag("player1").transform;
+                }
+                    break;
             case 2:
-                player = GameObject.FindGameObjectWithTag("player2").transform;
+                if (GameObject.FindGameObjectWithTag("player2"))
+                {
+                    player = GameObject.FindGameObjectWithTag("player2").transform;
+                }
                 break;
             case 3:
-                player = GameObject.FindGameObjectWithTag("player3").transform;
+                if (GameObject.FindGameObjectWithTag("player3"))
+                {
+                    player = GameObject.FindGameObjectWithTag("player3").transform;
+                }
                 break;
             case 4:
-                player = GameObject.FindGameObjectWithTag("player4").transform;
+                if (GameObject.FindGameObjectWithTag("player4"))
+                {
+                    player = GameObject.FindGameObjectWithTag("player4").transform;
+                }
                 break;
         }
+       
         findPlayer();
 
         ////Debug.Log(playerLoc.location);

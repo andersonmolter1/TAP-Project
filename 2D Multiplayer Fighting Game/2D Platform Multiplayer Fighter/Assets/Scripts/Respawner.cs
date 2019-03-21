@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Respawner : MonoBehaviour
 {
-    private int num;
+
     private Component player1, player2, player3, player4;
     //private bool isReadySpawn = true;
     private void OnCollisionEnter2D(Collision2D collision)
@@ -31,8 +31,8 @@ public class Respawner : MonoBehaviour
 
         }
     }
-    
-    IEnumerator WaitToSpawn(string player)
+
+    public IEnumerator WaitToSpawn(string player)
     {
         yield return new WaitForSeconds(0.8f);
         if (player.Equals("player1"))
@@ -52,4 +52,26 @@ public class Respawner : MonoBehaviour
             GetComponent<player4Spawner>().findPlayer4();
         }
     }
+    /*
+    private void Update()
+    {
+        if (playerValues.player1Lives > 0 && !(GameObject.FindGameObjectWithTag("player1")))
+        {
+            WaitToSpawn("player1");
+        }
+        else if (playerValues.player2Lives > 0 && !(GameObject.FindGameObjectWithTag("player2")))
+        {
+            WaitToSpawn("player2");
+        }
+        else if (playerValues.player1Lives > 0 && !(GameObject.FindGameObjectWithTag("player3")))
+        {
+            WaitToSpawn("player3");
+        }
+        else if (playerValues.player1Lives > 0 && !(GameObject.FindGameObjectWithTag("player4")))
+        {
+            WaitToSpawn("player4");
+        }
+    }
+    */
 }
+
