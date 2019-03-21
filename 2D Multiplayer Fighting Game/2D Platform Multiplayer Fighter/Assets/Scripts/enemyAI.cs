@@ -8,24 +8,20 @@ public class enemyAI : MonoBehaviour
     private Vector2 position;
     private Transform player;
     public GameObject particleEffect;
+    private bool isAlive = false;
 
-    void Start()
-    {
-        
-    }
 
     void Update()
     {
-        
-            int random = Random.Range(1, 5);
-            switch (random)
-            {
-                case 1:
+        int random = Random.Range(1, 5);
+        switch (random)
+        {
+            case 1:
                 if (GameObject.FindGameObjectWithTag("player1"))
                 {
                     player = GameObject.FindGameObjectWithTag("player1").transform;
                 }
-                    break;
+                break;
             case 2:
                 if (GameObject.FindGameObjectWithTag("player2"))
                 {
@@ -45,7 +41,7 @@ public class enemyAI : MonoBehaviour
                 }
                 break;
         }
-       
+
         findPlayer();
 
         ////Debug.Log(playerLoc.location);
@@ -53,8 +49,9 @@ public class enemyAI : MonoBehaviour
 
         // move sprite towards the target location
         transform.position = Vector2.MoveTowards(transform.position, target, step);
+        isAlive = true;
     }
-
+    
     void findPlayer()
     {
         target = player.transform.position;
@@ -67,6 +64,7 @@ public class enemyAI : MonoBehaviour
             Destroy(gameObject, 0.2f);
             GameObject particle = Instantiate(particleEffect, transform.position, Quaternion.Euler(new Vector3(0, 0, 0)));
             Destroy(particle, 0.3f);
+            isAlive = false;
         }
 
     }

@@ -35,10 +35,11 @@ TagManager:
   - pmarker2
   - pmarker3
   - pmarker4
-  - knightCollider
-  - vikingCollider
   - enemy
   - healer
+  - meleeCollider
+  - vikingCollider
+  - knightCollider
   layers:
   - Default
   - TransparentFX

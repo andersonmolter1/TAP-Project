@@ -27,10 +27,12 @@ public class PlayerControl : MonoBehaviour
     private bool isCooldown;
     public Transform projectileSpot;
 
+    public Transform colliderMelee;
+
     private GameObject meleeCollider;
     public GameObject meleeCol;
     private string meleeInput;
-    public string colliderTag;
+    //public string colliderTag;
     private float cooldownTime = .8f;
     
 
@@ -175,10 +177,12 @@ public class PlayerControl : MonoBehaviour
 
     private IEnumerator meleeCooldown()
     {
-        meleeCollider = Instantiate(meleeCol, transform.position, Quaternion.Euler(new Vector3(0, 0, 0)));
-        //need to destroy gameObject but comes with error "Destroying assets is not permitted to avoid data loss."
+        Vector3 collider = new Vector3(colliderMelee.transform.position.x, colliderMelee.transform.position.y , colliderMelee.transform.position.z);
+        meleeCollider = Instantiate(meleeCol, collider, Quaternion.Euler(new Vector3(0, 0, 0)));
+
+        
         activeState = 3;
-        Destroy(meleeCollider, 0.1f);
+        Destroy(meleeCollider, 0.3f);
         // Start cooldown
         isCooldown = false;
         // Wait for time you want

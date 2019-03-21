@@ -74,9 +74,7 @@ public class PlayerHealthAndDamage : MonoBehaviour
                 if (health > 0f)
                 {
                     TakeDamage(7.5f);
-
                 }
-
             }
 
             else if (col.gameObject.CompareTag("fireball"))

@@ -12,10 +12,5 @@ public class playerLives : MonoBehaviour
         playerValues.player3Lives = 3;
         playerValues.player4Lives = 3;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }

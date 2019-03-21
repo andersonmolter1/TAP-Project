@@ -139,6 +139,36 @@ Transform:
   m_Father: {fileID: 4201326894273833688}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2975136144937174591
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9042698598393325871}
+  m_Layer: 0
+  m_Name: colliderSpot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9042698598393325871
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2975136144937174591}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.97, y: -0.08, z: 0.15820312}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4201326894273833688}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5312144755579863284
 GameObject:
   m_ObjectHideFlags: 0
@@ -415,6 +445,7 @@ Transform:
   - {fileID: 6106084913981194769}
   - {fileID: 2506502625210955015}
   - {fileID: 8531699204194420973}
+  - {fileID: 9042698598393325871}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -482,7 +513,6 @@ MonoBehaviour:
   jump: 0
   isMelee: 0
   activeState: 0
-  playerAttack: Fire
   moveForce: 365
   maxSpeed: 5
   jumpForce: 1000
@@ -493,9 +523,10 @@ MonoBehaviour:
   projectile: {fileID: 6047219895168099818, guid: 3d635ad3d587cd1409c389a344b2fab3,
     type: 3}
   speed: 20
-  meleeCol: {fileID: 2674153289252896130, guid: 4f6a0684402d58e45986e3f01c4bd9d5,
+  projectileSpot: {fileID: 9042698598393325871}
+  colliderMelee: {fileID: 9042698598393325871}
+  meleeCol: {fileID: 1624887299430562865, guid: bde5f8eb9af2a1c48b81b3f24368bfad,
     type: 3}
-  colliderTag: knightCollider
 --- !u!95 &7843112853157048352
 Animator:
   serializedVersion: 3

@@ -9,22 +9,22 @@ public class Respawner : MonoBehaviour
     //private bool isReadySpawn = true;
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("player1"))
+        if (collision.gameObject.CompareTag("player1") && playerValues.player1Lives > 0)
         {
             StartCoroutine(WaitToSpawn("player1"));
             //isReadySpawn = false;
         }
-        else if (collision.gameObject.CompareTag("player2"))
+        else if (collision.gameObject.CompareTag("player2") && playerValues.player2Lives > 0)
         {
             StartCoroutine(WaitToSpawn("player2"));
             //isReadySpawn = false;
         }
-        else if (collision.gameObject.CompareTag("player3"))
+        else if (collision.gameObject.CompareTag("player3") && playerValues.player3Lives > 0)
         {
             StartCoroutine(WaitToSpawn("player3"));
             // isReadySpawn = false;
         }
-        else if (collision.gameObject.CompareTag("player4"))
+        else if (collision.gameObject.CompareTag("player4") && playerValues.player4Lives > 0)
         {
             StartCoroutine(WaitToSpawn("player4"));
             // isReadySpawn = false;
@@ -52,7 +52,7 @@ public class Respawner : MonoBehaviour
             GetComponent<player4Spawner>().findPlayer4();
         }
     }
-    /*
+    
     private void Update()
     {
         if (playerValues.player1Lives > 0 && !(GameObject.FindGameObjectWithTag("player1")))
@@ -72,6 +72,6 @@ public class Respawner : MonoBehaviour
             WaitToSpawn("player4");
         }
     }
-    */
+    
 }
 
