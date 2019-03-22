@@ -337,9 +337,9 @@ MonoBehaviour:
     type: 3}
   speed: 20
   projectileSpot: {fileID: 2686587511106801361}
+  colliderMelee: {fileID: 0}
   meleeCol: {fileID: 2674153289252896130, guid: 4f6a0684402d58e45986e3f01c4bd9d5,
     type: 3}
-  colliderTag: knightCollider
 --- !u!95 &5042245803051917226
 Animator:
   serializedVersion: 3
@@ -413,7 +413,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52121b47a452546fb88cf2e9a9352f56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lives: 3
   health: 100
   damageAmount: 10
   HealthBar: {fileID: 4748600950538419049}

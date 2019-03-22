@@ -549,7 +549,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.5, y: 0.01}
+  m_Size: {x: 1, y: 0.01}
   m_EdgeRadius: 0
 --- !u!114 &8720278284847353026
 MonoBehaviour:
@@ -579,7 +579,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52121b47a452546fb88cf2e9a9352f56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lives: 3
   health: 100
   damageAmount: 10
   HealthBar: {fileID: 6239847881420646126}
@@ -615,9 +614,8 @@ MonoBehaviour:
     type: 3}
   speed: 20
   projectileSpot: {fileID: 8750750773676431210}
-  meleeCol: {fileID: 2674153289252896130, guid: 4f6a0684402d58e45986e3f01c4bd9d5,
-    type: 3}
-  colliderTag: knightCollider
+  colliderMelee: {fileID: 8750750773676431210}
+  meleeCol: {fileID: 4147069577920737989}
 --- !u!95 &5863047488589916
 Animator:
   serializedVersion: 3

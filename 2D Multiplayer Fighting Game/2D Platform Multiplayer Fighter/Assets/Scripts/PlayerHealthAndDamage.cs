@@ -4,13 +4,13 @@ using System.Threading.Tasks;
 
 public class PlayerHealthAndDamage : MonoBehaviour
 {
-    public int lives = 3;
     public float health = 100f;
     public float damageAmount = 10f;
     //public GameObject project
 
     //public Transform healthBar;
     public GameObject HealthBar;
+    public bool canKill = true;
 
     private float swordDamage;
     private float maceDamage;
@@ -94,15 +94,17 @@ public class PlayerHealthAndDamage : MonoBehaviour
         if (col.gameObject.CompareTag("killBar"))
         {
 
-            KillPlayer();
-            Invoke("Respawn", 1.5f);
+            TakeDamage(50f);
+            
 
         }
     }
 
+    
     private void OnCollisionExit2D(Collision2D collision)
     {
         allowDamage = true;
+        canKill = true;
     }
 
     public void TakeDamage(float damageAmount)
@@ -117,7 +119,6 @@ public class PlayerHealthAndDamage : MonoBehaviour
         if (health == 0f)
         {
             KillPlayer();
-            Invoke("Respawn", 2f);
 
         }
         else
@@ -155,45 +156,54 @@ public class PlayerHealthAndDamage : MonoBehaviour
 
     public void KillPlayer()
     {
-        //activeState = 4;
-        UpdateHealthBar();
-        RestoreHealthBar();
-        UpdateHealthBar();
-        player.SetActive(false);
+        if (canKill)
+        {
+            canKill = false;
+            //activeState = 4;
+            UpdateHealthBar();
+            RestoreHealthBar();
+            UpdateHealthBar();
+            player.SetActive(false);
+
+            if (playerTag == "player1")
+            {
+
+                playerValues.player1Lives--;
 
 
-        Destroy(player);
-        if (playerTag == "player1")
-        {
-            playerValues.player1Lives--;
-            Debug.Log(playerValues.player1Lives);
-        }
-        else if (playerTag == "player2")
-        {
-            playerValues.player2Lives--;
-            Debug.Log(playerValues.player2Lives);
-        }
-        else if (playerTag == "player3")
-        {
-            playerValues.player3Lives--;
-            Debug.Log(playerValues.player3Lives);
-        }
-        else if (playerTag == "player4")
-        {
-            playerValues.player4Lives--;
-            Debug.Log(playerValues.player4Lives);
+            }
+            else if (playerTag == "player2")
+            {
+                playerValues.player2Lives--;
 
-        }
 
+            }
+            else if (playerTag == "player3")
+            {
+                playerValues.player3Lives--;
+
+
+            }
+            else if (playerTag == "player4")
+            {
+                playerValues.player4Lives--;
+            }
+            Destroy(player);
+        }
     }
     private void Update()
     {
+       
         playerTag = player.tag;
         if (playerTag == "player1")
         {
             switch (playerValues.player1Lives)
             {
+                case 0:
+                    Destroy(player);
+                    break;
                 case 1:
+                    Destroy(life1);
                     Destroy(life2);
                     break;
                 case 2:
@@ -205,7 +215,11 @@ public class PlayerHealthAndDamage : MonoBehaviour
         {
             switch (playerValues.player2Lives)
             {
+                case 0:
+                    Destroy(player);
+                    break;
                 case 1:
+                    Destroy(life1);
                     Destroy(life2);
                     break;
                 case 2:
@@ -217,19 +231,28 @@ public class PlayerHealthAndDamage : MonoBehaviour
         {
             switch (playerValues.player3Lives)
             {
+                case 0:
+                    Destroy(player);
+                    break;
                 case 1:
+                    Destroy(life1);
                     Destroy(life2);
                     break;
                 case 2:
                     Destroy(life1);
                     break;
+                    
             }
         }
         else if (playerTag == "player4")
         {
             switch (playerValues.player4Lives)
             {
+                case 0:
+                    Destroy(player);
+                    break;
                 case 1:
+                    Destroy(life1);
                     Destroy(life2);
                     break;
                 case 2:

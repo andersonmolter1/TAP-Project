@@ -544,14 +544,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52121b47a452546fb88cf2e9a9352f56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lives: 3
   health: 100
   damageAmount: 10
   HealthBar: {fileID: 259571198151874026}
+  canKill: 1
   player: {fileID: 7613987979073396137}
-  life1: {fileID: 0}
-  life2: {fileID: 0}
-  life3: {fileID: 0}
+  life1: {fileID: 8932583659747454502}
+  life2: {fileID: 4265831693722526855}
+  life3: {fileID: 6900928819687691943}
   playerTag: 
 --- !u!61 &985549484693091235
 BoxCollider2D:

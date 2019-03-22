@@ -621,10 +621,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52121b47a452546fb88cf2e9a9352f56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lives: 3
   health: 100
   damageAmount: 10
   HealthBar: {fileID: 259571198151874026}
+  canKill: 1
   player: {fileID: 7613987979073396137}
   life1: {fileID: 6717660203276392531}
   life2: {fileID: 5312144755579863284}
