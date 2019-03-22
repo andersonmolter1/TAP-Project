@@ -51,4 +51,12 @@ public static class playerValues
 
     public static int player4Lives { get; set; }
 
+    ///////////////////////
+    public static bool player1isDead { get; set; }
+
+    public static bool player2isDead { get; set; }
+
+    public static bool player3isDead { get; set; }
+
+    public static bool player4isDead { get; set; }
 }

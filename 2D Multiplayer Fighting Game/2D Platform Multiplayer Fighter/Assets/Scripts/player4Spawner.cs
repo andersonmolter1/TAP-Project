@@ -9,7 +9,7 @@ public class player4Spawner : MonoBehaviour
     public GameObject archer;
     public GameObject viking;
     public GameObject wizard;
-    private GameObject player4;
+    public GameObject player4;
     private bool isMelee;
     // Start is called before the first frame update
     void Start()
@@ -59,6 +59,9 @@ public class player4Spawner : MonoBehaviour
         
 
     }
+    public void DestroyPlayer()
+    {
+        Destroy(player4);
+    }
 
-    
 }
