@@ -46,7 +46,7 @@ public class PlayerHealthAndDamage : MonoBehaviour
             {
                 if (health > 0f)
                 {
-                    TakeDamage(5f);
+                    TakeDamage(15f);
 
                 }
 
@@ -73,7 +73,7 @@ public class PlayerHealthAndDamage : MonoBehaviour
 
                 if (health > 0f)
                 {
-                    TakeDamage(7.5f);
+                    TakeDamage(20f);
                 }
             }
 

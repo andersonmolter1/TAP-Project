@@ -13,7 +13,7 @@ public class PlayerControl : MonoBehaviour
     //public string playerAttack;
     public float moveForce = 365f;          // Amount of force added to move the player left and right.
     public float maxSpeed = 5f;             // The fastest the player can travel in the x axis.
-    public float jumpForce = 1000f;         // Amount of force added when the player jumps.
+    public float jumpForce = 1200f;         // Amount of force added when the player jumps.
     public string attack;   
     
     private Transform groundCheck;          // A position marking where to check if the player is grounded.
@@ -177,12 +177,14 @@ public class PlayerControl : MonoBehaviour
 
     private IEnumerator meleeCooldown()
     {
+        activeState = 3;
+        yield return new WaitForSeconds(0.15f);
         Vector3 collider = new Vector3(colliderMelee.transform.position.x, colliderMelee.transform.position.y , colliderMelee.transform.position.z);
         meleeCollider = Instantiate(meleeCol, collider, Quaternion.Euler(new Vector3(0, 0, 0)));
 
         
-        activeState = 3;
-        Destroy(meleeCollider, 0.3f);
+        
+        Destroy(meleeCollider, 0.1f);
         // Start cooldown
         isCooldown = false;
         // Wait for time you want
