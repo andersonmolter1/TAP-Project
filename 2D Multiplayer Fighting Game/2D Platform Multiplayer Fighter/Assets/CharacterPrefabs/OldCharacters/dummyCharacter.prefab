@@ -10,13 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 445534}
   - component: {fileID: 2848635786970813451}
-  - component: {fileID: 3043343141263316051}
   - component: {fileID: 2863201092601578471}
   - component: {fileID: 1495701138596128242}
   - component: {fileID: 5272531459248411590}
   - component: {fileID: 4180684622812061993}
   m_Layer: 0
-  m_Name: Archer
+  m_Name: dummyCharacter
   m_TagString: archer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -53,31 +52,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   facingRight: 1
   jump: 0
+  isMelee: 0
   activeState: 0
-  playerAttack: 
   moveForce: 365
   maxSpeed: 5
   jumpForce: 1000
+  attack: 
+  anim: {fileID: 4180684622812061993}
   horiztonal: Horizontal
   jumpButton: Jump
-  anim: {fileID: 4180684622812061993}
---- !u!114 &3043343141263316051
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 174424}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52121b47a452546fb88cf2e9a9352f56, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 100
-  damageAmount: 10
-  HealthBar: {fileID: 1034595749120041526}
-  spawnPoint: {fileID: 0}
-  player: {fileID: 0}
+  projectile: {fileID: 0}
+  speed: 20
+  projectileSpot: {fileID: 0}
+  colliderMelee: {fileID: 0}
+  meleeCol: {fileID: 0}
 --- !u!50 &2863201092601578471
 Rigidbody2D:
   serializedVersion: 4
@@ -348,7 +336,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c42d998115715364b8ad632dbd9d041a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b28094d0ea303634ab51b3a6d0ed0d2a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

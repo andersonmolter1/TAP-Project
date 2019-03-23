@@ -3043,7 +3043,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 10.099076
+  orthographic size: 10.379403
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3143,6 +3143,7 @@ GameObject:
   - component: {fileID: 2086485453}
   - component: {fileID: 2086485452}
   - component: {fileID: 2086485451}
+  - component: {fileID: 2086485455}
   m_Layer: 0
   m_Name: killBar
   m_TagString: killBar
@@ -3274,6 +3275,24 @@ MonoBehaviour:
   viking: {fileID: 7613987979073396137, guid: e27b3e95737066c4c9f6cc7bdfe5cffb, type: 3}
   wizard: {fileID: 8045197380288853528, guid: ec84c63dc646c5c428a3d6398ee9f43f, type: 3}
   player3: {fileID: 0}
+--- !u!114 &2086485455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2086485447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 355ca9e9c0c0c5445a0460bfc89c80a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoint: {fileID: 0}
+  knight: {fileID: 0}
+  archer: {fileID: 0}
+  viking: {fileID: 0}
+  wizard: {fileID: 0}
+  player5: {fileID: 0}
 --- !u!1 &2119458074
 GameObject:
   m_ObjectHideFlags: 0

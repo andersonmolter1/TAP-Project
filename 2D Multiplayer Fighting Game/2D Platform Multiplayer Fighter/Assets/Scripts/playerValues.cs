@@ -39,6 +39,18 @@ public static class playerValues
 
     public static bool P4wizard { get; set; }
 
+    
+    /////////////////////////////////////////
+    
+
+    public static bool P5knight { get; set; }
+
+    public static bool P5archer { get; set; }
+
+    public static bool P5viking { get; set; }
+
+    public static bool P5wizard { get; set; }
+
     public static int scene { get; set; }
 
     public static int playerCount { get; set; }
