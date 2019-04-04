@@ -1,12 +1,17 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Rewired;
 
+[AddComponentMenu("")]
+[RequireComponent(typeof(Rigidbody2D))]
 public class PlayerControl : MonoBehaviour
 {
     [HideInInspector]
     public bool facingRight = true;         // For determining which way the player is currently facing.
     [HideInInspector]
     public bool jump = false;               // Condition for whether the player should jump.
+
+    public int playerId = 0; // The Rewired player id of this character
 
     public bool isMelee;
     public int activeState;
@@ -19,7 +24,7 @@ public class PlayerControl : MonoBehaviour
     private Transform groundCheck;          // A position marking where to check if the player is grounded.
     private bool grounded = false;          // Whether or not the player is grounded.
     public Animator anim;                  // Reference to the player's animator component.
-    public string horiztonal = "Horizontal";
+    public string horiztonal = "Move Horizontal";
     public string jumpButton = "Jump";
 
     public Rigidbody2D projectile;               // Prefab of the rocket.
@@ -31,10 +36,15 @@ public class PlayerControl : MonoBehaviour
 
     private GameObject meleeCollider;
     public GameObject meleeCol;
-    private string meleeInput;
+    private string meleeplayer;
     //public string colliderTag;
+
+    [System.NonSerialized] // Don't serialize this so the value is lost on an editor script recompile.
+    private bool initialized;
+
     private float cooldownTime = .8f;
-    
+
+    private Player player; // The Rewired Player
 
     void Awake()
     {
@@ -43,13 +53,26 @@ public class PlayerControl : MonoBehaviour
         isCooldown = true;
         
     }
+
+    private void Initialize()
+    {
+        // Get the Rewired Player object for this player.
+        player = ReInput.players.GetPlayer(playerId);
+
+        initialized = true;
+    }
+
     void Update()
     {
+
+        if (!ReInput.isReady) return; // Exit if Rewired isn't ready. This would only happen during a script recompile in the editor.
+        if (!initialized) Initialize(); // Reinitialize after a recompile in the editor
+
         // The player is grounded if a linecast to the groundcheck position hits anything on the ground layer.
         grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
 
         // If the jump button is pressed and the player is grounded then the player should jump.
-        if (Input.GetButtonDown(jumpButton) && grounded)
+        if (player.GetButtonDown(jumpButton) && grounded)
         {
             jump = true;
         }
@@ -59,7 +82,7 @@ public class PlayerControl : MonoBehaviour
         if (!isMelee)
         {
             // If the fire button is pressed...
-            if (Input.GetButtonDown(attack) && isCooldown)
+            if (player.GetButtonDown(attack) && isCooldown)
             {
 
                 StartCoroutine(shootingCooldown());
@@ -68,7 +91,7 @@ public class PlayerControl : MonoBehaviour
         }
         else if (isMelee)
         {
-            if (Input.GetButtonDown(attack) && isCooldown)
+            if (player.GetButtonDown(attack) && isCooldown)
             {
 
                 StartCoroutine(meleeCooldown());
@@ -79,8 +102,8 @@ public class PlayerControl : MonoBehaviour
     void FixedUpdate()
     {
         anim.SetInteger("stateOfAction", activeState);
-        // Cache the horizontal input.
-        float h = Input.GetAxis(horiztonal);
+        // Cache the horizontal player.
+        float h = player.GetAxis("Move Horizontal");
         if (Mathf.Abs(h) > 0)
         {
             activeState = 1;
@@ -104,12 +127,12 @@ public class PlayerControl : MonoBehaviour
             // ... set the player's velocity to the maxSpeed in the x axis.
             GetComponent<Rigidbody2D>().velocity = new Vector2(Mathf.Sign(GetComponent<Rigidbody2D>().velocity.x) * maxSpeed, GetComponent<Rigidbody2D>().velocity.y);
         }
-        // If the input is moving the player right and the player is facing left...
+        // If the player is moving the player right and the player is facing left...
 
         if (h > 0 && !facingRight)
             // ... flip the player.
             Flip();
-        // Otherwise if the input is moving the player left and the player is facing right...
+        // Otherwise if the player is moving the player left and the player is facing right...
         else if (h < 0 && facingRight)
             // ... flip the player.
             Flip();
