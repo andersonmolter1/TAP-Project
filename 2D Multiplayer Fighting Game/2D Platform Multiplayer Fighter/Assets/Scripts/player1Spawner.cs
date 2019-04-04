@@ -50,10 +50,11 @@ public class player1Spawner : MonoBehaviour
         }
 
         player1.transform.gameObject.tag = "player1";
-        player1.GetComponent<PlayerControl>().horiztonal = "P1_Horizontal";
-        player1.GetComponent<PlayerControl>().jumpButton = "P1_Jump";
+        player1.GetComponent<PlayerControl>().playerId = 0;
+        //player1.GetComponent<PlayerControl>().horiztonal = "P1_Horizontal";
+        //player1.GetComponent<PlayerControl>().jumpButton = "P1_Jump";
         player1.GetComponent<PlayerControl>().isMelee = isMelee;
-        player1.GetComponent<PlayerControl>().attack = "P1_Fire";
+        //player1.GetComponent<PlayerControl>().attack = "P1_Fire";
         player1.GetComponent<ChangeColor>().playerNumber = 1;
         
 

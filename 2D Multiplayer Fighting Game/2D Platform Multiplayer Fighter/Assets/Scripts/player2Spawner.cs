@@ -51,12 +51,13 @@ public class player2Spawner : MonoBehaviour
         }
 
         player2.transform.gameObject.tag = "player2";
-        player2.GetComponent<PlayerControl>().horiztonal = "P2_Horizontal";
-        player2.GetComponent<PlayerControl>().jumpButton = "P2_Jump";
+        player2.GetComponent<PlayerControl>().playerId = 1;
+        //player2.GetComponent<PlayerControl>().horiztonal = "P2_Horizontal";
+        //player2.GetComponent<PlayerControl>().jumpButton = "P2_Jump";
         player2.GetComponent<PlayerControl>().isMelee = isMelee;
-        player2.GetComponent<PlayerControl>().attack = "P2_Fire";
+        //player2.GetComponent<PlayerControl>().attack = "P2_Fire";
         player2.GetComponent<ChangeColor>().playerNumber = 2;
-        
+
     }
 
     public void DestroyPlayer()

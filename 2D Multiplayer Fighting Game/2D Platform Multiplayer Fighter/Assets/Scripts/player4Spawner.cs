@@ -51,12 +51,13 @@ public class player4Spawner : MonoBehaviour
         }
 
         player4.transform.gameObject.tag = "player4";
-        player4.GetComponent<PlayerControl>().horiztonal = "P4_Horizontal";
-        player4.GetComponent<PlayerControl>().jumpButton = "P4_Jump";
+        player4.GetComponent<PlayerControl>().playerId = 3;
+        //player4.GetComponent<PlayerControl>().horiztonal = "P4_Horizontal";
+        //player4.GetComponent<PlayerControl>().jumpButton = "P4_Jump";
         player4.GetComponent<PlayerControl>().isMelee = isMelee;
-        player4.GetComponent<PlayerControl>().attack = "P4_Fire";
+        //player4.GetComponent<PlayerControl>().attack = "P4_Fire";
         player4.GetComponent<ChangeColor>().playerNumber = 4;
-        
+
 
     }
     public void DestroyPlayer()
