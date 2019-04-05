@@ -219,8 +219,6 @@
     <Compile Include="Assets\Scripts\player3Spawner.cs" />
     <Compile Include="Assets\Scripts\player4Assigner.cs" />
     <Compile Include="Assets\Scripts\player4Spawner.cs" />
-    <Compile Include="Assets\Scripts\player5Assigner.cs" />
-    <Compile Include="Assets\Scripts\player5Spawner.cs" />
     <Compile Include="Assets\Scripts\PlayerControl.cs" />
     <Compile Include="Assets\Scripts\playerCount.cs" />
     <Compile Include="Assets\Scripts\PlayerHealthAndDamage.cs" />

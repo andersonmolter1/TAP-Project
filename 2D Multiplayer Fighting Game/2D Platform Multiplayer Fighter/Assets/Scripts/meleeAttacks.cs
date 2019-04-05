@@ -18,7 +18,7 @@ public class meleeAttacks : MonoBehaviour
     void Awake()
     {
         PlayerControl pc = new PlayerControl();
-        meleeInput = pc.attack;
+        //meleeInput = pc.attack;
         isCooldown = true;
         // Setting up the references.
         anim = transform.root.gameObject.GetComponent<Animator>();

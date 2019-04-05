@@ -13,19 +13,21 @@ public class PlayerControl : MonoBehaviour
 
     public int playerId = 0; // The Rewired player id of this character
 
+
     public bool isMelee;
     public int activeState;
     //public string playerAttack;
     public float moveForce = 365f;          // Amount of force added to move the player left and right.
     public float maxSpeed = 5f;             // The fastest the player can travel in the x axis.
     public float jumpForce = 1200f;         // Amount of force added when the player jumps.
-    public string attack;   
+    public bool attack;   
     
     private Transform groundCheck;          // A position marking where to check if the player is grounded.
     private bool grounded = false;          // Whether or not the player is grounded.
     public Animator anim;                  // Reference to the player's animator component.
     public string horiztonal = "Move Horizontal";
     public string jumpButton = "Jump";
+    public string Fire = "Fire";
 
     public Rigidbody2D projectile;               // Prefab of the rocket.
     public float speed = 20f;				// The speed the rocket will fire at.
@@ -51,7 +53,7 @@ public class PlayerControl : MonoBehaviour
         // Setting up references.
         groundCheck = transform.Find("groundCheck");
         isCooldown = true;
-        
+        projectile.gravityScale = 0;
     }
 
     private void Initialize()
@@ -71,18 +73,10 @@ public class PlayerControl : MonoBehaviour
         // The player is grounded if a linecast to the groundcheck position hits anything on the ground layer.
         grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
 
-        // If the jump button is pressed and the player is grounded then the player should jump.
-        if (player.GetButtonDown(jumpButton) && grounded)
-        {
-            jump = true;
-        }
-        
-
-        projectile.gravityScale = 0;
         if (!isMelee)
         {
             // If the fire button is pressed...
-            if (player.GetButtonDown(attack) && isCooldown)
+            if (attack && isCooldown)
             {
 
                 StartCoroutine(shootingCooldown());
@@ -91,19 +85,21 @@ public class PlayerControl : MonoBehaviour
         }
         else if (isMelee)
         {
-            if (player.GetButtonDown(attack) && isCooldown)
+            if (attack && isCooldown)
             {
 
                 StartCoroutine(meleeCooldown());
             }
         }
     }
-
-    void FixedUpdate()
+    private void FixedUpdate()
     {
+        attack = player.GetButtonDown("Fire");
+        jump = player.GetButtonDown("Jump");
+        float h = player.GetAxis("Move Horizontal");
         anim.SetInteger("stateOfAction", activeState);
         // Cache the horizontal player.
-        float h = player.GetAxis("Move Horizontal");
+        
         if (Mathf.Abs(h) > 0)
         {
             activeState = 1;
@@ -136,9 +132,9 @@ public class PlayerControl : MonoBehaviour
         else if (h < 0 && facingRight)
             // ... flip the player.
             Flip();
-
+        
         // If the player should jump...
-        if (jump)
+        if (jump && grounded)
         {
             //activeState = 2;
 

@@ -15,7 +15,7 @@ public class shootingProjectile : MonoBehaviour
     void Awake()
     {
         PlayerControl pc = new PlayerControl();
-        gunFire = pc.attack;
+        gunFire = "no";
         isCooldown = true;
         // Setting up the references.
        
