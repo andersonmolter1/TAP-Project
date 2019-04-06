@@ -18,7 +18,7 @@ public class PlayerControl : MonoBehaviour
     public int activeState;
     //public string playerAttack;
     public float moveForce = 365f;          // Amount of force added to move the player left and right.
-    public float maxSpeed = 5f;             // The fastest the player can travel in the x axis.
+    public float maxSpeed = 365f;             // The fastest the player can travel in the x axis.
     public float jumpForce = 1200f;         // Amount of force added when the player jumps.
     public bool attack;   
     
