@@ -59,7 +59,7 @@ public class PlayerControl : MonoBehaviour
     private void Initialize()
     {
         // Get the Rewired Player object for this player.
-        player = ReInput.players.GetPlayer(playerId);
+        
 
         initialized = true;
     }
@@ -94,9 +94,10 @@ public class PlayerControl : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        player = ReInput.players.GetPlayer(playerId);
+        float h = player.GetAxis("Move Horizontal");
         attack = player.GetButtonDown("Fire");
         jump = player.GetButtonDown("Jump");
-        float h = player.GetAxis("Move Horizontal");
         anim.SetInteger("stateOfAction", activeState);
         // Cache the horizontal player.
         
