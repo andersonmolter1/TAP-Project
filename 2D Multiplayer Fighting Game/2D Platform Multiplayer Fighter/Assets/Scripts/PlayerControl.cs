@@ -99,6 +99,8 @@ public class PlayerControl : MonoBehaviour
         attack = player.GetButtonDown("Fire");
         jump = player.GetButtonDown("Jump");
         anim.SetInteger("stateOfAction", activeState);
+        
+        
         // Cache the horizontal player.
         
         if (Mathf.Abs(h) > 0)

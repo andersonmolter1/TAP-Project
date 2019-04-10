@@ -937,7 +937,7 @@ MonoBehaviour:
   m_VerticalAxis: UIVertical
   m_SubmitButton: UISubmit
   m_CancelButton: UICancel
-  m_InputActionsPerSecond: 10
+  m_InputActionsPerSecond: 5
   m_RepeatDelay: 0
   m_allowMouseInput: 1
   m_allowMouseInputIfTouchSupported: 1

@@ -31,9 +31,10 @@ public class PlayerHealthAndDamage : MonoBehaviour
 
         if (allowDamage)
         {
+            allowDamage = false;
             if (col.gameObject.CompareTag("arrow"))
             {
-
+                Debug.Log("arrow");
                 if (health > 0f)
                 {
                     TakeDamage(7.5f);
@@ -44,6 +45,7 @@ public class PlayerHealthAndDamage : MonoBehaviour
 
             else if (col.gameObject.CompareTag("knightCollider"))
             {
+                Debug.Log("knight");
                 if (health > 0f)
                 {
                     TakeDamage(15f);
@@ -53,7 +55,7 @@ public class PlayerHealthAndDamage : MonoBehaviour
             }
             else if (col.gameObject.CompareTag("healer"))
             {
-
+                Debug.Log("healer");
                 if (health > 0f)
                 {
                     TakeDamage(-5f);
@@ -62,6 +64,7 @@ public class PlayerHealthAndDamage : MonoBehaviour
             }
             else if (col.gameObject.CompareTag("enemy"))
             {
+                Debug.Log("enemy");
                 if (health > 0f)
                 {
                     TakeDamage(7.5f);
@@ -70,17 +73,17 @@ public class PlayerHealthAndDamage : MonoBehaviour
             }
             else if (col.gameObject.CompareTag("vikingCollider"))
             {
-
+                Debug.Log("viking");
                 if (health > 0f)
                 {
-                    TakeDamage(20f);
+                    TakeDamage(25f);
                 }
             }
 
             else if (col.gameObject.CompareTag("fireball"))
             {
 
-
+                Debug.Log("fireball");
                 if (health > 0f)
                 {
                     TakeDamage(15f);
