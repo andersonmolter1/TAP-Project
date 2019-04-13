@@ -14,7 +14,7 @@ public class MainMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("P1_Submit")
+        if (Input.GetButtonDown("P1_Start")
             || Input.GetKeyDown(KeyCode.Return)
             || Input.GetKeyDown("space")
             || Input.GetMouseButton(0))
