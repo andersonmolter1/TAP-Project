@@ -57,7 +57,7 @@ public class player2Spawner : MonoBehaviour
         player2.GetComponent<PlayerControl>().isMelee = isMelee;
         //player2.GetComponent<PlayerControl>().attack = "P2_Fire";
         player2.GetComponent<ChangeColor>().playerNumber = 2;
-
+        player2.GetComponent<ActivatePlayerTag>().player = "player2";
     }
 
     public void DestroyPlayer()

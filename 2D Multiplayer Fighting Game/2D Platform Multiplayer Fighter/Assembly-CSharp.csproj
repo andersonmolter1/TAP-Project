@@ -185,6 +185,7 @@
     <Compile Include="Assets\Rewired\Internal\Scripts\Misc\ExternalTools.cs" />
     <Compile Include="Assets\Rewired\Internal\Scripts\Platforms\Ouya\OuyaInputSource.cs" />
     <Compile Include="Assets\Scenes\RewiredStandaloneInputModule.cs" />
+    <Compile Include="Assets\Scripts\ActivatePlayerTag.cs" />
     <Compile Include="Assets\Scripts\ActiveStateToggler.cs" />
     <Compile Include="Assets\Scripts\ApplicationManager.cs" />
     <Compile Include="Assets\Scripts\arrowProjectileHandler.cs" />

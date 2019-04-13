@@ -5,14 +5,24 @@ using UnityEngine.SceneManagement;
 
 public class SceneUnloader : MonoBehaviour
 {
-    
+
     // Start is called before the first frame update
     void Start()
     {
-        SceneManager.UnloadSceneAsync("Player1Selector");
-        SceneManager.UnloadSceneAsync("Player2Selector");
-        SceneManager.UnloadSceneAsync("Player3Selector");
-        SceneManager.UnloadSceneAsync("Player4Selector");
+        for (int i = 0; i < SceneManager.sceneCount; i++)
+        {
+            Debug.Log(SceneManager.GetSceneAt(i).name);
+        }
+        for (int i = 0; i < SceneManager.sceneCount; i++)
+        {
+            if (SceneManager.GetSceneAt(i).name.Equals("Castle")) {
+                i++;
+            }
+            else {
+                string name = SceneManager.GetSceneAt(i).name;
+                SceneManager.UnloadSceneAsync(name);
+                 }
+        }
     }
 
     // Update is called once per frame

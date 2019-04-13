@@ -56,7 +56,7 @@ public class player1Spawner : MonoBehaviour
         player1.GetComponent<PlayerControl>().isMelee = isMelee;
         //player1.GetComponent<PlayerControl>().attack = "P1_Fire";
         player1.GetComponent<ChangeColor>().playerNumber = 1;
-        
+        player1.GetComponent<ActivatePlayerTag>().player = "player1";
 
 
     }

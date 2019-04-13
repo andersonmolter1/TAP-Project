@@ -33,19 +33,19 @@ public class ChangeColor : MonoBehaviour
                 playerID3Render.material.color = Color.red;
                 break;
             case 2:
+                playerID1Render.material.color = Color.blue;
+                playerID2Render.material.color = Color.blue;
+                playerID3Render.material.color = Color.blue;
+                break;
+            case 3:
                 playerID1Render.material.color = Color.green;
                 playerID2Render.material.color = Color.green;
                 playerID3Render.material.color = Color.green;
                 break;
-            case 3:
+            case 4:
                 playerID1Render.material.color = Color.yellow;
                 playerID2Render.material.color = Color.yellow;
                 playerID3Render.material.color = Color.yellow;
-                break;
-            case 4:
-                playerID1Render.material.color = Color.blue;
-                playerID2Render.material.color = Color.blue;
-                playerID3Render.material.color = Color.blue;
                 break;
 
         }

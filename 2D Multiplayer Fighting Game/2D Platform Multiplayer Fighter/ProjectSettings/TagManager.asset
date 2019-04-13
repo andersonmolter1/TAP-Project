@@ -41,6 +41,7 @@ TagManager:
   - vikingCollider
   - knightCollider
   - victory
+  - nametag
   layers:
   - Default
   - TransparentFX
