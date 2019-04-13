@@ -191,6 +191,7 @@
     <Compile Include="Assets\Scripts\arrowProjectileHandler.cs" />
     <Compile Include="Assets\Scripts\Blink.cs" />
     <Compile Include="Assets\Scripts\ChangeColor.cs" />
+    <Compile Include="Assets\Scripts\CharacterSelection.cs" />
     <Compile Include="Assets\Scripts\CursorControl.cs" />
     <Compile Include="Assets\Scripts\DragMe.cs" />
     <Compile Include="Assets\Scripts\DragPanel.cs" />
