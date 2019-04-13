@@ -593,18 +593,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 608055278}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 969236576}
-        m_MethodName: StartMap
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &608055278
@@ -1124,6 +1113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a2fa7b4bbaaf2347a8834ccd1bcd34a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentLevel: 
 --- !u!4 &969236577
 Transform:
   m_ObjectHideFlags: 0
@@ -1320,7 +1310,7 @@ MonoBehaviour:
     m_Mode: 4
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnLeft: {fileID: 608055277}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 2
   m_Colors:
