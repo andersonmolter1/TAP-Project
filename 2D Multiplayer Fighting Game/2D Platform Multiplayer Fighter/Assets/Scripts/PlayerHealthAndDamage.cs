@@ -97,7 +97,7 @@ public class PlayerHealthAndDamage : MonoBehaviour
         if (col.gameObject.CompareTag("killBar"))
         {
 
-            TakeDamage(50f);
+            TakeDamage(100f);
             
 
         }
